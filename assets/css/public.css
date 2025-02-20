@@ -288,6 +288,10 @@ a {
   font-size: 17px !important;
 }
 
+.f-40px {
+  font-size: 40px !important;
+}
+
 
 header nav .navbar-nav .fw-bolder {
   color: #ADB5CC !important;
@@ -305,6 +309,10 @@ header nav .navbar-nav .fw-bolder.active {
   right: -49px;
 }
 
+.next-slider {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(217, 225, 251, 1) 100%);
+}
 
 footer .top-footer {
   background-color: #7B8298;
@@ -320,6 +328,17 @@ footer .copyright {
 
 footer .copyright a {
   color: #DBDBDB !important;
+}
+
+
+
+
+
+
+.next-slider .deck {
+  width: 75%;
+  color: #7B8298;
+  font-size: 24px;
 }
 
 @media (max-width: 768px) {
@@ -346,6 +365,11 @@ footer .copyright a {
     right: -55px;
 
   }
+
+  
+.next-slider .deck {
+  width: 100%;
+}
 
 }
 
