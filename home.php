@@ -1,39 +1,63 @@
 <?php get_header(); ?>
-<header class="text-white bg-white">
-        <nav class="navbar navbar-expand-lg w-75 mx-auto py-3 d-flex flex-row justify-content-between">
-            <!-- لوگو در موبایل سمت راست -->
-            <a class="navbar-brand" href="/">
-                <img class="w-100" src="<?php echo zba_image('logo.png') ?>">
-            </a>
-
-                <!-- دکمه‌ی همبرگر -->
-                <button class="navbar-toggler ms-4 bg-white" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="w-100 mt-2 ms-4">
-                <!-- منو -->
-                <div class="w-100 collapse navbar-collapse" id="navbarNav">
-                    <!-- <?php
-                        wp_nav_menu([
-                            'theme_location' => 'main-menu', // نامی که در register_nav_menus تعریف کردی
-                            'container'      => false,       // چون خودش div داره، نمی‌خواهیم یه div اضافی بیاد
-                            'menu_class'     => 'navbar-nav text-center container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center',
-                            'fallback_cb'    => false,                   // اگر فهرستی تنظیم نشد، چیزی نمایش نده
-                            'depth'          => 2,                       // اگر منوی تو در تو داشته باشی، سطح دوم رو هم پشتیبانی می‌کنه
-                            'walker'         => new Custom_Nav_Walker(), // برای ساختار بوت‌استرپ نیاز به Walker داریم (اختیاری)
-                         ]);
-                    ?> -->
 
 
+<div class="zba-row mx-auto my-3">
+    <div class="d-flex flex-column flex-md-row gap-3 justify-content-around align-items-center text-white">
+        <div class="col-12 col-md-4 rounded-3 position-relative  overflow-hidden" style="background-color: #FFCE5B;">
+            <div
+                class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
+
+                <div class="">
+                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('tabestan.png') ?>">
 
                 </div>
+                <div class="py-4">
+                    <h3 class="fw-900">آیات تابستانه</h3>
+                    <p class="f-17px"><?php echo zba_to_persian('10 فراز قرآنی متناسب با مناسبت های تابستان')?></p>
+                    <a href="#" style="background-color: #FFA200;"
+                        class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
 
+                </div>
             </div>
-        </nav>
-    </header>
+            <img class="position-absolute head-cart" src="<?php echo zba_image('tabestan1.png') ?>">
+        </div>
 
+        <div class="col-12 col-md-4 rounded-3 position-relative  overflow-hidden" style="background-color: #DBBBE8;">
+            <div
+                class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
+                <div class="">
+                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('student.png') ?>">
+                </div>
+                <div class="py-4">
+                    <h3 class="fw-900">گام اول برای
+                        دانش آموزان ابتدایی</h3>
+                    <p class="f-17px"><?php echo zba_to_persian('10 فراز قرآنی متناسب با مناسبت های تابستان')?></p>
+                    <a href="#" style="background-color: #FFA200;"
+                        class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
+                </div>
+            </div>
+            <img class="position-absolute head-cart" src="<?php echo zba_image('student1.png') ?>">
+        </div>
 
+        <div class="col-12 col-md-4 rounded-3 position-relative  overflow-hidden" style="background-color: #77D4D6;">
+            <div
+                class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
+                <div class="">
+                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('keramat.png') ?>">
+                </div>
+                <div class="py-4">
+                    <h3 class="fw-900">آیات کرامت</h3>
+                    <p class="f-17px"><?php echo zba_to_persian('حفظ و فهم 7 فراز متناسب با دهه کرامت')?></p>
+                    <a href="#" style="background-color: #FFA200;"
+                        class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
+                </div>
+            </div>
+            <img class="position-absolute head-cart" src="<?php echo zba_image('keramat1.png') ?>">
+        </div>
+
+    </div>
+
+</div>
 
 
 

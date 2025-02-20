@@ -27,20 +27,46 @@ class Custom_Nav_Walker extends Walker_Nav_Menu
     public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         // بررسی مقدار `classes` و تبدیل آن به آرایه در صورت نیاز
-        $classes = isset($item->classes) && is_array($item->classes) ? $item->classes : [  ];
-
+        $classes = isset($item->classes) && is_array($item->classes) ? $item->classes : [];
         $class_names  = join(' ', $classes);
         $active_class = in_array('current-menu-item', $classes) ? ' active' : '';
+        $has_children = in_array('menu-item-has-children', $classes);
 
-        $output .= '<li class="nav-item ms-2 ' . esc_attr($class_names . $active_class) . '">';
+        // کلاس‌های آیتم لیست
+        $li_classes = 'nav-item ms-2';
+        if ($has_children) {
+            $li_classes .= ' dropdown';
+        }
+        $li_classes .= esc_attr($class_names . $active_class);
 
-        $attributes = ' class="nav-link' . esc_attr($active_class) . '" href="' . esc_url($item->url) . '"';
+        $output .= '<li class="' . $li_classes . '">';
 
+        // تنظیم ویژگی‌های لینک
+        $attributes  = ' class="nav-link fw-bolder' . esc_attr($active_class);
+        if ($has_children) {
+            $attributes .= ' dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"';
+        } else {
+            $attributes .= '"';
+        }
+        $attributes .= ' href="' . esc_url($item->url) . '"';
+
+        // تولید لینک
         $output .= '<a' . $attributes . '>';
         $output .= esc_html($item->title);
         $output .= '</a>';
     }
+
+    public function end_el(&$output, $item, $depth = 0, $args = null)
+    {
+        $output .= '</li>';
+    }
+
+    public function end_lvl(&$output, $depth = 0, $args = null)
+    {
+        $output .= '</ul>';
+    }
 }
+
 class Footer_Menu_Walker extends Walker_Nav_Menu
 {
     private $count = 0; // شمارشگر آیتم‌ها
@@ -59,13 +85,13 @@ class Footer_Menu_Walker extends Walker_Nav_Menu
     public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         $this->count++; // افزایش شمارشگر آیتم‌های پردازش‌شده
-        $output .= '<a href="' . esc_url($item->url) . '" class="text-body mx-2">' . esc_html($item->title) . '</a>';
+        $output .= '<a href="' . esc_url($item->url) . '" class="mx-2">' . esc_html($item->title) . '</a>';
     }
 
     public function end_el(&$output, $item, $depth = 0, $args = null)
     {
         if ($this->count < $this->total) { // فقط اگر این آیتم، آخرین نباشه "| " اضافه کن
-            $output .= ' | ';
+            // $output .= ' | ';
         }
     }
 
