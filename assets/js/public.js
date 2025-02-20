@@ -66,5 +66,66 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+
+    
+    let allItems = $(".mpgallery-item");
+
+    // حذف آیتم‌های تکراری بر اساس data-id و نمایش ۶ تای اول
+    function filterUniqueItems() {
+        let seenIds = {}; // اینجا id های دیده‌شده رو ذخیره می‌کنیم
+        let uniqueItems = allItems.filter(function () {
+            let itemId = $(this).data("id");
+            if (!seenIds[itemId]) {
+                seenIds[itemId] = true;
+                return true;
+            }
+            return false;
+        });
+
+        // نمایش فقط ۶ تا از آیتم‌های یکتا
+        allItems.hide();
+        uniqueItems.slice(0, 8).show();
+    }
+
+    // اجرای فیلتر در ابتدای بارگذاری صفحه
+    filterUniqueItems();
+
+
+
+    $(".mpcategories button").on("click", function () {
+        $(".mpcategories button").removeClass("mpactive");
+        $(this).addClass("mpactive");
+
+        let filter = $(this).data("filter");
+
+        if (filter === "all") {
+            filterUniqueItems();
+        } else {
+            let categoryItems = $(".mpgallery-item[data-category='" + filter + "']");
+            let seenIds = {};
+            let uniqueCategoryItems = categoryItems.filter(function () {
+                let itemId = $(this).data("id");
+                if (!seenIds[itemId]) {
+                    seenIds[itemId] = true;
+                    return true;
+                }
+                return false;
+            });
+
+            allItems.hide();
+            uniqueCategoryItems.slice(0, 8).show();
+        }
+    });
+
+
+
+
+
+
+
+
+
+
 });
 
