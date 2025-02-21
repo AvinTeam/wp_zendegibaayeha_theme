@@ -109,17 +109,32 @@ function zba_style()
         true
     );
 
+    wp_register_style(
+        'swiper',
+        ZBA_VENDOR . 'swiper/swiper-bundle.min.css',
+        [  ],
+        '11.2.2',
+    );
+
+    wp_register_script(
+        'swiper',
+        ZBA_VENDOR . 'swiper/swiper-bundle.min.js',
+        [  ],
+        '11.2.2',
+
+    );
+
     wp_enqueue_style(
         'zba_style',
         ZBA_CSS . 'public.css',
-        [ 'bootstrap.rtl', 'bootstrap.icons', 'select2', 'jalalidatepicker' ],
+        [ 'bootstrap.rtl', 'bootstrap.icons', 'select2', 'jalalidatepicker', 'swiper' ],
         ZBA_VERSION
     );
 
     wp_enqueue_script(
         'zba_js',
         ZBA_JS . 'public.js',
-        [ 'jquery', 'bootstrap', 'select2', 'jalalidatepicker' ],
+        [ 'jquery', 'bootstrap', 'select2', 'jalalidatepicker', 'swiper' ],
         ZBA_VERSION,
         true
     );
