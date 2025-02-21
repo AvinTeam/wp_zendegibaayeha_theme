@@ -1,6 +1,6 @@
 <?php wp_footer()?>
-<footer class="mt-5 ">
-    <div class="top-footer">
+<footer>
+    <div class="top-footer pt-5">
         <div
             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-5">
             <img src="<?php echo zba_image('footer-logo.svg') ?>">

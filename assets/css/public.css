@@ -346,10 +346,6 @@ footer .copyright a {
 }
 
 
-
-
-
-
 .next-slider .deck {
   width: 75%;
   color: #7B8298;
@@ -538,6 +534,20 @@ footer .copyright a {
 
 
 
+
+
+@media (max-width: 900px) {
+
+  .next-slider .deck {
+    width: 100%;
+  }
+  .mpgallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+
 @media (max-width: 768px) {
 
 
@@ -555,6 +565,10 @@ footer .copyright a {
     height: 350px;
   }
 
+  .next-slider .deck {
+    width: 100%;
+  }
+
 
 }
 
@@ -567,10 +581,6 @@ footer .copyright a {
 
   }
 
-
-  .next-slider .deck {
-    width: 100%;
-  }
 
 }
 
