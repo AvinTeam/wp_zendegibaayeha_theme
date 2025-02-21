@@ -1,8 +1,8 @@
 <div class="zba-media">
     <div style="height: 300px;"></div>
     <div class="mx-auto zba-row">
-        <h3 class="text-primary fw-900 text-center" style="font-size: 28px;">چند رسانه ای</h3>
-        <p class="text-white text-center" style="font-size: 21px;">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
+        <h3 class="text-primary fw-900 text-center f-28px">چند رسانه ای</h3>
+        <p class="text-white text-center f-21px" >فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
         <?php
 
             $parent_category_slug = 'media';                                                // اسلاگ دسته والد

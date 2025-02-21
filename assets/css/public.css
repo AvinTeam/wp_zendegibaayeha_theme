@@ -294,6 +294,15 @@ a {
   font-size: 17px !important;
 }
 
+.f-21px {
+  font-size: 21px !important;
+}
+
+
+.f-28px {
+  font-size: 28px !important;
+}
+
 .f-40px {
   font-size: 40px !important;
 }
@@ -347,16 +356,10 @@ footer .copyright a {
   font-size: 24px;
 }
 
-
 .zba-media {
   background: rgb(119, 212, 214);
   background: linear-gradient(180deg, rgba(119, 212, 214, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
-
-
-
-
-
 
 .mpcontainer {
   max-width: 1200px;
@@ -382,7 +385,6 @@ footer .copyright a {
   border: none;
   background: #FFFFFF;
   border-radius: 10px;
-
 }
 
 .mpcategory.mpactive,
@@ -476,6 +478,7 @@ footer .copyright a {
   padding-bottom: 70px;
 }
 
+.zba-ayeha .swiper-pagination-bullet,
 .mySwiper .swiper-pagination-bullet,
 .supportersSwiper .swiper-pagination-bullet {
   width: 21px;
@@ -490,6 +493,48 @@ footer .copyright a {
 }
 
 
+.zba-ayeha{
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(217,225,251,1) 100%);
+}
+
+
+.ayeh-swiper {
+  width: 90%;
+  height: 400px;
+}
+
+.ayeh-swiper .swiper-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.ayeh-swiper .swiper-slide img {
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+/* اسلایدهای غیر فعال کوچک‌تر و کم‌رنگ‌تر باشند */
+.ayeh-swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+
+/* دکمه‌های ناوبری */
+.ayeh-swiper .swiper-button-prev,
+.ayeh-swiper .swiper-button-next {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.ayeh-swiper .swiper-button-prev::after,
+.ayeh-swiper .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
 
 
 
@@ -505,6 +550,10 @@ footer .copyright a {
     font-size: 15px;
   }
 
+  .ayeh-swiper .ayeh-swiper {
+    width: 95%;
+    height: 350px;
+  }
 
 
 }

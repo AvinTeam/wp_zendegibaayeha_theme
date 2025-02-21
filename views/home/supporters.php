@@ -1,7 +1,7 @@
 <div class="supporters text-primary text-center d-flex flex-column justify-content-around align-items-center pt-3">
     <div>
-        <h2 class="fw-900" style="font-size: 28px;">حامیان پویش</h2>
-        <p style="font-size: 21px; ">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
+        <h2 class="fw-900 f-28px">حامیان پویش</h2>
+        <p class="f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
     </div>
 
     <div class="swiper supportersSwiper w-100 zba-row mx-auto" style="padding-bottom: 70px;">

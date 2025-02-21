@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 spaceBetween: 10,
             },
             1920: {
-                slidesPerView:4,
+                slidesPerView: 4,
                 spaceBetween: 10,
             },
         },
@@ -127,9 +127,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 spaceBetween: 10,
             },
             1920: {
-                slidesPerView:6,
+                slidesPerView: 6,
                 spaceBetween: 10,
             },
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    new Swiper('.ayeh-swiper', {
+        slidesPerView: 2.5, // نمایش ۲.۵ اسلاید در دسکتاپ
+        centeredSlides: true,
+        loop: true,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 50,
+            depth: 150,
+            modifier: 1,
+            slideShadows: false,
+        },
+        breakpoints: {
+            1000: { slidesPerView: 2.5 },
+            0: { slidesPerView: 1 } // در موبایل فقط ۱ اسلاید
         },
         pagination: {
             el: ".swiper-pagination",
@@ -174,6 +202,7 @@ jQuery(document).ready(function ($) {
 
 
     $(".mpcategories button").on("click", function () {
+
         $(".mpcategories button").removeClass("mpactive");
         $(this).addClass("mpactive");
 
@@ -196,6 +225,71 @@ jQuery(document).ready(function ($) {
             allItems.hide();
             uniqueCategoryItems.slice(0, 8).show();
         }
+    });
+
+
+
+    function gotoNumStyle1(type, id) {
+
+        let slides = document.querySelectorAll("#mr_aparat_" + id + " .ma_item");
+
+        let mrAparatActiveId = $('#mr_aparat_' + id + ' #mr_aparat_style_1 .active').attr('id').split("mr_aparat_view_");
+
+        let current = mrAparatActiveId[1];
+
+        let prevn = 0;
+        let nextn = 0;
+
+
+        if (type == 'next') {
+            current++;
+
+            if (current == slides.length) { current = 0; }
+            if (current == 0) { prevn = slides.length - 1 } else { prevn = current - 1; }
+            if (current == slides.length - 1) { nextn = 0 } else { nextn = current + 1; }
+        }
+
+
+        if (type == 'prev') {
+            current--;
+
+            if (current == -1) { current = slides.length - 1; }
+            if (current == 0) { prevn = slides.length - 1 } else { prevn = current - 1; }
+            if (current == slides.length - 1) { nextn = 0 } else { nextn = current + 1; }
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+            slides[i].classList.remove("prev");
+            slides[i].classList.remove("next");
+        }
+
+        slides[current].classList.add("active");
+        slides[prevn].classList.add("prev");
+        slides[nextn].classList.add("next");
+
+    };
+
+    $('.ma_btm_next').click(function (e) {
+
+
+        let mrAparatId = $(this).parent().attr('id').split("button-container_");
+
+        gotoNumStyle1('next', mrAparatId[1])
+
+        e.preventDefault();
+
+    });
+
+
+    $('.ma_btm_prev').click(function (e) {
+
+        let mrAparatId = $(this).parent().attr('id').split("button-container_");
+
+        gotoNumStyle1('prev', mrAparatId[1])
+
+        e.preventDefault();
+
     });
 
 
