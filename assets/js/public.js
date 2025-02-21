@@ -98,6 +98,44 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
     });
+    new Swiper(".supportersSwiper", {
+        spaceBetween: 10,
+        freeMode: true,
+        grabCursor: true,
+        loop: true,
+        pagination: true,
+        paginationClickable: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            576: {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            },
+            1280: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+            },
+            1920: {
+                slidesPerView:6,
+                spaceBetween: 10,
+            },
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 });
 jQuery(document).ready(function ($) {
 

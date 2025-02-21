@@ -473,14 +473,21 @@ footer .copyright a {
 }
 
 .mySwiper .swiper-wrapper {
-  height: 530px;
+  padding-bottom: 70px;
 }
 
-.mySwiper .swiper-pagination-bullet {
+.mySwiper .swiper-pagination-bullet,
+.supportersSwiper .swiper-pagination-bullet {
   width: 21px;
   height: 21px;
 }
 
+
+.supporters {
+  height: 500px;
+  background-image: url('../image/supporters.png');
+
+}
 
 
 

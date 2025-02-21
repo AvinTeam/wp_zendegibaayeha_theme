@@ -20,7 +20,7 @@
             <div class="swiper-slide">
                 <div class="news-item p-2">
                     <a href="<?php echo get_permalink() ?>">
-                        <img width="25%" height="260px"
+                        <img height="260px"
                             src="<?php echo(has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '' ?>"
                             class="card-img-top rounded shadow" alt="<?php echo get_the_title() ?>">
                     </a>
