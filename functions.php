@@ -30,9 +30,9 @@ require_once ZBA_INCLUDES . '/jdf.php';
 
 require_once ZBA_CLASS . '/ZBADB.php';
 require_once ZBA_CLASS . '/ZBAOption.php';
+require_once ZBA_INCLUDES . '/meta_boxs.php';
 
 // require_once ZBA_INCLUDES . '/postype.php';
-// require_once ZBA_INCLUDES . '/meta_boxs.php';
 // require_once ZBA_CLASS . '/Iran_Area.php';
 // require_once ZBA_INCLUDES . '/init_user_submit.php';
 

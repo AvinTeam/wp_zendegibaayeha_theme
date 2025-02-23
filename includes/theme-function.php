@@ -175,3 +175,16 @@ function generate_uuid()
         mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
     );
 }
+
+function linktocode($input)
+{
+    if (preg_match('/^[a-zA-Z0-9]+$/', $input)) {
+        return $input; // ورودی همان کد است
+    }
+
+    if (preg_match('/aparat\.com\/v\/([a-zA-Z0-9]+)/', $input, $matches)) {
+        return $matches[ 1 ]; // کد ویدیو را برگردان
+    }
+
+    return null;
+}

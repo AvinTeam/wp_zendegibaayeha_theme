@@ -307,7 +307,6 @@ a {
   font-size: 40px !important;
 }
 
-
 header nav .navbar-nav .fw-bolder {
   color: #ADB5CC !important;
   font-size: 16px;
@@ -315,6 +314,10 @@ header nav .navbar-nav .fw-bolder {
 
 header nav .navbar-nav .fw-bolder.active {
   color: var(--primary-color) !important;
+}
+
+header .logo {
+  height: 100px;
 }
 
 .head-cart {
@@ -470,13 +473,11 @@ footer .copyright a {
   background-size: cover;
 }
 
-.mySwiper .swiper-wrapper {
+.swiper-wrapper {
   padding-bottom: 70px;
 }
 
-.zba-ayeha .swiper-pagination-bullet,
-.mySwiper .swiper-pagination-bullet,
-.supportersSwiper .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   width: 21px;
   height: 21px;
 }
@@ -489,9 +490,9 @@ footer .copyright a {
 }
 
 
-.zba-ayeha{
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(217,225,251,1) 100%);
+.zba-ayeha {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(217, 225, 251, 1) 100%);
 }
 
 
@@ -516,6 +517,8 @@ footer .copyright a {
 }
 
 /* دکمه‌های ناوبری */
+.sliderSwiper .swiper-button-prev,
+.sliderSwiper .swiper-button-next,
 .ayeh-swiper .swiper-button-prev,
 .ayeh-swiper .swiper-button-next {
   color: #fff;
@@ -526,11 +529,43 @@ footer .copyright a {
   height: 40px;
 }
 
+.sliderSwiper .swiper-button-prev::after,
+.sliderSwiper .swiper-button-next::after,
 .ayeh-swiper .swiper-button-prev::after,
 .ayeh-swiper .swiper-button-next::after {
   font-size: 16px;
   font-weight: bold;
 }
+
+
+#slider-app {
+  background-image: url('../image/slider1.png');
+  height: 704px;
+  background-repeat: no-repeat;
+}
+
+#slider-app span {
+  font-size: 19px;
+}
+
+
+#slider-app .btn {
+  border-radius: 10px;
+  width: 130px;
+}
+
+
+.btn-gradient,
+.zba-header-post {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #393C97 0%, #37BEC1 100%) !important;
+
+}
+
+.zba-content-post-image {
+  width: 50%;
+}
+
 
 
 
@@ -541,24 +576,29 @@ footer .copyright a {
   .next-slider .deck {
     width: 100%;
   }
+
   .mpgallery {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+
+  #slider-app {
+    height: 400px;
+  }
+
+  header .logo {
+    height: 70px;
+  }
+
+  .zba-content-post-image {
+    width: 80%;
+  }
+
+
 }
 
 
 @media (max-width: 768px) {
-
-
-  * {
-    font-size: 13px;
-  }
-
-
-  h5 {
-    font-size: 15px;
-  }
 
   .ayeh-swiper .ayeh-swiper {
     width: 95%;
@@ -570,6 +610,13 @@ footer .copyright a {
   }
 
 
+  #slider-app {
+    height: 217px;
+  }
+  .zba-content-post-image {
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -580,6 +627,17 @@ footer .copyright a {
     right: -55px;
 
   }
+
+  #slider-app {
+    height: 217px;
+  }
+
+
+  header .logo {
+    height: 50px;
+  }
+
+
 
 
 }

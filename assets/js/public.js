@@ -3,6 +3,37 @@ jalaliDatepicker.startWatch({
     maxDate: "attr"
 });
 
+// آرایه‌های مربوط به اعداد
+const western = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+const arabic = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+
+// تابع تبدیل اعداد در متن
+function convertNumbers(text) {
+    western.forEach((digit, index) => {
+        text = text.replace(new RegExp(digit, 'g'), persian[index]);
+    });
+    arabic.forEach((digit, index) => {
+        text = text.replace(new RegExp(digit, 'g'), persian[index]);
+    });
+    return text;
+}
+
+// تابعی برای پیمایش در نودهای DOM و تغییر فقط نودهای متنی
+function traverseAndConvert(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+        // تغییر متن نود
+        node.nodeValue = convertNumbers(node.nodeValue);
+    } else {
+        // پیمایش در نودهای فرزند
+        node.childNodes.forEach(child => traverseAndConvert(child));
+    }
+}
+
+// اجرای تابع روی کل body صفحه
+traverseAndConvert(document.body);
+
+
 
 function startLoading() {
     var overlay = document.getElementById("overlay");
@@ -60,6 +91,25 @@ function notificator(text) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    new Swiper(".sliderSwiper", {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        freeMode: true,
+        grabCursor: true,
+        loop: true,
+        pagination: true,
+        paginationClickable: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
     new Swiper(".mySwiper", {
         spaceBetween: 10,
         freeMode: true,
@@ -98,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
     });
-    
+
     new Swiper(".supportersSwiper", {
         spaceBetween: 10,
         freeMode: true,
@@ -204,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
     });
+
 });
 jQuery(document).ready(function ($) {
 

@@ -1,11 +1,85 @@
 <?php get_header(); ?>
 
-<img class="w-100" src="<?php echo zba_image('slider.png') ?>">
-<div class="next-slider position-relative  overflow-hidden">
 
+
+
+
+<div class="zba_slider text-primary d-flex flex-column justify-content-around align-items-center">
+
+    <div class="swiper sliderSwiper w-100">
+        <div class="swiper-wrapper">
+            <!-- 
+            <div class="swiper-slide">
+                <div id="slider-app" class="position-relative">
+                    <div class="position-absolute z-3 p-3">
+                        <h2 class="f-40px fw-900">اپلیکیشن زندگی با آیه ها</h2>
+                        <span>اینجا می‌خواهیم حدود 200 آیه را با هم بخوانیم، بفهمیم، حفظ کنیم و
+                            با آن‌ها زندگی کنیم</span>
+                        <span> همراه با هدایای مادی و معنوی، کمک هزینه حج عمره، عتبات، ..مشهد
+                            مقدس و هزاران هدیه دیگر</span>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-warning text-white mx-1" style="background-color: #FFA200; ">توضیحات
+                                بیشتر</a>
+                            <a href="#" class="btn btn-success text-white mx-1" style="background-color: #73C259;">دانلود</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div> -->
+
+
+
+
+
+
+            <div class="swiper-slide">
+                <div id="slider-app" class="position-relative d-flex flex-row justify-content-center align-items-center">
+
+                    <div class="col-5 d-none d-lg-block">
+
+                    </div>
+                    <div class="col-12 col-lg-4  p-3">
+                        <h2 class="f-40px fw-900">اپلیکیشن زندگی با آیه ها</h2>
+                        <span>اینجا می‌خواهیم حدود 200 آیه را با هم بخوانیم، بفهمیم، حفظ کنیم و
+                            با آن‌ها زندگی کنیم</span>
+                        <span> همراه با هدایای مادی و معنوی، کمک هزینه حج عمره، عتبات، ..مشهد
+                            مقدس و هزاران هدیه دیگر</span>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-warning text-white mx-1"
+                                style="background-color: #FFA200; ">توضیحات
+                                بیشتر</a>
+                            <a href="#" class="btn btn-success text-white mx-1"
+                                style="background-color: #73C259;">دانلود</a>
+                        </div>
+                    </div>
+
+                    <div class="col-3 d-none d-lg-block">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+</div>
+
+<div class="next-slider position-relative  overflow-hidden">
     <div class="zba-row mx-auto my-3 py-5">
-        <div class="d-flex flex-column flex-md-row gap-3 justify-content-around align-items-center text-white">
-            <div class="col-12 col-md-4 rounded-3 position-relative  overflow-hidden"
+        <div class="d-flex flex-column flex-lg-row gap-3 justify-content-around align-items-center text-white">
+            <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
                 style="background-color: #FFCE5B;">
                 <div
                     class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
@@ -16,7 +90,7 @@
                     </div>
                     <div class="py-4">
                         <h3 class="fw-900">آیات تابستانه</h3>
-                        <p class="f-17px"><?php echo zba_to_persian('10 فراز قرآنی متناسب با مناسبت های تابستان') ?></p>
+                        <p class="f-17px">10 فراز قرآنی متناسب با مناسبت های تابستان</p>
                         <a href="#" style="background-color: #FFA200;"
                             class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
 
@@ -25,7 +99,7 @@
                 <img class="position-absolute head-cart" src="<?php echo zba_image('tabestan1.png') ?>">
             </div>
 
-            <div class="col-12 col-md-4 rounded-3 position-relative  overflow-hidden"
+            <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
                 style="background-color: #DBBBE8;">
                 <div
                     class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
@@ -35,7 +109,7 @@
                     <div class="py-4">
                         <h3 class="fw-900">گام اول برای
                             دانش آموزان ابتدایی</h3>
-                        <p class="f-17px"><?php echo zba_to_persian('10 فراز قرآنی متناسب با مناسبت های تابستان') ?></p>
+                        <p class="f-17px">10 فراز قرآنی متناسب با مناسبت های تابستان</p>
                         <a href="#" style="background-color: #FFA200;"
                             class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
                     </div>
@@ -43,7 +117,7 @@
                 <img class="position-absolute head-cart" src="<?php echo zba_image('student1.png') ?>">
             </div>
 
-            <div class="col-12 col-md-4 rounded-3 position-relative  overflow-hidden"
+            <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
                 style="background-color: #77D4D6;">
                 <div
                     class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
@@ -52,7 +126,7 @@
                     </div>
                     <div class="py-4">
                         <h3 class="fw-900">آیات کرامت</h3>
-                        <p class="f-17px"><?php echo zba_to_persian('حفظ و فهم 7 فراز متناسب با دهه کرامت') ?></p>
+                        <p class="f-17px">حفظ و فهم 7 فراز متناسب با دهه کرامت</p>
                         <a href="#" style="background-color: #FFA200;"
                             class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
                     </div>
@@ -87,40 +161,35 @@
 
                 <div class="row row-cols-2">
                     <a href="https://ayeh.tv/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('tv.png')?>">
+                        <img class="w-100" src="<?php echo zba_image('tv.png') ?>">
                     </a>
 
                     <a href="https://ayeh.net/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('net.png')?>">
+                        <img class="w-100" src="<?php echo zba_image('net.png') ?>">
                     </a>
 
                     <a href="https://ayeh.online/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('online.png')?>">
+                        <img class="w-100" src="<?php echo zba_image('online.png') ?>">
                     </a>
 
                     <a href="https://ayeh.info/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('info.png')?>">
+                        <img class="w-100" src="<?php echo zba_image('info.png') ?>">
                     </a>
-
-
-
                 </div>
 
             </div>
-            <div class="col-12 col-md-4 mt-3 mt-gl-0 ">
+            <div class="col-12 col-lg-4 mt-3 mt-gl-0 ">
                 <div class="w-75 mx-auto text-center">
                     <img class="w-50" src="<?php echo zba_image('zba-logo.png') ?>">
                     <p class="f-40px fw-900 text-white">مجمـوعه مسابقــات
                         زندگی با آیه ها</p>
                 </div>
             </div>
-
-
         </div>
     </div>
 
     <img class="position-absolute" style="width: 1087px;  left: -143px;  bottom: -88px;"
-        src="<?php echo zba_image('next-slider.png')?>">
+        src="<?php echo zba_image('next-slider.png') ?>">
 
     <div style="height: 300px;"></div>
 
@@ -134,7 +203,7 @@
             <h2 class="fw-900 f-28px">جوایز و برندگان </h2>
             <p class="f-21px" style="color: #C7CEE2;">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
         </div>
-        <div class="swiper giftSwiper w-100 zba-row mx-auto" style="padding-bottom: 70px;">
+        <div class="swiper giftSwiper w-100 zba-row mx-auto">
             <div class="swiper-wrapper f-21px" style="color: #9BA1B2;">
 
                 <div class="swiper-slide">
@@ -251,7 +320,6 @@
     </div>
 </div>
 
-
 <div
     class="zba-ayeha text-primary text-center d-flex flex-column justify-content-center align-items-center h-100 py-5 ">
     <h2 class="fw-900 f-28px"> برای مسابقه کدام آیه ها را باید بخوانم؟ </h2>
@@ -270,7 +338,6 @@
             <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="w-100"
                     src="<?php echo zba_image('ayeh.png') ?>" alt="5"></div>
         </div>
-        <!-- دکمه‌های قبل و بعد -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-pagination"></div>
@@ -330,6 +397,37 @@
     </div>
 </div>
 
+
+<div class="supporters text-primary text-center d-flex flex-column justify-content-around align-items-center pt-3">
+    <div>
+        <h2 class="fw-900 f-28px">حامیان پویش</h2>
+        <p class="f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
+    </div>
+
+    <div class="swiper supportersSwiper w-100 zba-row mx-auto">
+        <div class="swiper-wrapper">
+            <?php
+
+                $array = glob(ZBA_PATH . 'assets/image/supporters/*');
+
+                foreach ($array as $x) {
+
+                    $next = explode('/', $x);
+
+                if (! end($next)) {continue;}?>
+
+            <div class="swiper-slide">
+                <img src="<?php echo zba_image('supporters/' . end($next)) ?>" class="card-img-top rounded shadow">
+            </div>
+
+            <?php }
+            ?>
+        </div>
+        <div class=" swiper-pagination"></div>
+    </div>
+
+
+</div>
 
 
 
