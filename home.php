@@ -315,7 +315,7 @@
 
         ?>
 
-        <div class="text-center w-100 my-5"><a class="btn btn-secondary">دیدین بیشتر</a></div>
+        <div class="text-center w-100 my-5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/category/media/" class="btn btn-secondary">دیدین بیشتر</a></div>
 
     </div>
 </div>
