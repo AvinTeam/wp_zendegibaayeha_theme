@@ -39,7 +39,7 @@
                     ?>
 
                     <div class="d-flex flex-row justify-content-center align-items-center gap-3 text-primary">
-                        <button class="btn text-primary"><i class="bi bi-search"></i></button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search text-primary"></i></button>
                         <span>|</span>
                         <a href="tel:02191079321 " class="btn btn-tel" style="width: 150px !important;">
                             <span><?php echo zba_to_persian('02191079321-5') ?></span>

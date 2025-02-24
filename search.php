@@ -1,23 +1,16 @@
-<?php get_header(); ?>
-
+<?php
+    /**
+     * Template Name: Search Results
+     *
+     * این فایل برای نمایش نتایج جستجو در قالب شماست.
+     */
+    get_header();
+?>
 <div class="zba-header-post text-center py-5">
-    <div class="container d-flex flex-row justify-content-between align-items-center">
-
-
-        <h1 style="font-size: 34px; " class="text-white fw-900"><?php the_archive_title(); ?></h1>
-
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item text-white"><a class=" text-white" href="<?php echo home_url(); ?>">خانه</a>
-                </li>
-                <li class="breadcrumb-item text-white-50 active" aria-current="page"><?php the_archive_title(); ?></li>
-            </ol>
-        </nav>
+    <div class="container d-flex flex-row justify-content-start align-items-center">
+        <h1 style="font-size: 34px; " class="text-white fw-900">نتایج جستجو برای: <?php echo get_search_query(); ?></h1>
     </div>
 </div>
-
-
-
 
 
 
@@ -86,5 +79,6 @@
                 }
             ?>
 </div>
+
 
 <?php get_footer(); ?>
