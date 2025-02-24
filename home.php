@@ -77,7 +77,7 @@
 </div>
 
 <div class="next-slider position-relative  overflow-hidden">
-    <div class="zba-row mx-auto my-3 py-5">
+    <div class="container my-3 py-5">
         <div class="d-flex flex-column flex-lg-row gap-3 justify-content-around align-items-center text-white">
             <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
                 style="background-color: #FFCE5B;">
@@ -143,7 +143,7 @@
 
     <div class="py-5 position-relative z-3">
 
-        <div class="zba-row mx-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">
+        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
 
             <div class="col-12 col-lg-6">
                 <div class="d-flex flex-row justify-content-start align-items-center gap-2" style="height: 52px;">
@@ -198,12 +198,12 @@
 
 <div style="margin: -300px 0; position: relative;">
     <div style="height: 600px;  border-radius: 54px;"
-        class="zba-row mx-auto bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
+        class="container bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
         <div>
             <h2 class="fw-900 f-28px">جوایز و برندگان </h2>
             <p class="f-21px" style="color: #C7CEE2;">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
         </div>
-        <div class="swiper giftSwiper w-100 zba-row mx-auto">
+        <div class="swiper giftSwiper w-100 container">
             <div class="swiper-wrapper f-21px" style="color: #9BA1B2;">
 
                 <div class="swiper-slide">
@@ -245,7 +245,7 @@
 
 <div class="zba-media">
     <div style="height: 350px;"></div>
-    <div class="mx-auto zba-row">
+    <div class="mx-auto container">
         <h3 class="text-primary fw-900 text-center f-28px">چند رسانه ای</h3>
         <p class="text-white text-center f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
         <?php
@@ -350,7 +350,7 @@
     <h2 class="fw-900 f-28px">اخبار زندگی با آیه ها</h2>
     <p class="f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
 
-    <div class="swiper mySwiper w-100 zba-row mx-auto">
+    <div class="swiper mySwiper w-100 container">
         <div class="swiper-wrapper">
             <?php
                 $args = [
@@ -404,7 +404,7 @@
         <p class="f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
     </div>
 
-    <div class="swiper supportersSwiper w-100 zba-row mx-auto">
+    <div class="swiper supportersSwiper w-100 container">
         <div class="swiper-wrapper">
             <?php
 

@@ -162,10 +162,6 @@ a {
   text-align: justify;
 }
 
-.zba-row {
-  width: 85% !important;
-}
-
 .btn-primary,
 .btn-primary:active {
   background: var(--primary-color) !important;
@@ -671,7 +667,9 @@ footer .copyright a {
   .zba-content-post-image {
     width: 100%;
   }
-
+.f-40px {
+  font-size: 30px !important;
+}
 }
 
 @media (max-width: 576px) {

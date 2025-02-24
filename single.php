@@ -35,7 +35,7 @@
 </div>
 
 <div>
-    <div class="zba-row mx-auto d-flex flex-column justify-content-center align-items-center gap-5">
+    <div class="container d-flex flex-column justify-content-center align-items-center gap-5">
 
         <div class="zba-content-post">
             <div

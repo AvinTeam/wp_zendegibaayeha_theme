@@ -32,7 +32,7 @@ if (isset($_FILES[ 'zba_exel_ayeh' ]) && $_FILES[ 'zba_exel_ayeh' ][ 'error' ] =
                 <div class="py-5 zba-page-ayeha ">
                     <div class="container d-flex flex-column">
                             <p class="mb-5"><span class="bg-success p-3 text-white f-17px rounded  ">' . $row[ 'A' ] . '</span></p>
-                            <p class="zba_ayeh text-primary fw-900 f-40px  text-justify">' . $row[ 'B' ] . '</p>
+                            <p class="zba_ayeh text-primary fw-900 f-40px  text-justify lh-lg">' . $row[ 'B' ] . '</p>
 
 
                             <div class="ayeh-address d-flex align-items-center flex-row-reverse"><span class="pe-3 text-primary">' . $row[ 'D' ] . '</span>

@@ -2,7 +2,7 @@
 <footer>
     <div class="top-footer pt-5">
         <div
-            class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-5">
+            class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center container py-5">
             <img src="<?php echo zba_image('footer-logo.svg') ?>">
             <div class="w-50"></div>
             <div>
@@ -14,7 +14,7 @@
     </div>
     <div class="copyright">
         <div
-            class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-3">
+            class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center container py-3">
             <div>
                 <?php wp_nav_menu([
                         'theme_location' => 'footer-menu',

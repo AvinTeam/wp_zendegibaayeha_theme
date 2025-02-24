@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg zba-row mx-auto d-flex flex-row justify-content-between">
+        <nav class="navbar navbar-expand-lg container d-flex flex-row justify-content-between">
             <!-- لوگو در موبایل سمت راست -->
             <a class="navbar-brand" href="/">
                 <img class="w-100 logo " src="<?php echo zba_image('logo.svg') ?>">

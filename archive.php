@@ -6,13 +6,61 @@
 
         <h1 style="font-size: 34px; " class="text-white fw-900"><?php the_archive_title(); ?></h1>
 
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item text-white"><a class=" text-white" href="<?php echo home_url(); ?>">خانه</a>
                 </li>
                 <li class="breadcrumb-item text-white-50 active" aria-current="page"><?php the_archive_title(); ?></li>
             </ol>
-        </nav>
+        </nav> -->
+
+
+
+
+
+<?php
+
+$current_category = get_queried_object();
+
+echo '<nav aria-label="breadcrumb ">';
+echo '<ol class="breadcrumb m-0">';
+
+// لینک به صفحه اصلی
+echo '<li class="breadcrumb-item p-0"><a class=" text-white" href="' . home_url() . '">خانه</a></li>';
+
+// دریافت والدهای دسته به صورت آرایه (شناسه‌ها)
+$ancestors = get_ancestors( $current_category->term_id, 'category' );
+if ( $ancestors ) {
+    // آرایه والدها از ریشه به شاخه مرتب می‌شود
+    $ancestors = array_reverse( $ancestors );
+    foreach ( $ancestors as $ancestor_id ) {
+        $ancestor = get_category( $ancestor_id );
+        echo '<li class="breadcrumb-item  p-0"><a class=" text-white" href="' . esc_url( get_category_link( $ancestor_id ) ) . '">' . esc_html( $ancestor->name ) . '</a></li>';
+    }
+}
+
+// دسته فعلی به عنوان آیتم فعال
+echo '<li class="breadcrumb-item active text-white-50 p-0" aria-current="page">' . esc_html( $current_category->name ) . '</li>';
+echo '</ol>';
+echo '</nav>';
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 </div>
 
