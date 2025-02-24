@@ -567,9 +567,14 @@ footer .copyright a {
 }
 
 
+.archive-image{
+  height: 265px;
+}
 
+.zba-header-post .breadcrumb-item::before {
+color: #FFFFFF;
 
-
+}
 
 @media (max-width: 900px) {
 
