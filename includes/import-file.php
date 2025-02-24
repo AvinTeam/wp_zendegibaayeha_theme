@@ -1,29 +1,21 @@
 <?php
 
-use zbaclass\ZBADB;
 use PhpOffice\PhpSpreadsheet\IOFactory;
-
-$onidb = new ZBADB('question');
 
 $count_row = 0;
 
+$meta_value = '';
+
 // بررسی آپلود فایل
-if (isset($_FILES[ 'excel_file' ]) && $_FILES[ 'excel_file' ][ 'error' ] === UPLOAD_ERR_OK) {
-    $fileTmpPath   = $_FILES[ 'excel_file' ][ 'tmp_name' ];
-    $fileName      = $_FILES[ 'excel_file' ][ 'name' ];
+if (isset($_FILES[ 'zba_exel_ayeh' ]) && $_FILES[ 'zba_exel_ayeh' ][ 'error' ] === UPLOAD_ERR_OK) {
+    $fileTmpPath   = $_FILES[ 'zba_exel_ayeh' ][ 'tmp_name' ];
+    $fileName      = $_FILES[ 'zba_exel_ayeh' ][ 'name' ];
     $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
 
     // بررسی فرمت فایل
     $allowedExtensions = [ 'xls', 'xlsx' ];
     if (! in_array($fileExtension, $allowedExtensions)) {
         die("فرمت فایل پشتیبانی نمی‌شود. لطفاً یک فایل اکسل انتخاب کنید.");
-    }
-
-    // دریافت تطبیق ستون‌ها از کاربر
-    if (isset($_POST[ 'frm' ]) && ! empty($_POST[ 'frm' ])) {
-        $columnMapping = $_POST[ 'frm' ]; // کلید: ستون (مثلاً 'question' => 'A')
-    } else {
-        die("لطفاً ستون‌های مورد نظر را تطبیق دهید.");
     }
 
     try {
@@ -36,22 +28,22 @@ if (isset($_FILES[ 'excel_file' ]) && $_FILES[ 'excel_file' ][ 'error' ] === UPL
 
             if ($rowIndex === 1) {continue;}
 
-            $mappedRow = [  ];
-            foreach ($columnMapping as $key => $columnLetter) {
-                $value = "";
+            $meta_value .= '
+                <div class="py-5 zba-page-ayeha ">
+                    <div class="container d-flex flex-column">
+                            <p class="mb-5"><span class="bg-success p-3 text-white f-17px rounded  ">' . $row[ 'A' ] . '</span></p>
+                            <p class="zba_ayeh text-primary fw-900 f-40px  text-justify">' . $row[ 'B' ] . '</p>
 
-                if ($key == 'question') {$value = sanitize_textarea_field($row[ $columnLetter ]);}
-                if ($key == 'option1') {$value = sanitize_text_field($row[ $columnLetter ]);}
-                if ($key == 'option2') {$value = sanitize_text_field($row[ $columnLetter ]);}
-                if ($key == 'option3') {$value = sanitize_text_field($row[ $columnLetter ]);}
-                if ($key == 'option4') {$value = sanitize_text_field($row[ $columnLetter ]);}
-                if ($key == 'answer') {$value = (isset($row[ $columnLetter ])) ? absint($row[ $columnLetter ]) : 0;}
 
-                $mappedRow[ $key ] = $value ?? null; // مقدار ستون موردنظر
-            }
-            $insert_id = $onidb->insert($mappedRow);
+                            <div class="ayeh-address d-flex align-items-center flex-row-reverse"><span class="pe-3 text-primary">' . $row[ 'D' ] . '</span>
+                            </div>
 
-            $count_row++;
+                            <p class="f-17px py-3 text-justify">' . $row[ 'C' ] . '</p>
+
+                            <div class="w-100 divider-separator "></div>
+                    </div>
+                </div>
+            ';
 
         }
 

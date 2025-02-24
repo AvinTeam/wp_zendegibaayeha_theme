@@ -150,6 +150,10 @@
 
 }
 
+.zba_ayeh {
+  font-family: osmantaha;
+}
+
 a {
   text-decoration: none;
 }
@@ -567,13 +571,36 @@ footer .copyright a {
 }
 
 
-.archive-image{
+.archive-image {
   height: 265px;
 }
 
 .zba-header-post .breadcrumb-item::before {
-color: #FFFFFF;
+  color: #FFFFFF;
+}
 
+.zba-page-ayeha .ayeh-address:before {
+  display: block;
+  flex: 1 1 auto;
+  border-bottom: 1px solid rgba(119, 119, 119, .2);
+  content: "";
+}
+
+.zba-page-ayeha .bg-success {
+  background-color: #73C259 !important;
+  margin: 0 0 30px 0;
+  padding: 10px 25px 10px 25px;
+}
+
+.divider-separator {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url('../image/squared.svg');
+  mask-image: url('../image/squared.svg');
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-size: 20px 100%;
+  mask-size: 20px 100%;
+  min-height: 20px;
 }
 
 @media (max-width: 900px) {
@@ -618,6 +645,7 @@ color: #FFFFFF;
   #slider-app {
     height: 217px;
   }
+
   .zba-content-post-image {
     width: 100%;
   }
