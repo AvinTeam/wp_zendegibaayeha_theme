@@ -66,26 +66,31 @@ function append_metabox_to_page_content($post_id)
         return;
     }
 
+    $meta_value = '';
     if (isset($_FILES[ 'zba_exel_ayeh' ]) && ! empty($_FILES[ 'zba_exel_ayeh' ][ 'name' ])) {
-
-        $meta_value = '';
-
-        $post = get_post($post_id);
 
         include_once ZBA_INCLUDES . 'import-file.php';
 
-        $new_content = $post->post_content . "\n" . $meta_value;
+    } elseif (isset($_FILES[ 'zba_exel_winners' ]) && ! empty($_FILES[ 'zba_exel_winners' ][ 'name' ])) {
 
-        remove_action('save_post', 'append_metabox_to_page_content');
+        include_once ZBA_INCLUDES . 'import-winners.php';
 
-        wp_update_post([
-            'ID'           => $post_id,
-            'post_content' => $new_content,
-         ]);
-
-        // افزودن مجدد اکشن پس از به‌روزرسانی
-        add_action('save_post', 'append_metabox_to_page_content');
-
+    } else {
+        return;
     }
+
+    $post = get_post($post_id);
+
+    $new_content = $post->post_content . "\n" . $meta_value;
+
+    remove_action('save_post', 'append_metabox_to_page_content');
+
+    wp_update_post([
+        'ID'           => $post_id,
+        'post_content' => $new_content,
+     ]);
+
+    // افزودن مجدد اکشن پس از به‌روزرسانی
+    add_action('save_post', 'append_metabox_to_page_content');
 }
 add_action('save_post', 'append_metabox_to_page_content');

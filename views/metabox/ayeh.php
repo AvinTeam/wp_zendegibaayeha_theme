@@ -6,14 +6,17 @@
 <script>
 document.getElementById("post").enctype = "multipart/form-data";
 </script>
-<p>اکسل آیه ها</p>
-<div >
+<h3>اکسل آیه ها</h3>
+<div>
     <input name="zba_exel_ayeh" type="file" style="direction: ltr;" accept=".xlsx, .xls">
 </div>
+<hr>
+<p>یا</p>
 
-
-<p>اکسل برنده ها</p>
+<hr>
+<h3>اکسل برنده ها</h3>
 <div>
     <input name="zba_row_title" type="text" placeholder="عنوان سطر" class="regular-text">
-    <input name="zba_exel_ayeh" type="file" style="direction: ltr;" accept=".xlsx, .xls">
+    <br>
+    <input name="zba_exel_winners" type="file" style="direction: ltr;" accept=".xlsx, .xls">
 </div>
