@@ -40,9 +40,9 @@ if (is_admin()) {
     require_once ZBA_CLASS . '/List_Table.php';
     require_once ZBA_INCLUDES . '/menu.php';
     require_once ZBA_INCLUDES . '/install.php';
-//     require_once ZBA_INCLUDES . '/edit_column_institute.php';
-//
-//     require_once ZBA_INCLUDES . '/handle_download.php';
+    //     require_once ZBA_INCLUDES . '/edit_column_institute.php';
+    //
+    //     require_once ZBA_INCLUDES . '/handle_download.php';
 
 }
 

@@ -74,10 +74,7 @@ function zba_mask_mobile($mobile)
 {
     // بررسی طول شماره موبایل
     if (strlen($mobile) === 11) {
-        $lastFour = substr($mobile, -4); // گرفتن 4 رقم آخر
-
-        $masked = $lastFour . "*****" . substr($mobile, 0, 4);
-
+        $masked = substr($mobile, -3) . '****' . substr($mobile, 0, 4);
         return $masked;
     }
     return "شماره موبایل نامعتبر است.";

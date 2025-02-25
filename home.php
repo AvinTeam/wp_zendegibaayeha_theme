@@ -8,23 +8,6 @@
 
     <div class="swiper sliderSwiper w-100">
         <div class="swiper-wrapper">
-            <!-- 
-            <div class="swiper-slide">
-                <div id="slider-app" class="position-relative">
-                    <div class="position-absolute z-3 p-3">
-                        <h2 class="f-40px fw-900">اپلیکیشن زندگی با آیه ها</h2>
-                        <span>اینجا می‌خواهیم حدود 200 آیه را با هم بخوانیم، بفهمیم، حفظ کنیم و
-                            با آن‌ها زندگی کنیم</span>
-                        <span> همراه با هدایای مادی و معنوی، کمک هزینه حج عمره، عتبات، ..مشهد
-                            مقدس و هزاران هدیه دیگر</span>
-                        <div class="mt-3">
-                            <a href="#" class="btn btn-warning text-white mx-1" style="background-color: #FFA200; ">توضیحات
-                                بیشتر</a>
-                            <a href="#" class="btn btn-success text-white mx-1" style="background-color: #73C259;">دانلود</a>
-                        </div>
-                    </div>                    
-                </div>
-            </div> -->
 
 
 
@@ -60,6 +43,33 @@
 
 
 
+
+            <div class="swiper-slide">
+                <div id="slider-app" class="position-relative d-flex flex-row justify-content-center align-items-center">
+
+                    <div class="col-5 d-none d-lg-block">
+
+                    </div>
+                    <div class="col-12 col-lg-4  p-3">
+                        <h2 class="f-40px fw-900">اپلیکیشن زندگی با آیه ها</h2>
+                        <span>اینجا می‌خواهیم حدود 200 آیه را با هم بخوانیم، بفهمیم، حفظ کنیم و
+                            با آن‌ها زندگی کنیم</span>
+                        <span> همراه با هدایای مادی و معنوی، کمک هزینه حج عمره، عتبات، ..مشهد
+                            مقدس و هزاران هدیه دیگر</span>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-warning text-white mx-1"
+                                style="background-color: #FFA200; ">توضیحات
+                                بیشتر</a>
+                            <a href="#" class="btn btn-success text-white mx-1"
+                                style="background-color: #73C259;">دانلود</a>
+                        </div>
+                    </div>
+
+                    <div class="col-3 d-none d-lg-block">
+
+                    </div>
+                </div>
+            </div>
 
 
 
