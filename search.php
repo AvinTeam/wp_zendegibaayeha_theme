@@ -7,21 +7,21 @@
     get_header();
 ?>
 <div class="zba-header-post text-center py-5">
-    <div class="container d-flex flex-row justify-content-start align-items-center">
+    <div class="zba-row mx-auto d-flex flex-row justify-content-start align-items-center">
         <h1 style="font-size: 34px; " class="text-white fw-900">نتایج جستجو برای: <?php echo get_search_query(); ?></h1>
     </div>
 </div>
 
 
 
-<div class="container mt-4">
+<div class="zba-row mx-auto mt-4">
         <!-- لیست پست‌ها -->
-        <div class="container row row-cols-1 row-cols-lg-3 row-cols-md-2  ">
+        <div class="zba-row mx-auto row row-cols-1 row-cols-lg-3 row-cols-md-2  ">
             <?php if (have_posts()): ?>
             <?php while (have_posts()): the_post(); ?>
 
             <div class="col my-3 ">
-                <div class="bg-white rounded-3 d-flex flex-column  border border-1 border-primary-400 p-2 shadow">
+                <div class="bg-white rounded-3 d-flex flex-column border border-1 border-primary-400 p-2 shadow">
                     <a href="<?php the_permalink(); ?>"><img class="rounded-3 w-100 archive-image"
                             src="<?php echo(has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '' ?>"></a>
                     <div class="d-flex flex-row justify-content-between align-items-center">

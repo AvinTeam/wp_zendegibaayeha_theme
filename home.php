@@ -87,7 +87,7 @@
 </div>
 
 <div class="next-slider position-relative  overflow-hidden">
-    <div class="container my-3 py-5">
+    <div class="zba-row mx-auto my-3 py-5">
         <div class="d-flex flex-column flex-lg-row gap-3 justify-content-around align-items-center text-white">
             <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
                 style="background-color: #FFCE5B;">
@@ -148,12 +148,12 @@
 
     </div>
 
-    <div style="height: 100px;"></div>
+    <div class="d-none d-md-block" style="height: 100px;"></div>
 
 
-    <div class="py-5 position-relative z-3">
+    <div class="py-0 py-md-5 position-relative z-3">
 
-        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
+        <div class="zba-row mx-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">
 
             <div class="col-12 col-lg-6">
                 <div class="d-flex flex-row justify-content-start align-items-center gap-2" style="height: 52px;">
@@ -169,7 +169,7 @@
                 </p>
 
 
-                <div class="row row-cols-2">
+                <div class="row row-cols-1 row-cols-md-2">
                     <a href="https://ayeh.tv/" class="col">
                         <img class="w-100" src="<?php echo zba_image('tv.png') ?>">
                     </a>
@@ -208,7 +208,7 @@
 
 <div style="margin: -300px 0; position: relative;">
     <div style="height: 600px;  border-radius: 54px;"
-        class="container bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
+        class="zba-row mx-auto bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
         <div>
             <h2 class="fw-900 f-28px">جوایز و برندگان </h2>
             <p class="f-21px" style="color: #C7CEE2;">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
@@ -377,7 +377,7 @@
             <div class="swiper-slide">
                 <div class="news-item p-2">
                     <a href="<?php echo get_permalink() ?>">
-                        <img height="260px"
+                        <img style="height: 260px;"
                             src="<?php echo(has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '' ?>"
                             class="card-img-top rounded shadow" alt="<?php echo get_the_title() ?>">
                     </a>
