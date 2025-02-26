@@ -15,15 +15,10 @@
     <div class="copyright">
         <div
             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-3 gap-2 gap-md-0 text-center">
-            <div>
-                <?php wp_nav_menu([
-                        'theme_location' => 'footer-menu',
-                        'container'      => false,
-                        'menu_class'     => '',
-                        'depth'          => 2,
-                        'items_wrap'     => '%3$s', // فقط آیتم‌های منو
-                        'walker'         => new Footer_Menu_Walker(),
-                 ]); ?>
+            <div >
+                 <a class="mx-2" target="_blank" href="https://eitaa.com/joinchat/2527134304Ccdba67771f"><img src="<?php echo zba_image('eitaa.png')?>" alt="ایتا"></a>
+                 <a class="mx-2" target="_blank" href="https://ble.ir/join/BBTz8iGZLf"><img src="<?php echo zba_image('bale.png')?>" alt="بله"></a>
+                 <a class="mx-2" target="_blank" href="https://rubika.ir/zendegibaayeha"><img src="<?php echo zba_image('rubika.png')?>" alt="روبیکا"></a>
             </div>
             <div>Copyright © 2023 Zendegi ba ayeha. All rights reserved.</div>
         </div>
@@ -40,7 +35,7 @@
       </div>
       <div class="modal-body">
         <!-- فرم جستجو -->
-        <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+        <form action="<?php echo esc_url(home_url('/')); ?>" method="get">
           <div class="mb-3">
             <input type="text" name="s" class="form-control" id="s" placeholder="متن جستجو" value="<?php echo get_search_query(); ?>">
           </div>

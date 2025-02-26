@@ -15,7 +15,8 @@
 
 
             <div class="swiper-slide">
-                <div id="slider-app" class="position-relative d-flex flex-row justify-content-center align-items-center">
+                <div id="slider-app"
+                    class="position-relative d-flex flex-row justify-content-center align-items-center">
 
                     <div class="col-5 d-none d-lg-block">
 
@@ -45,7 +46,8 @@
 
 
             <div class="swiper-slide">
-                <div id="slider-app" class="position-relative d-flex flex-row justify-content-center align-items-center">
+                <div id="slider-app"
+                    class="position-relative d-flex flex-row justify-content-center align-items-center">
 
                     <div class="col-5 d-none d-lg-block">
 
@@ -169,21 +171,48 @@
                 </p>
 
 
-                <div class="row row-cols-1 row-cols-md-2">
-                    <a href="https://ayeh.tv/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('tv.png') ?>">
+                <div class="row row-cols-1 row-cols-md-2 justify-content-around row-gap-2 all-match ">
+
+
+                    <a href="https://ayeh.tv/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                        <div class="w-25 text-center"><img class="all-match-img"
+                                src="<?php echo zba_image('tv.svg') ?>">
+                        </div>
+                        <span class=" w-75 text-center text-primary f-22px fw-900">مسابقات تلویزیونی</span>
                     </a>
 
-                    <a href="https://ayeh.net/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('net.png') ?>">
+                    <a href="https://ayeh.net/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                        <div class="w-25 text-center"><img class="all-match-img"
+                                src="<?php echo zba_image('group.svg') ?>"></div>
+                        <span class=" w-75 text-center text-primary f-22px fw-900">مسابقه گروهی</span>
                     </a>
 
-                    <a href="https://ayeh.online/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('online.png') ?>">
+
+                    <a href="https://ayeh.online/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                        <div class="w-25 text-center"><img class="all-match-img"
+                                src="<?php echo zba_image('oni.svg') ?>">
+                        </div>
+                        <span class=" w-75 text-center text-primary f-22px fw-900">مسابقات لحظه ای</span>
                     </a>
 
-                    <a href="https://ayeh.info/" class="col">
-                        <img class="w-100" src="<?php echo zba_image('info.png') ?>">
+                    <a href="https://ayeh.info/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                        <div class="w-25 text-center"><img class="all-match-img"
+                                src="<?php echo zba_image('qu.svg') ?>"></div>
+                        <span class=" w-75 text-center text-primary f-22px fw-900">آزمون زندگی با آیه ها</span>
+                    </a>
+
+
+                    <a href="https://app.ayeh.net/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                        <div class="w-25 text-center"><img class="all-match-img"
+                                src="<?php echo zba_image('interneti.svg') ?>">
+                        </div>
+                        <span class=" w-75 text-center text-primary f-22px fw-900">مسابقه اینترنتی</span>
+                    </a>
+
+                    <a href="https://app.ayeh.net/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                        <div class="w-25 text-center"><img class="all-match-img"
+                                src="<?php echo zba_image('luck.svg') ?>"></div>
+                        <span class=" w-75 text-center text-primary f-22px fw-900">گردونه شانش</span>
                     </a>
                 </div>
 
@@ -211,39 +240,32 @@
         class="zba-row mx-auto bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
         <div>
             <h2 class="fw-900 f-28px">جوایز و برندگان </h2>
-            <p class="f-21px" style="color: #C7CEE2;">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
         </div>
         <div class="swiper giftSwiper w-100 container">
             <div class="swiper-wrapper f-21px" style="color: #9BA1B2;">
 
                 <div class="swiper-slide">
                     <img src="<?php echo zba_image('gift/haj.png') ?>" class="card-img-top rounded shadow">
-                    <p>حج عمره</p>
                 </div>
 
                 <div class="swiper-slide">
                     <img src="<?php echo zba_image('gift/karbala.png') ?>" class="card-img-top rounded shadow">
-                    <p>کربلای معلی</p>
                 </div>
 
                 <div class="swiper-slide">
                     <img src="<?php echo zba_image('gift/mashhad.png') ?>" class="card-img-top rounded shadow">
-                    <p>مشهد مقدس</p>
                 </div>
 
                 <div class="swiper-slide">
                     <img src="<?php echo zba_image('gift/laptop.png') ?>" class="card-img-top rounded shadow">
-                    <p>لپ تاب</p>
                 </div>
 
                 <div class="swiper-slide">
                     <img src="<?php echo zba_image('gift/tablet.png') ?>" class="card-img-top rounded shadow">
-                    <p>تبلت</p>
                 </div>
 
                 <div class="swiper-slide">
                     <img src="<?php echo zba_image('gift/earpad.png') ?>" class="card-img-top rounded shadow">
-                    <p>ایرپاد</p>
                 </div>
             </div>
             <div class=" swiper-pagination"></div>
@@ -325,7 +347,8 @@
 
         ?>
 
-        <div class="text-center w-100 my-5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/category/media/" class="btn btn-secondary">دیدین بیشتر</a></div>
+        <div class="text-center w-100 my-5"><a href="<?php echo esc_url(home_url('/')); ?>/category/media/"
+                class="btn btn-secondary">دیدین بیشتر</a></div>
 
     </div>
 </div>
@@ -358,7 +381,6 @@
 
 <div class="news text-white text-center d-flex flex-column justify-content-center align-items-center">
     <h2 class="fw-900 f-28px">اخبار زندگی با آیه ها</h2>
-    <p class="f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
 
     <div class="swiper mySwiper w-100 container">
         <div class="swiper-wrapper">
@@ -386,7 +408,7 @@
                             href="<?php echo get_permalink() ?>">
                             <?php echo get_the_title() ?>
                         </a>
-                        <p style="font-size: 14px;" class="text-justify"> <?php echo get_the_excerpt() ?></p>
+                        <p style="font-size: 14px;" class="text-justify">                                                                                                                                                   <?php echo get_the_excerpt() ?></p>
                         <a href="<?php echo get_permalink() ?>" style="background-color: #FFA200; width: 126px;"
                             class="btn btn-warning rounded-bottom-2 text-white ">توضیحات بیشتر</a>
                     </div>
@@ -411,7 +433,6 @@
 <div class="supporters text-primary text-center d-flex flex-column justify-content-around align-items-center pt-3">
     <div>
         <h2 class="fw-900 f-28px">حامیان پویش</h2>
-        <p class="f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>
     </div>
 
     <div class="swiper supportersSwiper w-100 container">

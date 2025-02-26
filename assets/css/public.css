@@ -310,6 +310,9 @@ a {
   font-size: 21px !important;
 }
 
+.f-22px {
+  font-size: 22px !important;
+}
 
 .f-28px {
   font-size: 28px !important;
@@ -319,8 +322,14 @@ a {
   font-size: 40px !important;
 }
 
+.h-108px{
+  height: 108px;
+}
 
 
+.w-395px{
+  width: 395px;
+}
 
 header nav .navbar-nav .fw-bolder {
   color: #ADB5CC !important;
@@ -332,7 +341,7 @@ header nav .navbar-nav .fw-bolder.active {
 }
 
 header .logo {
-  height: 100px;
+  height: 70px;
 }
 
 .head-cart {
@@ -626,6 +635,12 @@ footer .copyright a {
 .winner .mobile {
   width: 60%;
 }
+
+.all-match-img {
+  height: 70px !important;
+
+}
+
 
 @media (max-width: 900px) {
 

@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+
+
+?>
 
 <div class="zba-header-post text-center py-5">
     <div class="zba-row mx-auto d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">

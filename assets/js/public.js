@@ -108,6 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
     });
 
     new Swiper(".mySwiper", {
@@ -174,11 +178,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 spaceBetween: 10,
             },
             1280: {
-                slidesPerView: 6,
+                slidesPerView: 8,
                 spaceBetween: 10,
             },
             1920: {
-                slidesPerView: 6,
+                slidesPerView: 8,
                 spaceBetween: 10,
             },
         },
