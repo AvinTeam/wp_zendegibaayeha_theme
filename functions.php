@@ -2,7 +2,7 @@
 
 (defined('ABSPATH')) || exit;
 
-define('ZBA_VERSION', '1.0.11');
+define('ZBA_VERSION', '1.0.12');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -18,6 +18,12 @@ define('ZBA_JS', ZBA_ASSETS . 'js/');
 define('ZBA_IMAGE', ZBA_ASSETS . 'image/');
 define('ZBA_VENDOR', ZBA_ASSETS . 'vendor/');
 
+
+$clock_mr_setting = get_option('mr_setting_clock');
+
+define('ZBA_TIME_STAMP', $clock_mr_setting[ 'timestamp' ] * 60);
+
+
 require_once ZBA_PATH . 'vendor/autoload.php';
 
 require_once ZBA_CORE . '/accesses.php';
@@ -30,6 +36,8 @@ require_once ZBA_INCLUDES . '/init.php';
 require_once ZBA_INCLUDES . '/jdf.php';
 
 require_once ZBA_CLASS . '/ZBADB.php';
+require_once ZBA_CLASS . '/Mr_clock_List_Tabel.php';
+
 require_once ZBA_CLASS . '/ZBAOption.php';
 require_once ZBA_INCLUDES . '/meta_boxs.php';
 
@@ -47,6 +55,7 @@ if (is_admin()) {
 
 }
 
+
 if (isset($_GET[ 'test' ])) {
 
 
@@ -55,3 +64,33 @@ if (isset($_GET[ 'test' ])) {
     exit;
 
 }
+
+
+
+
+$results = get_option('mr_add_clock');
+
+if (is_array($results)) {
+
+    $err = $m = 0;
+
+    foreach ($results as $row) {
+
+        if (time() - ZBA_TIME_STAMP > $row[ 'ID' ]) {
+            unset($results[ $m ]);
+            $err = 1;
+        }
+        $m++;
+
+    }
+
+    if ($err == 1) {
+        sort($results);
+        update_option('mr_add_clock', $results);
+    }
+
+}
+
+
+
+

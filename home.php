@@ -1,7 +1,11 @@
-<?php get_header(); 
+<?php get_header();
 
+    require_once ZBA_VIEWS . 'home/slider.php';
 
-require_once ZBA_VIEWS . 'home/slider.php';
+    $clock_mr_setting = get_option('mr_setting_clock');
+
+    $setting_group = ($clock_mr_setting[ 'setting' ]) ? 1 : 0;
+    $setting_tv    = ($clock_mr_setting[ 'setting_tv' ]) ? 1 : 0;
 
 ?>
 
@@ -73,9 +77,6 @@ require_once ZBA_VIEWS . 'home/slider.php';
 
     </div>
 
-    <div class="d-none d-md-block" style="height: 100px;"></div>
-
-
     <div class="py-0 py-md-5 position-relative z-3">
 
         <div class="zba-row mx-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">
@@ -88,10 +89,8 @@ require_once ZBA_VIEWS . 'home/slider.php';
                     <h2 class="text-primary fw-900 m-0 f-40px">چطور در مسابقه شرکت کنم ؟ </h2>
                 </div>
 
-                <p class="text-justify mt-3 deck">
-                    هر هفته در سایت جایزه بارون مسابقات و چالش های فراوانی قرار داده می شود، شرکت کنندگان بصورت
-                    کاملا رایگان می توانند در این هر هفته در سایت جایزه بارون مسابقات و چالش های فراوانی
-                </p>
+                <p class="text-justify mt-3 deck">در پویش ملی "زندگی با آیه ها" به صورت روزانه مسابقه های متنوعی خواهیم
+                    داشت و به صورت روزانه به مخاطبان و برندگان جوایزی اهدا می شود.</p>
 
 
                 <div class="row row-cols-1 row-cols-md-2 justify-content-around row-gap-2 all-match ">
@@ -102,14 +101,21 @@ require_once ZBA_VIEWS . 'home/slider.php';
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('tv.svg') ?>">
                         </div>
-                        <span class=" w-75 text-center text-primary f-22px fw-900">مسابقات تلویزیونی</span>
+                        <div class=" w-75 text-center text-primary d-flex flex-column justify-content-around">
+                            <span class="f-22px fw-900">مسابقات تلویزیونی</span>
+                            <span id="mr_element"></span>
+                        </div>
                     </a>
 
                     <a href="https://ayeh.net/"
                         class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('group.svg') ?>"></div>
-                        <span class=" w-75 text-center text-primary f-22px fw-900">مسابقه گروهی</span>
+                                <div class=" w-75 text-center text-primary d-flex flex-column justify-content-around">
+
+                            <span class="f-22px fw-900">مسابقه گروهی</span>
+                            <span id="mr_element1"></span>
+                        </div>
                     </a>
 
 
@@ -137,7 +143,7 @@ require_once ZBA_VIEWS . 'home/slider.php';
                         <span class=" w-75 text-center text-primary f-22px fw-900">مسابقه اینترنتی</span>
                     </a>
 
-                    <a href="https://app.ayeh.net/"
+                    <a href="https://app.ayeh.net/prize"
                         class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('luck.svg') ?>"></div>
@@ -159,13 +165,13 @@ require_once ZBA_VIEWS . 'home/slider.php';
     <img class="position-absolute" style="width: 1087px;  left: -143px;  bottom: -88px;"
         src="<?php echo zba_image('next-slider.png') ?>">
 
-    <div style="height: 300px;"></div>
+    <div style="height: 270px;"></div>
 
 
 </div>
 
-<div style="margin: -300px 0; position: relative;">
-    <div style="height: 600px;  border-radius: 54px;"
+<div style="margin: -240px 0; position: relative;">
+    <div style="height: 480px;  border-radius: 54px;"
         class="zba-row mx-auto bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
         <div>
             <h2 class="fw-900 f-28px">جوایز و برندگان </h2>
@@ -205,7 +211,7 @@ require_once ZBA_VIEWS . 'home/slider.php';
 </div>
 
 <div class="zba-media">
-    <div style="height: 350px;"></div>
+    <div style="height: 300px;"></div>
     <div class="mx-auto container">
         <h3 class="text-primary fw-900 text-center f-28px">چند رسانه ای</h3>
         <p class="text-white text-center f-21px">فیلم ، عکس و صوت های مربوط به پویش زندگی با آیه ها</p>

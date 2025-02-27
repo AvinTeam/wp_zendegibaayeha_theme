@@ -41,8 +41,8 @@
                     <div class="d-flex flex-row justify-content-center align-items-center gap-3 text-primary">
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search text-primary"></i></button>
                         <span>|</span>
-                        <a href="tel:02192003978 " class="btn btn-tel" style="width: 150px !important;">
-                            <span>02192003978-9</span>
+                        <a href="tel:02192003978 " class="btn btn-tel" style="width: 170px !important;">
+                            <span>02192003978-82</span>
                             <i class="bi bi-telephone"></i>
                         </a>
                     </div>

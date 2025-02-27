@@ -185,3 +185,19 @@ function linktocode($input)
 
     return null;
 }
+
+
+if (!isset($clock_mr_setting[ 'version' ]) || $clock_mr_setting[ 'version' ] != ZBA_VERSION) {
+
+    $setting_clock = [
+
+        'version' => ZBA_VERSION,
+        'setting' => (isset($clock_mr_setting[ 'setting' ])) ? true : false,
+        'setting_tv' => (isset($clock_mr_setting[ 'setting_tv' ])) ? true : false,
+        'clock_decs' => (isset($clock_mr_setting[ 'clock_decs' ])) ? $clock_mr_setting[ 'clock_decs' ] : '',
+        'timestamp' => (isset($clock_mr_setting[ 'timestamp' ])) ? $clock_mr_setting[ 'timestamp' ] : 5,
+     ];
+
+     update_option('mr_setting_clock', $setting_clock);
+
+}

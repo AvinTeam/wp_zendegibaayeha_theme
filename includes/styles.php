@@ -152,3 +152,62 @@ function zba_style()
     );
 
 }
+
+
+add_action('wp_enqueue_scripts', 'addMyStyle');
+
+function addMyStyle()
+{
+    wp_enqueue_style(
+        'mr-style',
+        ZBA_CSS . 'mr-style.css',
+        [  ],
+        ZBA_VERSION
+    );
+
+    wp_enqueue_script(
+        'mr-javascript',
+        ZBA_JS . 'mr-javascript.js',
+        [ 'jquery' ],
+        ZBA_VERSION,
+        true
+    );
+
+    $clock_time = get_option('mr_add_clock');
+
+    $fersttime = $secendtime = 0;
+
+    if (is_array($clock_time)) {
+
+        $mr_clock = $mr_stamp_clock = [  ];
+
+        foreach ($clock_time as $row) {
+
+            $timeset = tarikh($row[ 'date' ], 1) . ' ' . $row[ 'time' ];
+
+            $mr_clock[  ] = tarikh($row[ 'date' ], 1) . ' ' . $row[ 'time' ];
+            $mr_stamp_clock[  ] = date("Y-m-d H:i:s", strtotime($timeset) + ZBA_TIME_STAMP);
+        }
+
+        $mr_clock[  ] = 0;
+    }
+
+    $clock_mr_setting = get_option('mr_setting_clock');
+
+
+    wp_localize_script(
+        'mr-javascript',
+        'mr_param_script',
+        [
+            'isarray' => (is_array($clock_time)) ? 1 : 0,
+            'setting' => ($clock_mr_setting[ 'setting' ]) ? 1 : 0,
+            'setting_tv' => ($clock_mr_setting[ 'setting_tv' ]) ? 1 : 0,
+            'clock_decs' => $clock_mr_setting[ 'clock_decs' ],
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'clock_time' => $mr_clock,
+            'mr_stamp_clock' => $mr_stamp_clock,
+
+         ]
+    );
+
+}

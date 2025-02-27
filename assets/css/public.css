@@ -322,12 +322,12 @@ a {
   font-size: 40px !important;
 }
 
-.h-108px{
+.h-108px {
   height: 108px;
 }
 
 
-.w-395px{
+.w-395px {
   width: 395px;
 }
 
@@ -544,7 +544,6 @@ footer .copyright a {
   transform: scale(0.8);
 }
 
-/* دکمه‌های ناوبری
 .sliderSwiper .swiper-button-prev,
 .sliderSwiper .swiper-button-next,
 .ayeh-swiper .swiper-button-prev,
@@ -563,7 +562,7 @@ footer .copyright a {
 .ayeh-swiper .swiper-button-next::after {
   font-size: 16px;
   font-weight: bold;
-} */
+}
 
 
 #slider-app {
@@ -638,9 +637,12 @@ footer .copyright a {
 
 .all-match-img {
   height: 70px !important;
-
 }
 
+.download-icon {
+  height: 40px !important;
+
+}
 
 @media (max-width: 900px) {
 
@@ -788,4 +790,16 @@ body.no-scroll {
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+.nav-tabs #android-tab.nav-link,
+.nav-tabs #ios-tab.nav-link {
+  color: var(--primary-color);
+}
+
+.nav-tabs #android-tab.nav-link.active,
+.nav-tabs #ios-tab.nav-link.active {
+  color: var(--secondary-color) !important;
+
 }

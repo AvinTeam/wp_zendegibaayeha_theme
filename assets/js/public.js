@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
     });
 
@@ -260,7 +260,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            return "Android";
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "iOS";
+        }
+        return "Unknown";
+    }
+
+    var os = getMobileOperatingSystem();
+
+    if (os === "iOS") {
+        document.getElementById("android-tab").classList.remove("active");
+        document.getElementById("android").classList.remove("show", "active");
+
+        document.getElementById("ios-tab").classList.add("active");
+        document.getElementById("ios").classList.add("show", "active");
+    }
+});
+
+
+
+
+
 jQuery(document).ready(function ($) {
+    // $("#download_app").modal("show");
 
 
     $('.onlyNumbersInput').on('input paste', function () {
