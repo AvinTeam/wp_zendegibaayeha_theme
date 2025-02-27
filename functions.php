@@ -2,7 +2,7 @@
 
 (defined('ABSPATH')) || exit;
 
-define('ZBA_VERSION', '1.0.9');
+define('ZBA_VERSION', '1.0.11');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -21,6 +21,7 @@ define('ZBA_VENDOR', ZBA_ASSETS . 'vendor/');
 require_once ZBA_PATH . 'vendor/autoload.php';
 
 require_once ZBA_CORE . '/accesses.php';
+require_once ZBA_INCLUDES . '/rest.php';
 require_once ZBA_INCLUDES . '/theme_filter.php';
 require_once ZBA_INCLUDES . '/theme-function.php';
 require_once ZBA_INCLUDES . '/ajax.php';
@@ -46,9 +47,11 @@ if (is_admin()) {
 
 }
 
-// if (isset($_GET[ 'test' ])) {
+if (isset($_GET[ 'test' ])) {
 
-// print_r($_GET);
-// exit;
 
-// }
+    echo get_option('android_link');
+
+    exit;
+
+}

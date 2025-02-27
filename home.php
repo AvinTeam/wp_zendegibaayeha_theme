@@ -1,92 +1,15 @@
-<?php get_header(); ?>
+<?php get_header(); 
 
 
+require_once ZBA_VIEWS . 'home/slider.php';
 
-
-
-<div class="zba_slider text-primary d-flex flex-column justify-content-around align-items-center">
-
-    <div class="swiper sliderSwiper w-100">
-        <div class="swiper-wrapper">
-
-
-
-
-
-
-            <div class="swiper-slide">
-                <div id="slider-app"
-                    class="position-relative d-flex flex-row justify-content-center align-items-center">
-
-                    <div class="col-5 d-none d-lg-block">
-
-                    </div>
-                    <div class="col-12 col-lg-4  p-3">
-                        <h2 class="f-40px fw-900">اپلیکیشن زندگی با آیه ها</h2>
-                        <span>اینجا می‌خواهیم حدود 200 آیه را با هم بخوانیم، بفهمیم، حفظ کنیم و
-                            با آن‌ها زندگی کنیم</span>
-                        <span> همراه با هدایای مادی و معنوی، کمک هزینه حج عمره، عتبات، ..مشهد
-                            مقدس و هزاران هدیه دیگر</span>
-                        <div class="mt-3">
-                            <a href="#" class="btn btn-warning text-white mx-1"
-                                style="background-color: #FFA200; ">توضیحات
-                                بیشتر</a>
-                            <a href="#" class="btn btn-success text-white mx-1"
-                                style="background-color: #73C259;">دانلود</a>
-                        </div>
-                    </div>
-
-                    <div class="col-3 d-none d-lg-block">
-
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="swiper-slide">
-                <div id="slider-app"
-                    class="position-relative d-flex flex-row justify-content-center align-items-center">
-
-                    <div class="col-5 d-none d-lg-block">
-
-                    </div>
-                    <div class="col-12 col-lg-4  p-3">
-                        <h2 class="f-40px fw-900">اپلیکیشن زندگی با آیه ها</h2>
-                        <span>اینجا می‌خواهیم حدود 200 آیه را با هم بخوانیم، بفهمیم، حفظ کنیم و
-                            با آن‌ها زندگی کنیم</span>
-                        <span> همراه با هدایای مادی و معنوی، کمک هزینه حج عمره، عتبات، ..مشهد
-                            مقدس و هزاران هدیه دیگر</span>
-                        <div class="mt-3">
-                            <a href="#" class="btn btn-warning text-white mx-1"
-                                style="background-color: #FFA200; ">توضیحات
-                                بیشتر</a>
-                            <a href="#" class="btn btn-success text-white mx-1"
-                                style="background-color: #73C259;">دانلود</a>
-                        </div>
-                    </div>
-
-                    <div class="col-3 d-none d-lg-block">
-
-                    </div>
-                </div>
-            </div>
+?>
 
 
 
 
 
 
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-
-
-</div>
 
 <div class="next-slider position-relative  overflow-hidden">
     <div class="zba-row mx-auto my-3 py-5">
@@ -174,42 +97,48 @@
                 <div class="row row-cols-1 row-cols-md-2 justify-content-around row-gap-2 all-match ">
 
 
-                    <a href="https://ayeh.tv/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                    <a href="https://ayeh.tv/"
+                        class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('tv.svg') ?>">
                         </div>
                         <span class=" w-75 text-center text-primary f-22px fw-900">مسابقات تلویزیونی</span>
                     </a>
 
-                    <a href="https://ayeh.net/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                    <a href="https://ayeh.net/"
+                        class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('group.svg') ?>"></div>
                         <span class=" w-75 text-center text-primary f-22px fw-900">مسابقه گروهی</span>
                     </a>
 
 
-                    <a href="https://ayeh.online/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                    <a href="https://ayeh.online/"
+                        class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('oni.svg') ?>">
                         </div>
                         <span class=" w-75 text-center text-primary f-22px fw-900">مسابقات لحظه ای</span>
                     </a>
 
-                    <a href="https://ayeh.info/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                    <a href="https://ayeh.info/"
+                        class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('qu.svg') ?>"></div>
                         <span class=" w-75 text-center text-primary f-22px fw-900">آزمون زندگی با آیه ها</span>
                     </a>
 
 
-                    <a href="https://app.ayeh.net/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                    <a href="https://app.ayeh.net/"
+                        class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('interneti.svg') ?>">
                         </div>
                         <span class=" w-75 text-center text-primary f-22px fw-900">مسابقه اینترنتی</span>
                     </a>
 
-                    <a href="https://app.ayeh.net/" class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
+                    <a href="https://app.ayeh.net/"
+                        class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('luck.svg') ?>"></div>
                         <span class=" w-75 text-center text-primary f-22px fw-900">گردونه شانش</span>
@@ -408,7 +337,7 @@
                             href="<?php echo get_permalink() ?>">
                             <?php echo get_the_title() ?>
                         </a>
-                        <p style="font-size: 14px;" class="text-justify">                                                                                                                                                   <?php echo get_the_excerpt() ?></p>
+                        <p style="font-size: 14px;" class="text-justify"> <?php echo get_the_excerpt() ?></p>
                         <a href="<?php echo get_permalink() ?>" style="background-color: #FFA200; width: 126px;"
                             class="btn btn-warning rounded-bottom-2 text-white ">توضیحات بیشتر</a>
                     </div>

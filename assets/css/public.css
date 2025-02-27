@@ -544,7 +544,7 @@ footer .copyright a {
   transform: scale(0.8);
 }
 
-/* دکمه‌های ناوبری */
+/* دکمه‌های ناوبری
 .sliderSwiper .swiper-button-prev,
 .sliderSwiper .swiper-button-next,
 .ayeh-swiper .swiper-button-prev,
@@ -563,7 +563,7 @@ footer .copyright a {
 .ayeh-swiper .swiper-button-next::after {
   font-size: 16px;
   font-weight: bold;
-}
+} */
 
 
 #slider-app {
