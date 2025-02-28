@@ -174,12 +174,11 @@ function addMyStyle()
     );
 
     $clock_time = get_option('mr_add_clock');
-
+    $mr_clock = $mr_stamp_clock = [  ];
     $fersttime = $secendtime = 0;
 
     if (is_array($clock_time)) {
 
-        $mr_clock = $mr_stamp_clock = [  ];
 
         foreach ($clock_time as $row) {
 

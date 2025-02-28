@@ -365,9 +365,9 @@
 </div>
 
 
-<div class="supporters text-primary text-center d-flex flex-column justify-content-around align-items-center pt-3">
+<div class="supporters text-primary text-center d-flex flex-column justify-content-around align-items-center py-3 gap-3">
     <div>
-        <h2 class="fw-900 f-28px">حامیان پویش</h2>
+        <h2 class="fw-900 f-28px">حامیان نهضت</h2>
     </div>
 
     <div class="swiper supportersSwiper w-100 container">

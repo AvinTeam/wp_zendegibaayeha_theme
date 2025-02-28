@@ -2,7 +2,7 @@
 
 (defined('ABSPATH')) || exit;
 
-define('ZBA_VERSION', '1.0.12');
+define('ZBA_VERSION', '1.0.13');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -18,10 +18,6 @@ define('ZBA_JS', ZBA_ASSETS . 'js/');
 define('ZBA_IMAGE', ZBA_ASSETS . 'image/');
 define('ZBA_VENDOR', ZBA_ASSETS . 'vendor/');
 
-
-$clock_mr_setting = get_option('mr_setting_clock');
-
-define('ZBA_TIME_STAMP', $clock_mr_setting[ 'timestamp' ] * 60);
 
 
 require_once ZBA_PATH . 'vendor/autoload.php';
@@ -54,7 +50,6 @@ if (is_admin()) {
     //     require_once ZBA_INCLUDES . '/handle_download.php';
 
 }
-
 
 if (isset($_GET[ 'test' ])) {
 

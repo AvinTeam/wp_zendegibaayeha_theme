@@ -201,3 +201,8 @@ if (!isset($clock_mr_setting[ 'version' ]) || $clock_mr_setting[ 'version' ] != 
      update_option('mr_setting_clock', $setting_clock);
 
 }
+
+
+$clock_mr_setting = get_option('mr_setting_clock');
+
+define('ZBA_TIME_STAMP', $clock_mr_setting[ 'timestamp' ] * 60);
