@@ -2,7 +2,7 @@
 
 (defined('ABSPATH')) || exit;
 
-define('ZBA_VERSION', '1.0.19');
+define('ZBA_VERSION', '1.0.20');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
