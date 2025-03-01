@@ -587,6 +587,7 @@ footer .copyright a {
 
 .archive-image {
   height: 265px;
+  object-fit: contain;
 }
 
 .zba-header-post .breadcrumb-item::before {

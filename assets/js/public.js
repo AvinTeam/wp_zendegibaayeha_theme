@@ -232,11 +232,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     new Swiper('.ayeh-swiper', {
-        slidesPerView: 2.5, // نمایش ۲.۵ اسلاید در دسکتاپ
+        slidesPerView: 4.5, // نمایش ۲.۵ اسلاید در دسکتاپ
         centeredSlides: true,
         loop: true,
         spaceBetween: 20,
         grabCursor: true,
+        pagination: true,
+        paginationClickable: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -250,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slideShadows: false,
         },
         breakpoints: {
-            1000: { slidesPerView: 2.5 },
+            1000: { slidesPerView: 4.5 },
             0: { slidesPerView: 1 } // در موبایل فقط ۱ اسلاید
         },
         pagination: {

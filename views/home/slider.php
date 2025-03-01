@@ -1,7 +1,7 @@
 <?php (defined('ABSPATH')) || exit; ?>
 <div class="zba_slider text-primary d-flex flex-column justify-content-around align-items-center">
     <div class="swiper sliderSwiper0 w-100">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper p-0">
 
             <div class="swiper-slide">
                 <div id="slider-app"

@@ -3,10 +3,10 @@
     <div class="top-footer pt-5">
         <div
             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-2 py-md-5">
-            <img style="height: 150px;" src="<?php echo zba_image('logo.png') ?>">
+            <img style="height: 150px;" src="<?php echo zba_image('logo-footer.png') ?>">
             <div class="w-50"></div>
             <div class="text-center  text-md-start" >
-                <p class="f-17px">پویش ملی تبیین و حفظ ۵۰ فراز زندگی ساز قرآن کریم</p>
+                <p class="f-17px">پویش ملی تبیین و حفظ 30 فراز زندگی ساز قرآن کریم</p>
                 <p style="font-size:15px">مسابقات روزانه در ماه مبارک رمضان برای نوجوانان و بزرگسالان همراه با جوایز
                     متنوع از جمله سفر حج عمره، کربلای معلی، مشهد مقدس و ...</p>
             </div>
