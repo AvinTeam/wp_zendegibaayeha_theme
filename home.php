@@ -16,69 +16,11 @@
 
 
 <div class="next-slider position-relative  overflow-hidden">
-    <div class="zba-row mx-auto my-3 py-5">
-        <div class="d-flex flex-column flex-lg-row gap-3 justify-content-around align-items-center text-white">
-            <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
-                style="background-color: #FFCE5B;">
-                <div
-                    class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
 
-                    <div class="">
-                        <img class="w-100" style="height: 115px;" src="<?php echo zba_image('tabestan.png') ?>">
-
-                    </div>
-                    <div class="py-4">
-                        <h3 class="fw-900">آیات تابستانه</h3>
-                        <p class="f-17px">10 فراز قرآنی متناسب با مناسبت های تابستان</p>
-                        <a href="#" style="background-color: #FFA200;"
-                            class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
-
-                    </div>
-                </div>
-                <img class="position-absolute head-cart" src="<?php echo zba_image('tabestan1.png') ?>">
-            </div>
-
-            <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
-                style="background-color: #DBBBE8;">
-                <div
-                    class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
-                    <div class="">
-                        <img class="w-100" style="height: 115px;" src="<?php echo zba_image('student.png') ?>">
-                    </div>
-                    <div class="py-4">
-                        <h3 class="fw-900">گام اول برای
-                            دانش آموزان ابتدایی</h3>
-                        <p class="f-17px">10 فراز قرآنی متناسب با مناسبت های تابستان</p>
-                        <a href="#" style="background-color: #FFA200;"
-                            class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
-                    </div>
-                </div>
-                <img class="position-absolute head-cart" src="<?php echo zba_image('student1.png') ?>">
-            </div>
-
-            <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden"
-                style="background-color: #77D4D6;">
-                <div
-                    class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
-                    <div class="">
-                        <img class="w-100" style="height: 115px;" src="<?php echo zba_image('keramat.png') ?>">
-                    </div>
-                    <div class="py-4">
-                        <h3 class="fw-900">آیات کرامت</h3>
-                        <p class="f-17px">حفظ و فهم 7 فراز متناسب با دهه کرامت</p>
-                        <a href="#" style="background-color: #FFA200;"
-                            class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
-                    </div>
-                </div>
-                <img class="position-absolute head-cart" src="<?php echo zba_image('keramat1.png') ?>">
-            </div>
-
-        </div>
-
-    </div>
 
     <div class="py-0 py-md-5 position-relative z-3">
 
+        <a href="#"><img class="w-100 mb-5" src="<?= zba_image('banner.png') ?>"></a>
         <div class="zba-row mx-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">
 
             <div class="col-12 col-lg-6">
@@ -111,7 +53,7 @@
                         class="w-395px col d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                         <div class="w-25 text-center"><img class="all-match-img"
                                 src="<?php echo zba_image('group.svg') ?>"></div>
-                                <div class=" w-75 text-center text-primary d-flex flex-column justify-content-around">
+                        <div class=" w-75 text-center text-primary d-flex flex-column justify-content-around">
 
                             <span class="f-22px fw-900">مسابقه گروهی</span>
                             <span id="mr_element1"></span>
@@ -164,7 +106,6 @@
 
     <img class="position-absolute" style="width: 1087px;  left: -143px;  bottom: -88px;"
         src="<?php echo zba_image('next-slider.png') ?>">
-
     <div style="height: 270px;"></div>
 
 
@@ -364,8 +305,65 @@
     </div>
 </div>
 
+<div class="zba-row mx-auto my-3 py-5">
+    <div class="d-flex flex-column flex-lg-row gap-3 justify-content-around align-items-center text-white">
+        <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden" style="background-color: #FFCE5B;">
+            <div
+                class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
 
-<div class="supporters text-primary text-center d-flex flex-column justify-content-around align-items-center py-3 gap-3">
+                <div class="">
+                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('tabestan.png') ?>">
+
+                </div>
+                <div class="py-4">
+                    <h3 class="fw-900">سفیران آیه ها</h3>
+                    <p class="f-17px">دستیار هوشمند تولید محتوا برای محفل زندگی با آیهها</p>
+                    <a href="https://safiranayeha.ir" style="background-color: #FFA200;"
+                        class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
+
+                </div>
+            </div>
+            <img class="position-absolute head-cart" src="<?php echo zba_image('tabestan1.png') ?>">
+        </div>
+
+        <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden" style="background-color: #DBBBE8;">
+            <div
+                class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
+                <div class="">
+                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('student.png') ?>">
+                </div>
+                <div class="py-4">
+                    <h3 class="fw-900">مدرسه شمع</h3>
+                    <p class="f-17px">دوره‌های ويژهٔ مدرسهٔ شمع بر اساس طرح «زندگی با آیه‌ها»</p>
+                    <a href="https://lms.shabaketabligh.ir/pages/zendegi-ba-ayeha" style="background-color: #FFA200;"
+                        class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
+                </div>
+            </div>
+            <img class="position-absolute head-cart" src="<?php echo zba_image('student1.png') ?>">
+        </div>
+
+        <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden" style="background-color: #77D4D6;">
+            <div
+                class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
+                <div class="">
+                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('keramat.png') ?>">
+                </div>
+                <div class="py-4">
+                    <h3 class="fw-900">آیات کرامت</h3>
+                    <p class="f-17px">حفظ و فهم 7 فراز متناسب با دهه کرامت</p>
+                    <a href="#" style="background-color: #FFA200;"
+                        class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
+                </div>
+            </div>
+            <img class="position-absolute head-cart" src="<?php echo zba_image('keramat1.png') ?>">
+        </div>
+
+    </div>
+
+</div>
+
+<div
+    class="supporters text-primary text-center d-flex flex-column justify-content-around align-items-center py-3 gap-3">
     <div>
         <h2 class="fw-900 f-28px">حامیان نهضت</h2>
     </div>

@@ -23,17 +23,9 @@
 
 @font-face {
   font-family: osmantaha;
-  src: url('../fonts/osmantaha-Regular.ttf');
-  src: url('../fonts/osmantaha-Regular.ttf') format('truetype');
+  src: url('../fonts/osmantaha.ttf');
+  src: url('../fonts/osmantaha.ttf') format('truetype');
   font-weight: normal;
-}
-
-@font-face {
-  font-family: osmantaha;
-  font-style: normal;
-  font-weight: bold;
-  src: url('../fonts/osmantaha-Bold.ttf');
-  src: url("../fonts/osmantaha-Bold.ttf") format("truetype");
 }
 
 /* font-family IRANSansX */
