@@ -129,22 +129,28 @@ document.addEventListener("DOMContentLoaded", function () {
             0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
+                slidesPerGroup: 1, 
+
             },
             576: {
                 slidesPerView: 1,
                 spaceBetween: 10,
+                slidesPerGroup: 1, 
             },
             768: {
                 slidesPerView: 2.5,
                 spaceBetween: 10,
+                slidesPerGroup: 2, 
             },
             1280: {
                 slidesPerView: 4,
                 spaceBetween: 10,
+                slidesPerGroup: 4, 
             },
             1920: {
                 slidesPerView: 4,
                 spaceBetween: 10,
+                slidesPerGroup: 4,
             },
         },
         pagination: {
@@ -168,27 +174,33 @@ document.addEventListener("DOMContentLoaded", function () {
             0: {
                 slidesPerView: 3,
                 spaceBetween: 10,
+                slidesPerGroup: 3, 
             },
             576: {
                 slidesPerView: 4,
                 spaceBetween: 10,
+                slidesPerGroup: 4, 
             },
             768: {
                 slidesPerView: 4,
                 spaceBetween: 10,
+                slidesPerGroup: 4, 
             },
             1280: {
                 slidesPerView: 8,
                 spaceBetween: 10,
+                slidesPerGroup: 8, 
             },
             1920: {
                 slidesPerView: 8,
                 spaceBetween: 10,
+                slidesPerGroup: 8, 
             },
         },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+
         },
     });
 

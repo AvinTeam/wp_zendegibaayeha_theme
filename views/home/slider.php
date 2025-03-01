@@ -13,7 +13,7 @@
                         <br>
                         <span>(حج عمره، عتبات، مشهد مقدس و هزاران هدیه دیگر)</span>
                         <div class="mt-3">
-                            <a href="#" class="btn btn-warning text-white mx-1"
+                            <a href="https://app.ayeh.net/" class="btn btn-warning text-white mx-1"
                                 style="background-color: #FFA200; ">توضیحات
                                 بیشتر</a>
                             <a href="#" class="btn btn-success text-white mx-1" style="background-color: #73C259;"

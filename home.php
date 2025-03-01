@@ -20,11 +20,12 @@
 
     <div class="py-0 py-md-5 position-relative z-3">
         <div class="zba-row mx-auto mt-3 mb-5 ">
-
-
             <a
                 href="https://zendegibaayeha.ir/%d9%85%d8%ad%d8%aa%d9%88%d8%a7%db%8c-%d8%b2%d9%86%d8%af%da%af%db%8c-%d8%a8%d8%a7-%d8%a2%db%8c%d9%87%d9%87%d8%a7/"><img
-                    class="w-100 mb-5" src="<?php echo zba_image('banner.png') ?>"></a>
+                    class="w-100 mb-2" src="<?php echo zba_image('banner.png') ?>"></a>
+
+                    <a href="https://zendegibaayeha.ir/atlas/"><img class="w-100" src="<?php echo zba_image('banner1.png') ?>"></a>
+
         </div>
         <div class="zba-row mx-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">
 
@@ -300,7 +301,7 @@
                             href="<?php echo get_permalink() ?>">
                             <?php echo get_the_title() ?>
                         </a>
-                        <p style="font-size: 14px;" class="text-justify">                                                                          <?php echo get_the_excerpt() ?></p>
+                        <p style="font-size: 14px;" class="text-justify">                                                                                                                                                   <?php echo get_the_excerpt() ?></p>
                         <a href="<?php echo get_permalink() ?>" style="background-color: #FFA200; width: 126px;"
                             class="btn btn-warning rounded-bottom-2 text-white ">توضیحات بیشتر</a>
                     </div>
@@ -321,10 +322,6 @@
     </div>
 </div>
 
-<div class="zba-row mx-auto mt-3 ">
-    <a href="https://zendegibaayeha.ir/atlas/"><img class="w-100" src="<?php echo zba_image('banner1.png') ?>"></a>
-
-</div>
 <div class="zba-row mx-auto my-3 ">
     <div class="d-flex flex-column flex-lg-row gap-3 justify-content-around align-items-center text-white">
         <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden" style="background-color: #FFCE5B;">
