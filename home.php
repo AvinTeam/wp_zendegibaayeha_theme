@@ -20,7 +20,7 @@
 
     <div class="py-0 py-md-5 position-relative z-3">
 
-        <a href="#"><img class="w-100 mb-5" src="<?= zba_image('banner.png') ?>"></a>
+        <a href="https://zendegibaayeha.ir/%d9%85%d8%ad%d8%aa%d9%88%d8%a7%db%8c-%d8%b2%d9%86%d8%af%da%af%db%8c-%d8%a8%d8%a7-%d8%a2%db%8c%d9%87%d9%87%d8%a7/"><img class="w-100 mb-5" src="<?= zba_image('banner.png') ?>"></a>
         <div class="zba-row mx-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">
 
             <div class="col-12 col-lg-6">
