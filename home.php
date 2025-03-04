@@ -2,17 +2,6 @@
 
     require_once ZBA_VIEWS . 'home/slider.php';
 ?>
-
-
-
-
-
-
-
-
-
-
-
 <div class="next-slider position-relative  overflow-hidden">
 
 
@@ -122,17 +111,10 @@
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                             <div class="w-25 text-center"><img class="all-match-img"
                                     src="<?php echo zba_image('qu.svg') ?>"></div>
-                            <span class=" w-75 text-center text-primary f-22px fw-900">آزمون صدور گواهی</span>
+                            <span class=" w-75 text-center text-primary f-22px fw-900">آزمـــون صدور گواهــی معتبـــر</span>
                         </div>
                     </a>
-
-
-
-
-
-
                 </div>
-
             </div>
             <div class="col-12 col-lg-4 mt-3 mt-gl-0 ">
                 <div class="w-75 mx-auto text-center">
