@@ -186,23 +186,47 @@ function linktocode($input)
     return null;
 }
 
+function mr_time_start_working()
+{
+    $clock_mr_setting = get_option('mr_setting_clock');
 
-if (!isset($clock_mr_setting[ 'version' ]) || $clock_mr_setting[ 'version' ] != ZBA_VERSION) {
+    if (! isset($clock_mr_setting[ 'version' ]) || version_compare(ZBA_VERSION, $clock_mr_setting[ 'version' ], '>')) {
 
-    $setting_clock = [
+        update_option(
+            'mr_setting_clock',
+            [
+                'version'    => ZBA_VERSION,
 
-        'version' => ZBA_VERSION,
-        'setting' => (isset($clock_mr_setting[ 'setting' ])) ? true : false,
-        'setting_tv' => (isset($clock_mr_setting[ 'setting_tv' ])) ? true : false,
-        'clock_decs' => (isset($clock_mr_setting[ 'clock_decs' ])) ? $clock_mr_setting[ 'clock_decs' ] : '',
-        'timestamp' => (isset($clock_mr_setting[ 'timestamp' ])) ? $clock_mr_setting[ 'timestamp' ] : 5,
-     ];
+                'setting'    => (isset($clock_mr_setting[ 'setting' ])) ? absint($clock_mr_setting[ 'setting' ]) : 0,
+                'setting_tv' => (isset($clock_mr_setting[ 'setting_tv' ])) ? absint($clock_mr_setting[ 'setting_tv' ]) : 0,
+                'clock_decs' => (isset($clock_mr_setting[ 'clock_decs' ])) ? sanitize_text_field($clock_mr_setting[ 'clock_decs' ]) : '',
+                'timestamp'  => (isset($clock_mr_setting[ 'timestamp' ])) ? absint($clock_mr_setting[ 'timestamp' ]) : 5,
 
-     update_option('mr_setting_clock', $setting_clock);
+             ]
+
+        );
+
+    }
+
+    return get_option('mr_setting_clock');
 
 }
 
+function time_update_option($data)
+{
 
-$clock_mr_setting = get_option('mr_setting_clock');
+    $clock_mr_setting = get_option('mr_setting_clock');
 
-define('ZBA_TIME_STAMP', $clock_mr_setting[ 'timestamp' ] * 60);
+    $clock_mr_setting = [
+        'version'    => ZBA_VERSION,
+
+        'setting'    => (isset($data[ 'setting' ])) ? absint($data[ 'setting' ]) : $clock_mr_setting[ 'setting' ],
+        'setting_tv' => (isset($data[ 'setting_tv' ])) ? absint($data[ 'setting_tv' ]) : $clock_mr_setting[ 'setting_tv' ],
+        'clock_decs' => (isset($data[ 'clock_decs' ])) ? sanitize_text_field($data[ 'clock_decs' ]) : $clock_mr_setting[ 'clock_decs' ],
+        'timestamp'  => (isset($data[ 'timestamp' ])) ? absint($data[ 'timestamp' ]) : $clock_mr_setting[ 'timestamp' ],
+
+     ];
+
+    update_option('mr_setting_clock', $clock_mr_setting);
+
+}

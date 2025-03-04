@@ -50,7 +50,3 @@ function custom_search_by_meta($search, $wp_query)
 }
 add_filter('posts_search', 'custom_search_by_meta', 10, 2);
 
-add_filter('get_the_archive_title_prefix', function ($prefix) {
-
-    return '';
-});

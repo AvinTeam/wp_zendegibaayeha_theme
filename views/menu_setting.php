@@ -9,9 +9,14 @@
 		                <tr>
 		                    <th scope="row">مسابقه گروهی</th>
 		                    <td>
-		                        <fieldset><label for="setting_start">
-		                                <input name="setting_start" type="checkbox" id="setting_start"
-		                                    <?php echo $checked_mr_setting?>>فعال</label>
+		                        <fieldset><label for="setting">
+		                                <input name="setting" type="radio" value="1"
+		                                    <?php checked(1, $clock_mr_setting[ 'setting' ])?>>فعال</label>
+
+		                            <label for="setting">
+
+		                                <input name="setting" type="radio" value="0"
+		                                    <?php checked(0, $clock_mr_setting[ 'setting' ])?>>غیر فعال</label>
 		                        </fieldset>
 		                    </td>
 		                </tr>
@@ -19,9 +24,15 @@
 		                <tr>
 		                    <th scope="row">مسابقه تلویزیونی</th>
 		                    <td>
-		                        <fieldset><label for="setting_start_tv">
-		                                <input name="setting_start_tv" type="checkbox" id="setting_start_tv"
-		                                    <?php echo $checked_mr_setting_tv?>>فعال</label>
+		                        <fieldset><label for="setting_tv">
+
+		                                <input name="setting_tv" type="radio" value="1"
+		                                    <?php checked(1, $clock_mr_setting[ 'setting_tv' ])?>>فعال</label>
+
+		                            <label for="setting_tv">
+
+		                                <input name="setting_tv" type="radio" value="0"
+		                                    <?php checked(0, $clock_mr_setting[ 'setting_tv' ])?>>غیر فعال</label>
 		                        </fieldset>
 		                    </td>
 		                </tr>
@@ -29,13 +40,14 @@
 		                <tr class="d-none">
 		                    <th scope="row"><label for="mrdecs">متن بعد ساعت مسابقه تلویزیون</label></th>
 		                    <td>
-		                        <input name="mrdecs" id="mrdecs" type="text" value="<?php echo $clock_decs?>" class="regular-text">
+		                        <input name="mrdecs" id="mrdecs" type="text" value="<?php echo $clock_decs ?>"
+		                            class="regular-text">
 		                    </td>
 		                </tr>
 		                <tr class="d-none">
 		                    <th scope="row"><label for="timestamp">وقفه در زمان</label></th>
 		                    <td>
-		                        <input name="timestamp" id="timestamp" type="text" value="<?php echo $timestamp?>"
+		                        <input name="timestamp" id="timestamp" type="text" value="<?php echo $timestamp ?>"
 		                            class="regular-text">
 		                    </td>
 		                </tr>

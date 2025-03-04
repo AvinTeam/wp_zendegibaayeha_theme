@@ -1,8 +1,9 @@
 <?php
 
 (defined('ABSPATH')) || exit;
+date_default_timezone_set('Asia/Tehran');
 
-define('ZBA_VERSION', '1.0.20');
+define('ZBA_VERSION', '1.0.31');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -18,7 +19,7 @@ define('ZBA_JS', ZBA_ASSETS . 'js/');
 define('ZBA_IMAGE', ZBA_ASSETS . 'image/');
 define('ZBA_VENDOR', ZBA_ASSETS . 'vendor/');
 
-
+define('ZBA_TIME_STAMP', 5 * 60);
 
 require_once ZBA_PATH . 'vendor/autoload.php';
 
@@ -46,13 +47,11 @@ if (is_admin()) {
     require_once ZBA_INCLUDES . '/menu.php';
     require_once ZBA_INCLUDES . '/install.php';
     //     require_once ZBA_INCLUDES . '/edit_column_institute.php';
-    //
     //     require_once ZBA_INCLUDES . '/handle_download.php';
 
 }
 
 if (isset($_GET[ 'test' ])) {
-
 
     echo get_option('android_link');
 
@@ -60,32 +59,15 @@ if (isset($_GET[ 'test' ])) {
 
 }
 
+$mr_times_set = get_option('mr_add_clock');
+if (is_array($mr_times_set)) {
+    foreach ($mr_times_set as $key => $value) {
 
-
-
-$results = get_option('mr_add_clock');
-
-if (is_array($results)) {
-
-    $err = $m = 0;
-
-    foreach ($results as $row) {
-
-        if (time() - ZBA_TIME_STAMP > $row[ 'ID' ]) {
-            unset($results[ $m ]);
-            $err = 1;
+        if (intval($key) + ZBA_TIME_STAMP < time()) {
+            unset($mr_times_set[ $key ]);
         }
-        $m++;
-
     }
-
-    if ($err == 1) {
-        sort($results);
-        update_option('mr_add_clock', $results);
-    }
-
+    update_option('mr_add_clock', $mr_times_set);
 }
 
-
-
-
+// exit;

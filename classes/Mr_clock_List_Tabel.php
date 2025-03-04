@@ -1,9 +1,9 @@
 <?php
-if (!defined('ABSPATH')) {
+if (! defined('ABSPATH')) {
     exit;
 }
 // Exit if accessed directly
-if (!class_exists('WP_List_Table')) {
+if (! class_exists('WP_List_Table')) {
 
     require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
 
@@ -15,9 +15,9 @@ class Mr_clock_List_Tabel extends WP_List_Table
     public function get_columns()
     {
         return [
-            'ID' => 'شناسه',
             'date' => 'تاریخ',
             'time' => 'ساعت',
+            'ID'   => 'شناسه',
          ];
     }
 
@@ -25,12 +25,19 @@ class Mr_clock_List_Tabel extends WP_List_Table
     {
 
         $actions = [
-            'delete' => '<a href="'.admin_url('admin.php?page=mrrashidpour&mrclockid='.$item['ID']).'">حذف</a>',
+            'delete' => '<a href="' . admin_url('admin.php?page=mrrashidpour&mrclockid=' . $item[ 'ID' ]) . '">حذف</a>',
          ];
 
         return $item[ 'date' ] . $this->row_actions($actions);
 
     }
+
+    // public function column_ID($item)
+    // {
+
+    //     return $item[ 'ID' ] . '-' . time() . '=' . ($item[ 'ID' ] - time());
+
+    // }
 
     public function column_default($item, $column_name)
     {
@@ -61,7 +68,7 @@ class Mr_clock_List_Tabel extends WP_List_Table
         }
         $this->_column_headers = [
             $this->get_columns(),
-            [ 'ID' ],
+            [  ],
             [  ],
             'date',
          ];

@@ -5,15 +5,15 @@ function zba_row_install()
 {
 
     if (get_option('mr_add_clock') == false) {
-        update_option('mr_add_clock', '');
+        update_option('mr_add_clock', []);
     }
 
     if (get_option('mr_setting_clock') == false) {
         $setting_clock = [
 
             'version' => ZBA_VERSION,
-            'setting' => false,
-            'setting_tv' => false,
+            'setting' => 0,
+            'setting_tv' => 0,
             'clock_decs' => '',
             'timestamp' => 5,
          ];

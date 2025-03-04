@@ -1,12 +1,6 @@
 <?php get_header();
 
     require_once ZBA_VIEWS . 'home/slider.php';
-
-    $clock_mr_setting = get_option('mr_setting_clock');
-
-    $setting_group = ($clock_mr_setting[ 'setting' ]) ? 1 : 0;
-    $setting_tv    = ($clock_mr_setting[ 'setting_tv' ]) ? 1 : 0;
-
 ?>
 
 
@@ -369,7 +363,7 @@
                 </div>
                 <div class="py-4">
                     <h3 class="fw-900">سفیران آیه ها</h3>
-                    <p class="f-17px">دستیار هوشمند تولید محتوا برای محفل زندگی با آیهها</p>
+                    <p class="f-17px">دستیار هوشمند تولید محتوا برای محفل زندگی با آیه ها</p>
                     <a href="https://safiranayeha.ir" style="background-color: #FFA200;"
                         class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
 
