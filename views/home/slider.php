@@ -119,7 +119,7 @@
                                     </div>
                                 </div>
                             </a>
-
+<!-- 
                             <a href="#" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">سیب اپ</span>
@@ -172,7 +172,7 @@
                                             src="<?php echo zba_image('download-sibirani.svg') ?>">
                                     </div>
                                 </div>
-                            </a>
+                            </a> -->
 
                         </div>
                     </div>

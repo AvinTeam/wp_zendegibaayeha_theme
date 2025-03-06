@@ -444,12 +444,11 @@ footer .copyright a {
 .mpgallery-item {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 6;
   overflow: hidden;
   cursor: pointer;
   background: #f0f0f0;
   border-radius: 5px;
-  height: 400px;
 }
 
 .mpgallery-item img {
