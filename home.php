@@ -202,7 +202,7 @@
 
                         $query = new WP_Query([
                             'cat'            => $term->term_id, // گرفتن پست‌های این زیر دسته
-                            'posts_per_page' => 8,              // تعداد پست‌ها
+                            'posts_per_page' => 12,              // تعداد پست‌ها
                          ]);
 
                         if ($query->have_posts()) {
