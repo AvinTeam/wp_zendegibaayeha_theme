@@ -43,6 +43,62 @@ function zba_add_meta_boxes(): void
 
     }
 
+    add_meta_box(
+        'zba_ayeh_details',
+        'اطلاعات آیه ها',
+        'submenu_zba_ayeh_details_callable',
+        'content_ayeh',
+        'normal',
+        'high',
+    );
+
+    function submenu_zba_ayeh_details_callable($post)
+    {
+        $ayeh_ayeh     = get_post_meta($post->ID, '_ayeh_ayeh', true);
+        $ayeh_tarjomeh = get_post_meta($post->ID, '_ayeh_tarjomeh', true);
+        $ayeh_address  = get_post_meta($post->ID, '_ayeh_address', true);
+
+        include_once ZBA_VIEWS . 'metabox/ayeh_details.php';
+    }
+
+    add_meta_box(
+        'zba_ayeh_video',
+        'ویدئو آیه ها',
+        'submenu_zba_ayeh_video_callable',
+        'content_ayeh',
+        'normal',
+        'high',
+    );
+
+    function submenu_zba_ayeh_video_callable($post)
+    {
+
+        $ayeh_video_list = get_post_meta($post->ID, '_ayeh_video_list', true);
+
+        $ayeh_video_list = (is_array($ayeh_video_list)) ? $ayeh_video_list : [  ];
+
+        include_once ZBA_VIEWS . 'metabox/ayeh_video.php';
+    }
+
+    add_meta_box(
+        'zba_ayeh_sound',
+        'صوت آیه ها',
+        'submenu_zba_ayeh_sound_callable',
+        'content_ayeh',
+        'normal',
+        'high',
+    );
+
+    function submenu_zba_ayeh_sound_callable($post)
+    {
+
+        $ayeh_sound_list = get_post_meta($post->ID, '_ayeh_sound_list', true);
+
+        $ayeh_sound_list = (is_array($ayeh_sound_list)) ? $ayeh_sound_list : [  ];
+
+        include_once ZBA_VIEWS . 'metabox/ayeh_sound.php';
+    }
+
 }
 
 add_action('save_post', 'zba_save_bax', 1, 3);
@@ -52,7 +108,15 @@ function zba_save_bax($post_id, $post, $updata)
     if (isset($_POST[ 'zba_aparat' ])) {
         update_post_meta($post_id, '_zba_aparat', esc_html($_POST[ 'zba_aparat' ]));
     }
+    if (isset($_POST[ 'ayeh' ])) {
 
+        update_post_meta($post_id, '_ayeh_ayeh', $_POST[ 'ayeh' ][ 'ayeh' ]);
+        update_post_meta($post_id, '_ayeh_tarjomeh', $_POST[ 'ayeh' ][ 'tarjomeh' ]);
+        update_post_meta($post_id, '_ayeh_address', $_POST[ 'ayeh' ][ 'address' ]);
+        update_post_meta($post_id, '_ayeh_sound_list', $_POST[ 'ayeh' ][ 'sound' ]);
+        update_post_meta($post_id, '_ayeh_video_list', $_POST[ 'ayeh' ][ 'video' ]);
+
+    }
 }
 
 function append_metabox_to_page_content($post_id)

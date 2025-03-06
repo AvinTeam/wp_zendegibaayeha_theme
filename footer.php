@@ -24,6 +24,7 @@
             </div>
             <div>Copyright © 2023 Zendegi ba ayeha. All rights reserved.</div>
         </div>
+        <div class="w-100 text-center py-2"><span class="" >طراحی و پشتیبانی: گروه هنری رسانه ای آوین</span></div>
     </div>
 </footer>
 

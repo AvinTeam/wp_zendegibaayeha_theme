@@ -21,6 +21,10 @@
   font-family: vazir;
 }
 
+.d-ltr {
+  direction: ltr !important;
+}
+
 .d-none {
   display: none !important;
 }
@@ -52,4 +56,21 @@
 
 .ID.column-ID {
   direction: ltr;
+}
+
+.zba-row-meta-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0px;
+}
+
+.zba-row-meta-box a {
+  text-align: end;
+}
+
+.zba-row-meta-box video{
+  height: 100px;
 }
