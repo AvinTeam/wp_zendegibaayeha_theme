@@ -16,15 +16,15 @@
         <div
             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-3 gap-2 gap-md-0 text-center">
             <div >
-                 <a class="mx-2" target="_blank" href="https://eitaa.com/joinchat/2527134304Ccdba67771f"><img src="<?php echo zba_image('eitaa.png')?>" alt="ایتا"></a>
-                 <a class="mx-2" target="_blank" href="https://ble.ir/join/BBTz8iGZLf"><img src="<?php echo zba_image('bale.png')?>" alt="بله"></a>
-                 <a class="mx-2" target="_blank" href="https://rubika.ir/zendegibaayeha"><img src="<?php echo zba_image('rubika.png')?>" alt="روبیکا"></a>
-                 <a class="mx-2" target="_blank" href="https://www.aparat.com/mzbah.com"><img src="<?php echo zba_image('aparat.png')?>" alt="آپارات"></a>
-                 <a class="mx-2" target="_blank" href="http://www.youtube.com/@zendegibaayeha"><img src="<?php echo zba_image('youtube.png')?>" alt="یوتیوب"></a>
+                 <a class="mx-2" target="_blank" href="https://eitaa.com/joinchat/2527134304Ccdba67771f"><img src="<?php echo zba_image('eitaa.png') ?>" alt="ایتا"></a>
+                 <a class="mx-2" target="_blank" href="https://ble.ir/join/BBTz8iGZLf"><img src="<?php echo zba_image('bale.png') ?>" alt="بله"></a>
+                 <a class="mx-2" target="_blank" href="https://rubika.ir/zendegibaayeha"><img src="<?php echo zba_image('rubika.png') ?>" alt="روبیکا"></a>
+                 <a class="mx-2" target="_blank" href="https://www.aparat.com/mzbah.com"><img src="<?php echo zba_image('aparat.png') ?>" alt="آپارات"></a>
+                 <a class="mx-2" target="_blank" href="http://www.youtube.com/@zendegibaayeha"><img src="<?php echo zba_image('youtube.png') ?>" alt="یوتیوب"></a>
             </div>
             <div>Copyright © 2023 Zendegi ba ayeha. All rights reserved.</div>
         </div>
-        <div class="w-100 text-center py-2"><span class="" >طراحی و پشتیبانی: گروه هنری رسانه ای آوین</span></div>
+        <div class="w-100 text-center py-2"><a href="https://avinmedia.ir/" target="_blank" >طراحی و پشتیبانی: گروه هنری رسانه ای آوین</a></div>
     </div>
 </footer>
 
