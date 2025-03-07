@@ -337,7 +337,7 @@ jQuery(document).ready(function ($) {
 
         // نمایش فقط ۶ تا از آیتم‌های یکتا
         allItems.hide();
-        uniqueItems.slice(0, 8).show();
+        uniqueItems.slice(0, 12).show();
     }
 
     // اجرای فیلتر در ابتدای بارگذاری صفحه
