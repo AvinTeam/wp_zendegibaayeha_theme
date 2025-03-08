@@ -140,7 +140,7 @@ function get_posts_from_single_category($request)
     // تنظیم پارامترهای WP_Query
     $args = [
         'category__in'   => [ $category_id ], // فقط پست‌های این دسته‌بندی
-        'posts_per_page' => -1,               // دریافت تمام پست‌ها
+        'posts_per_page' => 15,               // دریافت تمام پست‌ها
         'post_status'    => 'publish',        // فقط پست‌های منتشر شده
      ];
 
@@ -174,7 +174,7 @@ function get_posts_from_all_categories($request)
 
     // تنظیم پارامترهای WP_Query
     $args = [
-        'posts_per_page' => -1,        // دریافت تمام پست‌ها
+        'posts_per_page' => 15,        // دریافت تمام پست‌ها
         'post_status'    => 'publish', // فقط پست‌های منتشر شده
      ];
 

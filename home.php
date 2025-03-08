@@ -309,7 +309,7 @@
                             href="<?php echo get_permalink() ?>">
                             <?php echo get_the_title() ?>
                         </a>
-                        <p style="font-size: 14px;" class="text-justify"> <?php echo get_the_excerpt() ?></p>
+                        <p style="font-size: 14px;" class="text-justify d-none"> <?php echo get_the_excerpt() ?></p>
                         <a href="<?php echo get_permalink() ?>" style="background-color: #FFA200; width: 126px;"
                             class="btn btn-warning rounded-bottom-2 text-white ">توضیحات بیشتر</a>
                     </div>

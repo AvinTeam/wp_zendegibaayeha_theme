@@ -3,7 +3,7 @@
 (defined('ABSPATH')) || exit;
 date_default_timezone_set('Asia/Tehran');
 
-define('ZBA_VERSION', '1.0.36');
+define('ZBA_VERSION', '1.1.0');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
