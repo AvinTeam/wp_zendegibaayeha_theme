@@ -142,29 +142,26 @@
         <div class="swiper giftSwiper w-100 container">
             <div class="swiper-wrapper f-21px" style="color: #9BA1B2; ;">
 
-                <div class="swiper-slide">
-                    <img src="<?php echo zba_image('gift/haj.png') ?>" class="card-img-top rounded shadow">
+
+
+
+
+            <?php
+
+                $gift_array = glob(ZBA_PATH . 'assets/image/gift/*');
+
+                foreach ($gift_array as $x) {
+
+                    $gift_next = explode('/', $x);
+
+                if (! end($gift_next)) {continue;}?>
+
+                    <div class="swiper-slide">
+                    <img src="<?php echo zba_image('gift/' . end($gift_next)) ?>" class="card-img-top rounded shadow">
                 </div>
 
-                <div class="swiper-slide">
-                    <img src="<?php echo zba_image('gift/karbala.png') ?>" class="card-img-top rounded shadow">
-                </div>
 
-                <div class="swiper-slide">
-                    <img src="<?php echo zba_image('gift/mashhad.png') ?>" class="card-img-top rounded shadow">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="<?php echo zba_image('gift/laptop.png') ?>" class="card-img-top rounded shadow">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="<?php echo zba_image('gift/tablet.png') ?>" class="card-img-top rounded shadow">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="<?php echo zba_image('gift/earpad.png') ?>" class="card-img-top rounded shadow">
-                </div>
+            <?php } ?>
             </div>
             <div class=" swiper-pagination"></div>
         </div>

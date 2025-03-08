@@ -56,6 +56,24 @@ function store_secure_update_link(WP_REST_Request $request)
      ]);
 }
 
+function get_custom_categories($request)
+{
+    $ids        = explode(',', $request[ 'ids' ]);
+    $categories = [  ];
+
+    foreach ($ids as $id) {
+        $category = get_term($id, 'category');
+        if ($category && ! is_wp_error($category)) {
+            $categories[  ] = [
+                'id'   => $category->term_id,
+                'name' => $category->name,
+             ];
+        }
+    }
+
+    return new WP_REST_Response($categories, 200);
+}
+
 // ثبت اندپوینت در REST API
 add_action('rest_api_init', function () {
     register_rest_route('zba/v1', '/update-app-link/?', [
@@ -73,4 +91,112 @@ add_action('rest_api_init', function () {
 
          ],
      ]);
+
+    // Endpoint برای دریافت لیست دسته‌بندی‌ها
+    register_rest_route('zba/v1', '/categories/?', [
+        'methods'  => 'GET',
+        'callback' => 'get_custom_categories_list',
+     ]);
+
+    // Endpoint برای دریافت پست‌های یک دسته‌بندی خاص
+    register_rest_route('zba/v1', '/categories/(?P<id>\d+)', [
+        'methods'  => 'GET',
+        'callback' => 'get_posts_from_single_category',
+     ]);
+
+    // Endpoint برای دریافت پست‌های تمام دسته‌بندی‌ها
+    register_rest_route('zba/v1', '/categories/post', [
+        'methods'  => 'GET',
+        'callback' => 'get_posts_from_all_categories',
+     ]);
 });
+
+// تابع برای دریافت لیست دسته‌بندی‌ها
+function get_custom_categories_list($request)
+{
+    // IDs ثابت دسته‌بندی‌ها (مقادیر را با IDهای مورد نظر خود جایگزین کنید)
+    $category_ids = [ 128, 131, 156, 132, 133 ];
+    $categories   = [  ];
+
+    foreach ($category_ids as $id) {
+        $category = get_term($id, 'category');
+        if ($category && ! is_wp_error($category)) {
+            $categories[  ] = [
+                'id'   => $category->term_id,
+                'name' => $category->name,
+             ];
+        }
+    }
+
+    return new WP_REST_Response($categories, 200);
+}
+
+// تابع برای دریافت پست‌های یک دسته‌بندی خاص
+function get_posts_from_single_category($request)
+{
+    $category_id = $request[ 'id' ]; // دریافت ID دسته‌بندی از URL
+    $posts       = [  ];
+
+    // تنظیم پارامترهای WP_Query
+    $args = [
+        'category__in'   => [ $category_id ], // فقط پست‌های این دسته‌بندی
+        'posts_per_page' => -1,               // دریافت تمام پست‌ها
+        'post_status'    => 'publish',        // فقط پست‌های منتشر شده
+     ];
+
+    $query = new WP_Query($args);
+
+    // اگر پستی وجود داشته باشد
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $posts[  ] = [
+                'id'        => get_the_ID(),
+                'title'     => get_the_title(),
+                'content'   => get_the_content(),
+                'excerpt'   => get_the_excerpt(),
+                'permalink' => get_permalink(),
+                'thumbnail' => get_the_post_thumbnail_url(),
+             ];
+        }
+    }
+
+    // بازنشانی پست‌های اصلی
+    wp_reset_postdata();
+
+    return new WP_REST_Response($posts, 200);
+}
+
+// تابع برای دریافت پست‌های تمام دسته‌بندی‌ها
+function get_posts_from_all_categories($request)
+{
+    $posts = [  ];
+
+    // تنظیم پارامترهای WP_Query
+    $args = [
+        'posts_per_page' => -1,        // دریافت تمام پست‌ها
+        'post_status'    => 'publish', // فقط پست‌های منتشر شده
+     ];
+
+    $query = new WP_Query($args);
+
+    // اگر پستی وجود داشته باشد
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $posts[  ] = [
+                'id'        => get_the_ID(),
+                'title'     => get_the_title(),
+                'content'   => get_the_content(),
+                'excerpt'   => get_the_excerpt(),
+                'permalink' => get_permalink(),
+                'thumbnail' => get_the_post_thumbnail_url(),
+             ];
+        }
+    }
+
+    // بازنشانی پست‌های اصلی
+    wp_reset_postdata();
+
+    return new WP_REST_Response($posts, 200);
+}

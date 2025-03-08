@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
-
-    <script async defer src="https://tianji.ayeh.net/tracker.js" data-website-id="cm7ggk6wf0nq655wmydnwnjkm"></script>
-
+    <script async defer src="https://tianji.ayeh.net/tracker.js" data-website-id="cm807nd8s48srul657mxap2vr"></script>
 </head>
 
 <body>
