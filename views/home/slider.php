@@ -69,7 +69,7 @@
 
                         <div class=" row row-cols-1 row-cols-lg-2">
                             <!-- <a href="<?php echo get_option('android_link') ?>" target="_blank" class="col p-1"> -->
-                            <a href="http://zendegibaayeha.ir/app/zba.apk" target="_blank" class="col p-1">
+                            <a href="https://zendegibaayeha.ir/app/zba.apk" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">لینک مستقیم</span>
                                     <div class="w-25 text-center"><img class="download-icon"
