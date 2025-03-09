@@ -96,18 +96,21 @@ add_action('rest_api_init', function () {
     register_rest_route('zba/v1', '/categories/?', [
         'methods'  => 'GET',
         'callback' => 'get_custom_categories_list',
+        'permission_callback' => '__return_true',
      ]);
 
     // Endpoint برای دریافت پست‌های یک دسته‌بندی خاص
     register_rest_route('zba/v1', '/categories/(?P<id>\d+)', [
         'methods'  => 'GET',
         'callback' => 'get_posts_from_single_category',
+        'permission_callback' => '__return_true',
      ]);
 
     // Endpoint برای دریافت پست‌های تمام دسته‌بندی‌ها
     register_rest_route('zba/v1', '/categories/post', [
         'methods'  => 'GET',
         'callback' => 'get_posts_from_all_categories',
+        'permission_callback' => '__return_true',
      ]);
 });
 
@@ -156,7 +159,7 @@ function get_posts_from_single_category($request)
                 'content'   => get_the_content(),
                 'excerpt'   => get_the_excerpt(),
                 'permalink' => get_permalink(),
-                'thumbnail' => get_the_post_thumbnail_url(),
+                'thumbnail' => (has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : 'https://zendegibaayeha.ir/wp-content/uploads/2025/02/PNG-zendegi-ba-ayeha-520x245-1.png',
              ];
         }
     }
@@ -190,7 +193,7 @@ function get_posts_from_all_categories($request)
                 'content'   => get_the_content(),
                 'excerpt'   => get_the_excerpt(),
                 'permalink' => get_permalink(),
-                'thumbnail' => get_the_post_thumbnail_url(),
+                'thumbnail' => (has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : 'https://zendegibaayeha.ir/wp-content/uploads/2025/02/PNG-zendegi-ba-ayeha-520x245-1.png',
              ];
         }
     }

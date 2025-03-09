@@ -27,7 +27,7 @@
 
 
             <a class="col"
-                href="https://zendegibaayeha.ir/atlas/">
+                href="https://atlas.zendegibaayeha.ir/">
                 <img class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner1.png') ?>">
 
                 <div
@@ -376,7 +376,7 @@
                 <div class="py-4">
                     <h3 class="fw-900">اطلس</h3>
                     <p class="f-17px">سامانه جامع ثبت و معرفی محافل و تشکل های قرآنی کشور</p>
-                    <a href="https://zendegibaayeha.ir/atlas/" style="background-color: #FFA200;"
+                    <a href="https://atlas.zendegibaayeha.ir/" style="background-color: #FFA200;"
                         class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
                 </div>
             </div>

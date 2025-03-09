@@ -42,7 +42,7 @@ function zba_remote(string $url)
     return $result;
 }
 
-function zba_cookie(): string
+function zba_cookie()
 {
 
     if (! is_user_logged_in()) {

@@ -670,7 +670,7 @@
             20
         );
     }
-    add_action('admin_menu', 'default_featured_image_menu');
+    //add_action('admin_menu', 'default_featured_image_menu');
 
     // نمایش صفحه تنظیمات
     function default_featured_image_settings_page()
