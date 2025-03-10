@@ -15,7 +15,7 @@
 
 <div class="zba-header-post text-center py-5">
     <div class="zba-row mx-auto d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
-        <h1 style="font-size: 34px; " class="text-white fw-900">آیه های <?php the_archive_title(); ?></h1>
+        <h1 style="font-size: 34px; " class="text-white fw-900">محتوای آیه های سال <?php the_archive_title(); ?></h1>
         <?php
 
             $current_category = get_queried_object();
@@ -24,7 +24,7 @@
             echo '<ol class="breadcrumb m-0">';
 
             // لینک به صفحه اصلی
-            echo '<li class="breadcrumb-item p-0"><a class=" text-white" href="' . home_url() . '">خانه</a></li>';
+            echo '<li class="breadcrumb-item p-0"><a class=" text-white" href="' . home_url() . '">صفحه نخست</a></li>';
 
             // دریافت والدهای دسته به صورت آرایه (شناسه‌ها)
             $ancestors = get_ancestors($current_category->term_id, 'category');
@@ -33,7 +33,7 @@
                 $ancestors = array_reverse($ancestors);
                 foreach ($ancestors as $ancestor_id) {
                     $ancestor = get_category($ancestor_id);
-                    echo '<li class="breadcrumb-item  p-0"><a class=" text-white" href="' . esc_url(get_category_link($ancestor_id)) . '">' . esc_html($ancestor->name) . '</a></li>';
+                    echo '<li class="breadcrumb-item  p-0"><a class=" text-white" href="' . esc_url(get_category_link($ancestor_id)) . '">محتوای آیه های سال ' . esc_html($ancestor->name) . '</a></li>';
                 }
             }
 
@@ -73,11 +73,9 @@
 
             if ($query->have_posts()):
                 while (have_posts()): the_post();
-
                     $ayeh_ayeh     = get_post_meta(get_the_ID(), '_ayeh_ayeh', true);
                     $ayeh_tarjomeh = get_post_meta(get_the_ID(), '_ayeh_tarjomeh', true);
                     $ayeh_address  = get_post_meta(get_the_ID(), '_ayeh_address', true);
-
                 ?>
 
         <div class="py-2 zba-page-ayeha ">
@@ -92,7 +90,7 @@
 
                 <p class="f-17px py-3 text-justify"><?php echo $ayeh_tarjomeh ?></p>
                 <div class="text-end">
-                    <a class="btn btn-outline-primary" target="_blank" href="<?php the_permalink(); ?>" >مشاهده آیه</a>
+                    <a class="btn btn-outline-primary" target="_blank" href="<?php the_permalink(); ?>" >محتوای آیه</a>
                 </div>
 
                 <div class="w-100 divider-separator "></div>

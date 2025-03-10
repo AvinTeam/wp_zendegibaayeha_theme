@@ -702,7 +702,7 @@
                 <th scope="row">تصویر پیش‌فرض</th>
                 <td>
                     <?php if ($default_image_url): ?>
-                    <img src="<?php echo esc_url($default_image_url); ?>" alt="تصویر پیش‌فرض"
+                    <img loading="lazy" src="<?php echo esc_url($default_image_url); ?>" alt="تصویر پیش‌فرض"
                         style="max-width: 300px; display: block; margin-bottom: 10px;">
                     <?php endif; ?>
                     <input type="file" name="default_featured_image" />

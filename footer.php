@@ -3,7 +3,7 @@
     <div class="top-footer pt-5">
         <div
             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-2 py-md-5">
-            <img style="height: 150px;" src="<?php echo zba_image('logo-footer.png') ?>">
+            <img loading="lazy" style="height: 150px;" src="<?php echo zba_image('logo-footer.png') ?>">
             <div class="w-50"></div>
             <div class="text-center  text-md-start" >
                 <p class="f-17px">پویش ملی تبیین و حفظ 30 فراز زندگی ساز قرآن کریم</p>
@@ -16,11 +16,11 @@
         <div
             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center zba-row mx-auto py-3 gap-2 gap-md-0 text-center">
             <div >
-                 <a class="mx-2" target="_blank" href="https://eitaa.com/joinchat/2527134304Ccdba67771f"><img src="<?php echo zba_image('eitaa.png') ?>" alt="ایتا"></a>
-                 <a class="mx-2" target="_blank" href="https://ble.ir/join/BBTz8iGZLf"><img src="<?php echo zba_image('bale.png') ?>" alt="بله"></a>
-                 <a class="mx-2" target="_blank" href="https://rubika.ir/zendegibaayeha"><img src="<?php echo zba_image('rubika.png') ?>" alt="روبیکا"></a>
-                 <a class="mx-2" target="_blank" href="https://www.aparat.com/zendegibaayeha"><img src="<?php echo zba_image('aparat.png') ?>" alt="آپارات"></a>
-                 <a class="mx-2" target="_blank" href="http://www.youtube.com/@zendegibaayeha"><img src="<?php echo zba_image('youtube.png') ?>" alt="یوتیوب"></a>
+                 <a class="mx-2" target="_blank" href="https://eitaa.com/joinchat/2527134304Ccdba67771f"><img loading="lazy" src="<?php echo zba_image('eitaa.png') ?>" alt="ایتا"></a>
+                 <a class="mx-2" target="_blank" href="https://ble.ir/join/BBTz8iGZLf"><img loading="lazy" src="<?php echo zba_image('bale.png') ?>" alt="بله"></a>
+                 <a class="mx-2" target="_blank" href="https://rubika.ir/zendegibaayeha"><img loading="lazy" src="<?php echo zba_image('rubika.png') ?>" alt="روبیکا"></a>
+                 <a class="mx-2" target="_blank" href="https://www.aparat.com/zendegibaayeha"><img loading="lazy" src="<?php echo zba_image('aparat.png') ?>" alt="آپارات"></a>
+                 <a class="mx-2" target="_blank" href="http://www.youtube.com/@zendegibaayeha"><img loading="lazy" src="<?php echo zba_image('youtube.png') ?>" alt="یوتیوب"></a>
             </div>
             <div>Copyright © 2023 Zendegi ba ayeha. All rights reserved.</div>
         </div>
@@ -55,7 +55,7 @@
 <div class="overlay" id="overlay">
     <div class="loader"></div>
 </div>
-
+<script type="text/javascript">;!(function(w,d) {'use strict';d.write('<div class="opacity-0" id="amarfa-stats-13367" style="display: inline-block height: 0px; width: 0px;  "></div>');d.write('<'+'sc'+'ript type="text/javasc'+'ri'+'pt" src="//amarfa.ir/stats/13367.js" async><'+'/'+'scri'+'pt>');})(this,document);</script>
 <?php wp_footer()?>
 </body>
 

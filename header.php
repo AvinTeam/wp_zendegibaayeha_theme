@@ -14,7 +14,7 @@
         <nav class="navbar navbar-expand-lg zba-row mx-auto d-flex flex-row justify-content-between">
             <!-- لوگو در موبایل سمت راست -->
             <a class="navbar-brand" href="/">
-                <img class="logo " src="<?php echo zba_image('logo.png') ?>">
+                <img loading="lazy" class="logo " src="<?php echo zba_image('logo.png') ?>">
             </a>
 
             <!-- دکمه‌ی همبرگر -->

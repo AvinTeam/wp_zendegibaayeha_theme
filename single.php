@@ -50,7 +50,7 @@
 
 
                 <?php else: ?>
-                <img src="<?php echo $image; ?>" alt="<?php echo get_the_title(); ?>" class="img-fluid  h-100">
+                <img loading="lazy" src="<?php echo $image; ?>" alt="<?php echo get_the_title(); ?>" class="img-fluid  h-100">
 
                 <?php endif; ?>
             </div>

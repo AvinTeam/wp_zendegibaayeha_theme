@@ -3,7 +3,7 @@
 
 add_action('init', function (): void {
 
-    if (! wp_is_json_request()) {
+    if (wp_is_json_request()) {
         zba_cookie();
     }
     // header("Access-Control-Allow-Origin: *");

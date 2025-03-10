@@ -10,11 +10,11 @@
 
             <a class="col"
                 href="https://zendegibaayeha.ir/%d9%85%d8%ad%d8%aa%d9%88%d8%a7%db%8c-%d8%b2%d9%86%d8%af%da%af%db%8c-%d8%a8%d8%a7-%d8%a2%db%8c%d9%87%d9%87%d8%a7/">
-                <img class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner.png') ?>">
+                <img loading="lazy" class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner.png') ?>">
 
                 <div
                     class="rounded-3 banner0 d-flex flex-column justify-content-center align-items-center d-md-none gap-2 ">
-                    <img class="w-100 rounded-3" src="<?php echo zba_image('30.png')?>">
+                    <img loading="lazy" class="w-100 rounded-3" src="<?php echo zba_image('30.png') ?>">
                     <div class="px-2 text-center">
                         <h2 class="f-22px text-primary fw-900">منابع نهضت ملی زندگی با آیه ها</h2>
                         <p class="f-17px text-white fw-bold">قبل از شرکت در آزمون، منابع را مطالعه کنید</p>
@@ -27,12 +27,12 @@
 
 
             <a class="col"
-                href="https://atlas.zendegibaayeha.ir/">
-                <img class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner1.png') ?>">
+                href="https://mahfel.info/">
+                <img loading="lazy" class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner1.png') ?>">
 
                 <div
                     class="rounded-3 banner0 d-flex flex-column justify-content-center align-items-center d-md-none gap-2 ">
-                    <img class="w-100 rounded-3" src="<?php echo zba_image('family.jpg')?>">
+                    <img loading="lazy" class="w-100 rounded-3" src="<?php echo zba_image('family.jpg') ?>">
                     <div class="px-2 text-center">
                         <h2 class="f-22px text-primary fw-900">اطلس محافل و تشکل های قرآنی</h2>
                         <p class="f-17px text-white fw-bold">نمایش و ثبت محافل و تشکل های قرآنی در سطح کشور</p>
@@ -64,7 +64,7 @@
 
                     <a href="https://ayeh.tv/" class="col p-2">
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
-                            <div class="w-25 text-center"><img class="all-match-img"
+                            <div class="w-25 text-center"><img loading="lazy" class="all-match-img"
                                     src="<?php echo zba_image('tv.svg') ?>">
                             </div>
                             <div class=" w-75 text-center text-primary d-flex flex-column justify-content-around">
@@ -77,7 +77,7 @@
 
                     <a href="https://ayeh.net/" class="col p-2">
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
-                            <div class="w-25 text-center"><img class="all-match-img"
+                            <div class="w-25 text-center"><img loading="lazy" class="all-match-img"
                                     src="<?php echo zba_image('group.svg') ?>"></div>
                             <div class=" w-75 text-center text-primary d-flex flex-column justify-content-around">
 
@@ -90,7 +90,7 @@
 
                     <a href="https://ayeh.online/" class="col p-2">
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
-                            <div class="w-25 text-center"><img class="all-match-img"
+                            <div class="w-25 text-center"><img loading="lazy" class="all-match-img"
                                     src="<?php echo zba_image('oni.svg') ?>">
                             </div>
                             <span class=" w-75 text-center text-primary f-22px fw-900">مسابقه لحظه ای</span>
@@ -99,7 +99,7 @@
 
                     <a href="https://app.ayeh.net/prize" class="col p-2">
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
-                            <div class="w-25 text-center"><img class="all-match-img"
+                            <div class="w-25 text-center"><img loading="lazy" class="all-match-img"
                                     src="<?php echo zba_image('luck.svg') ?>"></div>
                             <span class=" w-75 text-center text-primary f-22px fw-900">گردونه جایزه</span>
                         </div>
@@ -109,7 +109,7 @@
 
                     <a href="https://ayeh.info/" class=" w-100 p-2">
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
-                            <div class="w-25 text-center"><img class="all-match-img"
+                            <div class="w-25 text-center"><img loading="lazy" class="all-match-img"
                                     src="<?php echo zba_image('qu.svg') ?>"></div>
                             <span class=" w-75 text-center text-primary f-22px fw-900">آزمـــون صدور گواهــی معتبـــر</span>
                         </div>
@@ -118,7 +118,7 @@
             </div>
             <div class="col-12 col-lg-4 mt-3 mt-gl-0 ">
                 <div class="w-75 mx-auto text-center">
-                    <img class="w-50" src="<?php echo zba_image('zba-logo.png') ?>">
+                    <img loading="lazy" class="w-50" src="<?php echo zba_image('zba-logo.png') ?>">
                     <p class="f-40px fw-900 text-white">مجمـوعه مسابقــات
                         زندگی با آیه ها</p>
                 </div>
@@ -157,11 +157,11 @@
                 if (! end($gift_next)) {continue;}?>
 
                     <div class="swiper-slide">
-                    <img src="<?php echo zba_image('gift/' . end($gift_next)) ?>" class="card-img-top rounded shadow">
+                    <img loading="lazy" src="<?php echo zba_image('gift/' . end($gift_next)) ?>" class="card-img-top rounded shadow">
                 </div>
 
 
-            <?php } ?>
+            <?php }?>
             </div>
             <div class=" swiper-pagination"></div>
         </div>
@@ -199,7 +199,7 @@
 
                         $query = new WP_Query([
                             'cat'            => $term->term_id, // گرفتن پست‌های این زیر دسته
-                            'posts_per_page' => 12,              // تعداد پست‌ها
+                            'posts_per_page' => 12,             // تعداد پست‌ها
                          ]);
 
                         if ($query->have_posts()) {
@@ -230,7 +230,7 @@
                         echo '
                         <div class="mpgallery-item"  data-category="category' . $post[ 'term_id' ] . '" data-title="' . $post[ 'title' ] . '" data-id="' . $post[ 'id' ] . '" >
                         <a href="' . $post[ 'url' ] . '">
-                            <img src="' . $post[ 'image' ] . '" alt="' . $post[ 'title' ] . '">
+                            <img loading="lazy" src="' . $post[ 'image' ] . '" alt="' . $post[ 'title' ] . '">
                             <div class="title">' . $post[ 'title' ] . '</div>
                         </a>
                         </div>';
@@ -266,7 +266,7 @@
                 if (! end($ayeh_next)) {continue;}?>
 
 
-            <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="w-100"
+            <div class="swiper-slide d-flex justify-content-center align-items-center"><img loading="lazy" class="w-100"
                     src="<?php echo zba_image('ayeh/' . end($ayeh_next)) ?>"></div>
 
             <?php }
@@ -300,7 +300,7 @@
             <div class="swiper-slide">
                 <div class="news-item p-2">
                     <a href="<?php echo get_permalink() ?>">
-                        <img style="height: 260px; object-fit: contain;"
+                        <img loading="lazy" style="height: 260px; object-fit: contain;"
                             src="<?php echo(has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '' ?>"
                             class="card-img-top rounded" alt="<?php echo get_the_title() ?>">
                     </a>
@@ -309,7 +309,7 @@
                             href="<?php echo get_permalink() ?>">
                             <?php echo get_the_title() ?>
                         </a>
-                        <p style="font-size: 14px;" class="text-justify d-none"> <?php echo get_the_excerpt() ?></p>
+                        <p style="font-size: 14px;" class="text-justify d-none">                                                                                 <?php echo get_the_excerpt() ?></p>
                         <a href="<?php echo get_permalink() ?>" style="background-color: #FFA200; width: 126px;"
                             class="btn btn-warning rounded-bottom-2 text-white ">توضیحات بیشتر</a>
                     </div>
@@ -337,7 +337,7 @@
                 class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
 
                 <div class="">
-                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('tabestan.png') ?>">
+                    <img loading="lazy" class="w-100" style="height: 115px;" src="<?php echo zba_image('tabestan.png') ?>">
 
                 </div>
                 <div class="py-4">
@@ -348,14 +348,14 @@
 
                 </div>
             </div>
-            <img class="position-absolute head-cart" src="<?php echo zba_image('tabestan1.png') ?>">
+            <img loading="lazy" class="position-absolute head-cart" src="<?php echo zba_image('tabestan1.png') ?>">
         </div>
 
         <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden" style="background-color: #DBBBE8;">
             <div
                 class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
                 <div class="">
-                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('student.png') ?>">
+                    <img loading="lazy" class="w-100" style="height: 115px;" src="<?php echo zba_image('student.png') ?>">
                 </div>
                 <div class="py-4">
                     <h3 class="fw-900">مدرسه شمع</h3>
@@ -364,23 +364,23 @@
                         class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
                 </div>
             </div>
-            <img class="position-absolute head-cart" src="<?php echo zba_image('student1.png') ?>">
+            <img loading="lazy" class="position-absolute head-cart" src="<?php echo zba_image('student1.png') ?>">
         </div>
 
         <div class="col-12 col-lg-4 rounded-3 position-relative  overflow-hidden" style="background-color: #77D4D6;">
             <div
                 class=" d-flex flex-row gap-2 justify-content-around align-items-center  w-100 py-3 z-3 position-relative">
                 <div class="">
-                    <img class="w-100" style="height: 115px;" src="<?php echo zba_image('keramat.png') ?>">
+                    <img loading="lazy" class="w-100" style="height: 115px;" src="<?php echo zba_image('keramat.png') ?>">
                 </div>
                 <div class="py-4">
                     <h3 class="fw-900">اطلس</h3>
                     <p class="f-17px">سامانه جامع ثبت و معرفی محافل و تشکل های قرآنی کشور</p>
-                    <a href="https://atlas.zendegibaayeha.ir/" style="background-color: #FFA200;"
+                    <a href="https://mahfel.info/" style="background-color: #FFA200;"
                         class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
                 </div>
             </div>
-            <img class="position-absolute head-cart" src="<?php echo zba_image('keramat1.png') ?>">
+            <img loading="lazy" class="position-absolute head-cart" src="<?php echo zba_image('keramat1.png') ?>">
         </div>
 
     </div>
@@ -406,7 +406,7 @@
                 if (! end($next)) {continue;}?>
 
             <div class="swiper-slide">
-                <img src="<?php echo zba_image('supporters/' . end($next)) ?>" class="card-img-top rounded shadow">
+                <img loading="lazy" src="<?php echo zba_image('supporters/' . end($next)) ?>" class="card-img-top rounded shadow">
             </div>
 
             <?php }

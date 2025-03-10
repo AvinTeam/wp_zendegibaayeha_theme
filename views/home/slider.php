@@ -72,7 +72,7 @@
                             <a href="https://zendegibaayeha.ir/app/zba.apk" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">لینک مستقیم</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download.svg') ?>">
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                             <a href="https://app.ayeh.net/" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">وب اپلیکیشن</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-pwa.svg') ?>">
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                             <a href="https://cafebazaar.ir/app/com.zendegi_ba_ayeha" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">کافه بازار</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-cafebazaar.svg') ?>">
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
                             <a href="https://myket.ir/app/com.zendegi_ba_ayeha" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">مایکت</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-myket.svg') ?>">
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
                             <a href="https://app.ayeh.net/" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">وب اپلیکیشن</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-pwa.svg') ?>">
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                             <a href="#" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">سیب اپ</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-sibapp.svg') ?>">
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                             <a href="#" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">انار دونی</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-anardoni.svg') ?>">
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@
                             <a href="#" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">سیبچه</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-sibche.svg') ?>">
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                             <a href="#" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">آی‌اپس</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-iapps.svg') ?>">
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@
                             <a href="#" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">اپ‌استار</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-app-star.svg') ?>">
                                     </div>
                                 </div>
@@ -169,7 +169,7 @@
                             <a href="#" target="_blank" class="col p-1">
                                 <div class="w-100 d-flex flex-row align-items-center bg-white rounded-4 shadow py-2  ">
                                     <span class=" w-75 text-center text-primary f-17px fw-900">سیب‌ایرانی</span>
-                                    <div class="w-25 text-center"><img class="download-icon"
+                                    <div class="w-25 text-center"><img loading="lazy" class="download-icon"
                                             src="<?php echo zba_image('download-sibirani.svg') ?>">
                                     </div>
                                 </div>
