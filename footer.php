@@ -55,7 +55,7 @@
 <div class="overlay" id="overlay">
     <div class="loader"></div>
 </div>
-<script type="text/javascript">;!(function(w,d) {'use strict';d.write('<div class="opacity-0" id="amarfa-stats-13367" style="display: inline-block height: 0px; width: 0px;  "></div>');d.write('<'+'sc'+'ript type="text/javasc'+'ri'+'pt" src="//amarfa.ir/stats/13367.js" async><'+'/'+'scri'+'pt>');})(this,document);</script>
+<script type="text/javascript">;!(function(w,d) {'use strict';d.write('<div class="opacity-0 d-none" id="amarfa-stats-13367" style="display: inline-block height: 0px; width: 0px;  "></div>');d.write('<'+'sc'+'ript type="text/javasc'+'ri'+'pt" src="//amarfa.ir/stats/13367.js" async><'+'/'+'scri'+'pt>');})(this,document);</script>
 <?php wp_footer()?>
 </body>
 
