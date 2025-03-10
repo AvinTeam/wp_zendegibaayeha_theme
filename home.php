@@ -9,7 +9,7 @@
         <div class="zba-row mx-auto mt-3 mb-5 row row-cols-2 row-cols-md-1 ">
 
             <a class="col"
-                href="https://zendegibaayeha.ir/%d9%85%d8%ad%d8%aa%d9%88%d8%a7%db%8c-%d8%b2%d9%86%d8%af%da%af%db%8c-%d8%a8%d8%a7-%d8%a2%db%8c%d9%87%d9%87%d8%a7/">
+                href="https://zendegibaayeha.ir/cat_ayeh/1403/">
                 <img loading="lazy" class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner.png') ?>">
 
                 <div
@@ -309,7 +309,7 @@
                             href="<?php echo get_permalink() ?>">
                             <?php echo get_the_title() ?>
                         </a>
-                        <p style="font-size: 14px;" class="text-justify d-none">                                                                                 <?php echo get_the_excerpt() ?></p>
+                        <p style="font-size: 14px;" class="text-justify d-none"><?php echo get_the_excerpt() ?></p>
                         <a href="<?php echo get_permalink() ?>" style="background-color: #FFA200; width: 126px;"
                             class="btn btn-warning rounded-bottom-2 text-white ">توضیحات بیشتر</a>
                     </div>
