@@ -40,6 +40,7 @@ require_once ZBA_INCLUDES . '/meta_boxs.php';
 
 require_once ZBA_INCLUDES . '/postype.php';
 require_once ZBA_INCLUDES . '/taxonomies.php';
+require_once ZBA_INCLUDES . '/dashboard_widget.php';
 // require_once ZBA_INCLUDES . '/init_user_submit.php';
 
 if (is_admin()) {
@@ -58,6 +59,8 @@ if (isset($_GET[ 'test' ])) {
     exit;
 
 }
+
+
 
 $mr_times_set = get_option('mr_add_clock');
 if (is_array($mr_times_set)) {

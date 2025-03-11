@@ -54,17 +54,3 @@ add_filter('get_the_archive_title_prefix', function ($prefix) {
 
     return '';
 });
-
-
-function compress_image_on_upload($file) {
-    $type = $file['type'];
-    if ($type == 'image/jpeg' || $type == 'image/png' || $type == 'image/gif') {
-        $image = wp_get_image_editor($file['file']);
-        if (!is_wp_error($image)) {
-            $image->set_quality(75); // کیفیت عکس را به 75% کاهش می‌دهد
-            $image->save($file['file']);
-        }
-    }
-    return $file;
-}
-add_filter('wp_handle_upload', 'compress_image_on_upload');
