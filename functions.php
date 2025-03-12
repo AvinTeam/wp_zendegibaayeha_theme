@@ -3,7 +3,7 @@
 (defined('ABSPATH')) || exit;
 date_default_timezone_set('Asia/Tehran');
 
-define('ZBA_VERSION', '1.1.14');
+define('ZBA_VERSION', '1.1.19');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -59,7 +59,6 @@ if (isset($_GET[ 'test' ])) {
     exit;
 
 }
-
 
 
 $mr_times_set = get_option('mr_add_clock');

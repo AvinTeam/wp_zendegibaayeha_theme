@@ -4,14 +4,8 @@
      * Description: Template for displaying the cat_ayeh taxonomy archive.
      */
 
-    get_header(); // هدر سایت را فراخوانی کنید
+    get_header();
 ?>
-
-
-
-
-
-
 
 <div class="zba-header-post text-center py-5">
     <div class="zba-row mx-auto d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
@@ -53,56 +47,57 @@
 
 <div class="zba-row mx-auto mt-4">
     <!-- لیست پست‌ها -->
-    <div class="zba-row mx-auto ">
+    <div class="zba-row mx-auto">
         <?php
-            $term = get_queried_object();
+        $term = get_queried_object();
 
-            $args = [
-                'post_type'      => 'content_ayeh', // نوع پست تایپ
-                'posts_per_page' => 40,             // تعداد پست‌ها
-                'tax_query'      => [
-                    [
-                        'taxonomy' => 'cat_ayeh', // نام تاکسونومی
-                        'field'    => 'slug',
-                        'terms'    => $term->slug, // اسلاگ تاکسونومی فعلی
-                     ],
+        $args = [
+            'post_type'      => 'content_ayeh', // نوع پست تایپ
+            'posts_per_page' => -1,
+            'orderby'        => 'date', // مرتب‌سازی بر اساس تاریخ
+            'order'          => 'ASC',  // از قدیم به جدید
+            'tax_query'      => [
+                [
+                    'taxonomy' => 'cat_ayeh', // نام تاکسونومی
+                    'field'    => 'slug',
+                    'terms'    => $term->slug, // اسلاگ تاکسونومی فعلی
                  ],
-             ];
+             ],
+         ];
 
-            $query = new WP_Query($args);
+        $query = new WP_Query($args);
 
-            if ($query->have_posts()):
-                while (have_posts()): the_post();
-                    $ayeh_ayeh     = get_post_meta(get_the_ID(), '_ayeh_ayeh', true);
-                    $ayeh_tarjomeh = get_post_meta(get_the_ID(), '_ayeh_tarjomeh', true);
-                    $ayeh_address  = get_post_meta(get_the_ID(), '_ayeh_address', true);
-                ?>
-
-        <div class="py-2 zba-page-ayeha ">
+        if ($query->have_posts()):
+            while ($query->have_posts()): $query->the_post();
+                $ayeh_ayeh     = get_post_meta(get_the_ID(), '_ayeh_ayeh', true);
+                $ayeh_tarjomeh = get_post_meta(get_the_ID(), '_ayeh_tarjomeh', true);
+                $ayeh_address  = get_post_meta(get_the_ID(), '_ayeh_address', true);
+            ?>
+        <div class="py-2 zba-page-ayeha">
             <div class="zba-row mx-auto d-flex flex-column">
-                <p class="mb-5"><span class="bg-success p-3 text-white f-17px rounded  "><?php the_title(); ?></span></p>
-                <p class="zba_ayeh text-primary fw-900 f-40px  text-justify lh-lg"><?php echo $ayeh_ayeh ?></p>
+                <p class="mb-5">
+                    <span class="bg-success p-3 text-white f-17px rounded"><?php the_title(); ?></span>
+                </p>
+                <p class="zba_ayeh text-primary fw-900 f-40px text-justify lh-lg"><?php echo $ayeh_ayeh; ?></p>
 
-
-                <div class="ayeh-address d-flex align-items-center flex-row-reverse"><span
-                        class="pe-3 text-primary"><?php echo $ayeh_address ?></span>
+                <div class="ayeh-address d-flex align-items-center flex-row-reverse">
+                    <span class="pe-3 text-primary"><?php echo $ayeh_address; ?></span>
                 </div>
 
-                <p class="f-17px py-3 text-justify"><?php echo $ayeh_tarjomeh ?></p>
+                <p class="f-17px py-3 text-justify"><?php echo $ayeh_tarjomeh; ?></p>
                 <div class="text-end">
-                    <a class="btn btn-outline-primary" target="_blank" href="<?php the_permalink(); ?>" >محتوای آیه</a>
+                    <a class="btn btn-outline-primary" target="_blank" href="<?php the_permalink(); ?>">محتوای آیه</a>
                 </div>
 
-                <div class="w-100 divider-separator "></div>
+                <div class="w-100 divider-separator"></div>
             </div>
         </div>
         <?php endwhile; ?>
         <?php else: ?>
         <p>هیچ آیه ای یافت نشد.</p>
         <?php endif;
-            wp_reset_postdata(); // بازنشانی کوئری
-
-        ?>
+        wp_reset_postdata(); // بازنشانی کوئری
+    ?>
     </div>
     <?php
         global $wp_query;
@@ -133,5 +128,5 @@
 </div>
 
 <?php
-get_footer(); // فوتر سایت را فراخوانی کنید
+get_footer();
 ?>

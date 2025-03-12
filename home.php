@@ -133,19 +133,14 @@
 
 </div>
 
-<div style="margin: -240px 0; position: relative;">
-    <div style="height: 480px;  border-radius: 54px;"
+<div style="margin: -250px 0; position: relative;">
+    <div style="height: 500px;  border-radius: 54px;"
         class="zba-row mx-auto bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
         <div>
             <h2 class="fw-900 f-28px">جوایز و برندگان </h2>
         </div>
         <div class="swiper giftSwiper w-100 container">
-            <div class="swiper-wrapper f-21px" style="color: #9BA1B2; ;">
-
-
-
-
-
+            <div class="swiper-wrapper f-21px" style="color: #9BA1B2;">
             <?php
 
                 $gift_array = glob(ZBA_PATH . 'assets/image/gift/*');
@@ -166,8 +161,10 @@
             <div class=" swiper-pagination"></div>
         </div>
 
+        <p class="text-center"> <a class="text-primary f-21px" href="https://zendegibaayeha.ir/pay" target="_blank" >مشارکت در هدایای پویش زندگی با آیه ها </a> </p>
 
     </div>
+
 </div>
 
 <div class="zba-media">
