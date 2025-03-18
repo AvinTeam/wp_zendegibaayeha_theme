@@ -9,7 +9,11 @@
 
         if ($zba_aparat[ 'code' ] == 0) {
             $zba_aparat = $zba_aparat[ 'result' ];
-            $file_link  = $zba_aparat->video->file_link;
+            if(isset($zba_aparat->video)){
+                $file_link  = $zba_aparat->video->file_link;
+            }else{
+              $zba_aparat = '';
+            }
         } else {
             $zba_aparat = '';
         }
