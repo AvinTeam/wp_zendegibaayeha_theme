@@ -32,7 +32,7 @@ if (isset($_FILES[ 'zba_exel_winners' ]) && $_FILES[ 'zba_exel_winners' ][ 'erro
             <span class="mx-3">' . sanitize_text_field($_POST[ 'zba_row_title' ]) . '</span>
             <div class="flex-grow-1 bg-primary-400" style="height: 1px;"></div>
         </div>
-        <div class="row row-cols-lg-3 row-cols-md-2  row-cols-1">';
+        <div class="row row-cols-lg-3 row-cols-1">';
 
         foreach ($data as $rowIndex => $row) {
 
