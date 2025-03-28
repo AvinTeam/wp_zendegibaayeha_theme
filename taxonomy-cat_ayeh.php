@@ -40,11 +40,6 @@
     </div>
 </div>
 
-
-
-
-
-
 <div class="zba-row mx-auto mt-4">
     <!-- لیست پست‌ها -->
     <div class="zba-row mx-auto">
@@ -99,32 +94,6 @@
         wp_reset_postdata(); // بازنشانی کوئری
     ?>
     </div>
-    <?php
-        global $wp_query;
-        $big        = 999999999;
-        $pagination = paginate_links([
-            'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-            'format'    => '?paged=%#%',
-            'current'   => max(1, get_query_var('paged')),
-            'total'     => $wp_query->max_num_pages,
-            'type'      => 'array',
-            'prev_text' => __('قبلی'),
-            'next_text' => __('بعدی'),
-         ]);
-        if (is_array($pagination)) {
-            echo '<nav aria-label="Page navigation">';
-            echo '<ul class="pagination justify-content-center">';
-            foreach ($pagination as $page) {
-                if (strpos($page, 'current') !== false) {
-                    echo '<li class="page-item active">' . str_replace('page-numbers', 'page-link bg-primary text-white border-primary', $page) . '</li>';
-                } else {
-                    echo '<li class="page-item">' . str_replace('page-numbers', 'page-link text-primary', $page) . '</li>';
-                }
-            }
-            echo '</ul>';
-            echo '</nav>';
-        }
-    ?>
 </div>
 
 <?php
