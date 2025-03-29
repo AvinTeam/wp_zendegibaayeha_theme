@@ -92,7 +92,7 @@ Template Name: نظرسنجی
 
             <?php wp_nonce_field('zba_nonce_captcha' . $captcha_code); ?>
             <div class="my-3">
-                <div class="d-flex flex-row gap-2">
+                <div class="row gap-2">
                     <div class="col-12 col-lg-6 mb-3">
                         <label for="phone" class="form-label">شماره موبایل <span class="text-danger">*</span></label>
                         <input type="text" class="form-control onlyNumbersInput" maxlength="11"
