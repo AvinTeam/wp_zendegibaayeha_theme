@@ -3,7 +3,7 @@
 (defined('ABSPATH')) || exit;
 date_default_timezone_set('Asia/Tehran');
 
-define('ZBA_VERSION', '1.2.0');
+define('ZBA_VERSION', '1.2.2');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -41,13 +41,12 @@ require_once ZBA_INCLUDES . '/meta_boxs.php';
 require_once ZBA_INCLUDES . '/postype.php';
 require_once ZBA_INCLUDES . '/taxonomies.php';
 require_once ZBA_INCLUDES . '/dashboard_widget.php';
-// require_once ZBA_INCLUDES . '/init_user_submit.php';
 
 if (is_admin()) {
     require_once ZBA_CLASS . '/List_Table.php';
     require_once ZBA_INCLUDES . '/menu.php';
     require_once ZBA_INCLUDES . '/install.php';
-    //     require_once ZBA_INCLUDES . '/edit_column_institute.php';
+    require_once ZBA_INCLUDES . '/edit_column_ayeh.php';
     //     require_once ZBA_INCLUDES . '/handle_download.php';
 
 }
@@ -59,7 +58,6 @@ if (isset($_GET[ 'test' ])) {
     exit;
 
 }
-
 
 $mr_times_set = get_option('mr_add_clock');
 if (is_array($mr_times_set)) {
@@ -73,4 +71,3 @@ if (is_array($mr_times_set)) {
 }
 
 // exit;
-

@@ -115,6 +115,7 @@ function zba_save_bax($post_id, $post, $updata)
         update_post_meta($post_id, '_ayeh_address', $_POST[ 'ayeh' ][ 'address' ]);
         update_post_meta($post_id, '_ayeh_sound_list', $_POST[ 'ayeh' ][ 'sound' ]);
         update_post_meta($post_id, '_ayeh_video_list', $_POST[ 'ayeh' ][ 'video' ]);
+        update_post_meta($post_id, '_vote_ayeh', 0);
 
     }
 }
