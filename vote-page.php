@@ -29,7 +29,7 @@ Template Name: نظرسنجی
 
 
 
-        <form id="zba-ayeh-form" method="post" class="needs-validation" novalidate>
+        <form id="zba-ayeh-form" method="post" class="needs-validation d-flex flex-column" novalidate>
 
             <?php
 
@@ -57,32 +57,27 @@ Template Name: نظرسنجی
                         $ayeh_tarjomeh = get_post_meta(get_the_ID(), '_ayeh_tarjomeh', true);
                         $ayeh_address  = get_post_meta(get_the_ID(), '_ayeh_address', true);
                     ?>
-            <div class="py-2 zba-page-ayeha">
+
+            <label for="ayeh<?php echo get_the_ID() ?>" style="cursor: pointer;" class="py-2 zba-page-ayeha">
                 <div class="d-flex flex-column">
-                    <p class="mb-5">
-                        <span class="bg-success p-3 text-white f-17px rounded"><?php the_title(); ?></span>
+                    <p
+                        class="zba_ayeh text-primary fw-900 f-40px text-justify lh-lg d-flex flex-row align-items-center gap-3">
+
+                        <input id="ayeh<?php echo get_the_ID() ?>" class="form-check-input" name="vote_ayeh"
+                            value="<?php echo get_the_ID() ?>" type="radio">
+
+                        <?php echo $ayeh_ayeh; ?>
                     </p>
-                    <p class="zba_ayeh text-primary fw-900 f-40px text-justify lh-lg"><?php echo $ayeh_ayeh; ?></p>
 
                     <div class="ayeh-address d-flex align-items-center flex-row-reverse">
                         <span class="pe-3 text-primary"><?php echo $ayeh_address; ?></span>
                     </div>
 
                     <p class="f-17px py-3 text-justify"><?php echo $ayeh_tarjomeh; ?></p>
-                    <div class="text-end">
-
-
-                        <label for="ayeh<?php echo get_the_ID() ?>" onclick=""
-                            class="zba-radio btn btn-outline-primary">
-                            انتخاب آیه
-                        </label>
-                        <input id="ayeh<?php echo get_the_ID() ?>" style="width:0px;" class="form-check-input opacity-0"
-                            name="vote_ayeh" value="<?php echo get_the_ID() ?>" type="radio">
-                    </div>
 
                     <div class="w-100 divider-separator"></div>
                 </div>
-            </div>
+            </label>
             <?php endwhile; ?>
             <?php else: ?>
             <p>هیچ آیه ای یافت نشد.</p>
@@ -92,15 +87,15 @@ Template Name: نظرسنجی
 
             <?php wp_nonce_field('zba_nonce_captcha' . $captcha_code); ?>
             <div class="my-3">
-                <div class="row gap-2">
-                    <div class="col-12 col-lg-6 mb-3">
+                <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="col mb-3">
                         <label for="phone" class="form-label">شماره موبایل <span class="text-danger">*</span></label>
                         <input type="text" class="form-control onlyNumbersInput" maxlength="11"
                             placeholder="09123456789" inputmode="numeric" pattern="\d*" id="phone" name="phone"
                             required>
                     </div>
 
-                    <div class="col-12 col-lg-6 mb-3 captcha-container">
+                    <div class="col mb-3 captcha-container">
                         <label for="captcha" class="form-label">
                             <?php echo "سوال امنیتی: $number2 + $number1 = ؟" ?> <span class="text-danger">*</span>
                         </label>
