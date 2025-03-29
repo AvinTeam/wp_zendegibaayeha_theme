@@ -1,11 +1,4 @@
-<?php
-    /**
-     * Template Name: Search Results
-     *
-     * این فایل برای نمایش نتایج جستجو در قالب شماست.
-     */
-    get_header();
-?>
+<?php get_header(); ?>
 <div class="zba-header-post text-center py-5">
     <div class="zba-row mx-auto d-flex flex-row justify-content-start align-items-center">
         <h1 style="font-size: 34px; " class="text-white fw-900">نتایج جستجو برای: <?php echo get_search_query(); ?></h1>

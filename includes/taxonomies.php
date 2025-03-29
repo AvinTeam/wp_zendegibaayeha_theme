@@ -2,7 +2,7 @@
 
 (defined('ABSPATH')) || exit;
 
-function mat_taxonomies()
+function zba_taxonomies()
 {
     $labels = [
         'name'                  => 'سال ها',
@@ -35,4 +35,4 @@ function mat_taxonomies()
 
 }
 
-add_action('init', 'mat_taxonomies');
+add_action('init', 'zba_taxonomies');

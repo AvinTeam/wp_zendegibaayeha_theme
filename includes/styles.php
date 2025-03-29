@@ -158,13 +158,6 @@ add_action('wp_enqueue_scripts', 'addMyStyle');
 
 function addMyStyle()
 {
-    wp_enqueue_style(
-        'mr-style',
-        ZBA_CSS . 'mr-style.css',
-        [  ],
-        ZBA_VERSION
-    );
-
     wp_enqueue_script(
         'mr-javascript',
         ZBA_JS . 'mr-javascript.js',

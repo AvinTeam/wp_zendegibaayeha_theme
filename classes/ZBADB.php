@@ -6,6 +6,7 @@ class ZBADB
 
     protected $wpdb;
     protected $tablename;
+    public $query;
 
     public function __construct($table)
     {
@@ -21,6 +22,9 @@ class ZBADB
 
         $format = [  ];
         foreach ($data as $key => $value) {
+
+            if (is_array($value)) {$value = serialize($value);}
+
             $data[ $key ] = $value;
             $format[  ]   = $this->set_type($value);
 
@@ -32,60 +36,8 @@ class ZBADB
             $format
 
         );
-
+        $this->query = $this->wpdb->last_query;
         return ($inserted) ? $this->wpdb->insert_id : false;
-
-    }
-
-    public function update(array $data, array $where): int | false
-    {
-
-        if (! $data && ! $where) {return false;}
-
-        $format = $where_format = [  ];
-
-        foreach ($data as $value) {
-            $format[  ] = $this->set_type($value);
-        }
-
-        foreach ($where as $value) {
-            $where_format[  ] = $this->set_type($value);
-
-        }
-
-        $result = $this->wpdb->update(
-            $this->tablename,
-            $data,
-            $where,
-            $format,
-            $where_format
-        );
-
-        return $result;
-
-    }
-
-    public function delete(array $data): int | false
-    {
-        $format = [  ];
-        foreach ($data as $key => $value) {
-            $data[ $key ] = $value;
-            $format[  ]   = $this->set_type($value);
-        }
-
-        $result = false;
-        if (! empty($data)) {
-
-            $result = $this->wpdb->delete(
-                $this->tablename,
-                $data,
-                $format
-
-            );
-
-        }
-
-        return $result;
 
     }
 
@@ -100,8 +52,10 @@ class ZBADB
             $where .= $this->wpdb->prepare(' AND %i = ' . $this->set_type($value), $key, $value);
         }
 
+        $this->query = "SELECT * FROM `$this->tablename` WHERE $where";
+
         $result = $this->wpdb->get_row(
-            "SELECT * FROM `$this->tablename` WHERE $where",
+            $this->query,
             $output
         );
 
@@ -134,11 +88,41 @@ class ZBADB
                 $sqlwhere .= " AND  `$key` = $value ";
             }
         }
+        $this->query = "SELECT COUNT(*) FROM $this->tablename WHERE 1=1  $sqlwhere ";
 
-        $num = $this->wpdb->get_var("SELECT COUNT(*) FROM $this->tablename WHERE 1=1  $sqlwhere ");
+        $num = $this->wpdb->get_var($this->query);
 
         return absint($num);
 
+    }
+
+    public function update(array $data, array $where): int | false
+    {
+
+        if (! $data && ! $where) {
+            return false;
+        }
+
+        $format = $where_format = [  ];
+
+        foreach ($data as $value) {
+            $format[  ] = $this->set_type($value);
+        }
+
+        foreach ($where as $value) {
+            $where_format[  ] = $this->set_type($value);
+
+        }
+
+        $result = $this->wpdb->update(
+            $this->tablename,
+            $data,
+            $where,
+            $format,
+            $where_format
+        );
+        $this->query = $this->wpdb->last_query;
+        return $result;
     }
 
     public function select(array $args = [  ]): array | object | null
@@ -149,12 +133,10 @@ class ZBADB
             foreach ($args[ 'data' ] as $key => $value) {
 
                 if (is_array($value)) {
-                    $where .= ' AND (';
-                    foreach ($value as $i => $row) {
-                        if ($i == 1) {$where .= ' OR ';}
-                        $where .= $this->wpdb->prepare(' %i = ' . $this->set_type($row), $key, $row);
-                    }
-                    $where .= ')';
+
+                    $value = implode(',', $value);
+                    $where .= $this->wpdb->prepare(" AND  %i IN ( $value )", $key);
+
                 } else {
                     $where .= $this->wpdb->prepare(' AND %i = ' . $this->set_type($value), $key, $value);
 
@@ -184,14 +166,40 @@ class ZBADB
 
         $star = (isset($args[ 'star' ])) ? $args[ 'star' ] : "*";
 
-        $mpn_row = $this->wpdb->get_results(
-            "SELECT $star FROM `$this->tablename` WHERE  $where "
-        );
+        $this->query = "SELECT $star FROM `$this->tablename` WHERE  $where ";
+
+        $mpn_row = $this->wpdb->get_results($this->query);
+
         return $mpn_row;
 
     }
 
-    public function sum(string $object, array $data, string $where): int | string
+    public function delete(array $data): int | false
+    {
+        $format = [  ];
+        foreach ($data as $key => $value) {
+            $data[ $key ] = $value;
+            $format[  ]   = $this->set_type($value);
+        }
+
+        $result = false;
+        if (! empty($data)) {
+
+            $result = $this->wpdb->delete(
+                $this->tablename,
+                $data,
+                $format
+
+            );
+            $this->query = $this->wpdb->last_query;
+
+        }
+
+        return $result;
+
+    }
+
+    public function sum(string $object, array $data, string $where = ""): int | string
     {
 
         $sqlwhere = "";
@@ -218,8 +226,9 @@ class ZBADB
                 $sqlwhere .= " AND  `$key` = $value ";
             }
         }
+        $this->query = "SELECT SUM($object) FROM `$this->tablename` WHERE 1=1 $sqlwhere ";
 
-        $num = $this->wpdb->get_var("SELECT SUM($object) FROM `$this->tablename` WHERE 1=1 $sqlwhere ");
+        $num = $this->wpdb->get_var($this->query);
 
         return absint($num);
 
@@ -245,8 +254,9 @@ class ZBADB
 
     public function empty()
     {
+        $this->query = "TRUNCATE `$this->tablename`  ";
 
-        $empty = $this->wpdb->get_results("TRUNCATE `$this->tablename`  ");
+        $empty = $this->wpdb->get_results($this->query);
 
         return $empty;
 

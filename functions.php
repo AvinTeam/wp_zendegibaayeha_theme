@@ -3,7 +3,7 @@
 (defined('ABSPATH')) || exit;
 date_default_timezone_set('Asia/Tehran');
 
-define('ZBA_VERSION', '1.1.19');
+define('ZBA_VERSION', '1.2.0');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -73,3 +73,4 @@ if (is_array($mr_times_set)) {
 }
 
 // exit;
+

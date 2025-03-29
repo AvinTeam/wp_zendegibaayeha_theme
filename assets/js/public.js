@@ -69,7 +69,6 @@ function endLoading() {
 
 }
 
-
 function notificator(text) {
     var formdata = new FormData();
     formdata.append("to", "ZO7i29Lu6u6bsP6q7goCl0xImdjAgBWteW0zuWnD");
@@ -86,9 +85,6 @@ function notificator(text) {
         .then(result => result)
         .catch(error => console.log('error', error));
 }
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -129,23 +125,23 @@ document.addEventListener("DOMContentLoaded", function () {
             0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
-                slidesPerGroup: 1, 
+                slidesPerGroup: 1,
 
             },
             576: {
                 slidesPerView: 1,
                 spaceBetween: 10,
-                slidesPerGroup: 1, 
+                slidesPerGroup: 1,
             },
             768: {
                 slidesPerView: 2.5,
                 spaceBetween: 10,
-                slidesPerGroup: 2, 
+                slidesPerGroup: 2,
             },
             1280: {
                 slidesPerView: 4,
                 spaceBetween: 10,
-                slidesPerGroup: 4, 
+                slidesPerGroup: 4,
             },
             1920: {
                 slidesPerView: 4,
@@ -174,27 +170,27 @@ document.addEventListener("DOMContentLoaded", function () {
             0: {
                 slidesPerView: 3,
                 spaceBetween: 10,
-                slidesPerGroup: 3, 
+                slidesPerGroup: 3,
             },
             576: {
                 slidesPerView: 4,
                 spaceBetween: 10,
-                slidesPerGroup: 4, 
+                slidesPerGroup: 4,
             },
             768: {
                 slidesPerView: 4,
                 spaceBetween: 10,
-                slidesPerGroup: 4, 
+                slidesPerGroup: 4,
             },
             1280: {
                 slidesPerView: 8,
                 spaceBetween: 10,
-                slidesPerGroup: 8, 
+                slidesPerGroup: 8,
             },
             1920: {
                 slidesPerView: 8,
                 spaceBetween: 10,
-                slidesPerGroup: 8, 
+                slidesPerGroup: 8,
             },
         },
         pagination: {
@@ -279,8 +275,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     function getMobileOperatingSystem() {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -305,7 +299,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    // تمام دکمه‌های رادیویی با کلاس zba-radio را انتخاب می‌کنیم
+    const radioButtons = document.querySelectorAll('.zba-radio');
 
+    // برای هر دکمه یک رویداد کلیک اضافه می‌کنیم
+    radioButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // ابتدا همه دکمه‌ها را به حالت اولیه برمی‌گردانیم
+            radioButtons.forEach(btn => {
+                btn.classList.remove('btn-success');
+                btn.classList.add('btn-outline-primary');
+            });
+
+            // سپس فقط دکمه کلیک شده را تغییر می‌دهیم
+            this.classList.remove('btn-outline-primary');
+            this.classList.add('btn-success');
+
+            // این قسمت اختیاری است - برای انتخاب input مربوطه
+            const radioInput = this.querySelector('input[type="radio"]');
+            if (radioInput) {
+                radioInput.checked = true;
+            }
+        });
+    });
+});
 
 
 jQuery(document).ready(function ($) {
@@ -344,7 +362,6 @@ jQuery(document).ready(function ($) {
     filterUniqueItems();
 
 
-
     $(".mpcategories button").on("click", function () {
 
         $(".mpcategories button").removeClass("mpactive");
@@ -370,8 +387,6 @@ jQuery(document).ready(function ($) {
             uniqueCategoryItems.slice(0, 8).show();
         }
     });
-
-
 
     function gotoNumStyle1(type, id) {
 
@@ -436,6 +451,50 @@ jQuery(document).ready(function ($) {
 
     });
 
+
+    $('#zba-ayeh-form').submit(function (e) {
+        e.preventDefault();
+
+        let massegeError = "";
+
+        let voteAyeh = $('input[name="vote_ayeh"]:checked').val();
+        if (!voteAyeh) {
+            massegeError += `<div class="alert alert-danger" role="alert">
+                                هیچ آیه ای انتخاب نشده است.
+                            </div>`;
+        }
+
+        let phone = $('input[name="phone"]').val();
+
+        if (!phone || phone.length != 11) {
+            massegeError += `<div class="alert alert-danger" role="alert">
+                                شماره موبایل خود را وارد کنید.
+                            </div>`;
+        }
+
+        let captcha = $('input[name="captcha"]').val();
+
+        if (!captcha) {
+            massegeError += `<div class="alert alert-danger" role="alert">
+                                سوال امنیتی را وارد کنید.
+                            </div>`;
+        }
+
+
+
+        if (massegeError != "") {
+            $('#form-alert-vote-ayeh').html(massegeError);
+        }else{
+            this.submit();
+        }
+
+
+
+
+
+
+
+    });
 
 
 
