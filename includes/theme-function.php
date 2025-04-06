@@ -149,59 +149,6 @@ function zba_to_persian($text)
 
 }
 
-function sanitize_phone($phone)
-{
-
-    /**
-     * Convert all chars to en digits
-     */
-
-    $phone = zba_to_english($phone);
-
-    //.9158636712   => 09158636712
-    if (strpos($phone, '.') === 0) {
-        $phone = '0' . substr($phone, 1);
-    }
-
-    //00989185223232 => 9185223232
-    if (strpos($phone, '0098') === 0) {
-        $phone = substr($phone, 4);
-    }
-    //0989108210911 => 9108210911
-    if (strlen($phone) == 13 && strpos($phone, '098') === 0) {
-        $phone = substr($phone, 3);
-    }
-    //+989156040160 => 9156040160
-    if (strlen($phone) == 13 && strpos($phone, '+98') === 0) {
-        $phone = substr($phone, 3);
-    }
-    //+98 9156040160 => 9156040160
-    if (strlen($phone) == 14 && strpos($phone, '+98 ') === 0) {
-        $phone = substr($phone, 4);
-    }
-    //989152532120 => 9152532120
-    if (strlen($phone) == 12 && strpos($phone, '98') === 0) {
-        $phone = substr($phone, 2);
-    }
-    //Prepend 0
-    if (strpos($phone, '0') !== 0) {
-        $phone = '0' . $phone;
-    }
-    /**
-     * check for all character was digit
-     */
-    if (! ctype_digit($phone)) {
-        return '';
-    }
-
-    if (strlen($phone) != 11) {
-        return '';
-    }
-
-    return $phone;
-
-}
-
 function is_mobile($mobile)
 {
     $pattern = '/^(\+98|0)?9\d{9}$/';

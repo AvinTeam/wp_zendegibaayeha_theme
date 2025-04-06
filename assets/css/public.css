@@ -640,14 +640,19 @@ footer .copyright a {
 
 }
 
-.banner0{
+.banner0 {
   background-color: #77D4D6;
   /* height: 215px; */
 }
 
+.login-box {
+  width: 400px;
+}
+
 @media (max-width: 900px) {
 
-  .next-slider .deck {
+  .next-slider .deck,
+  .login-box {
     width: 100%;
   }
 

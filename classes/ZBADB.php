@@ -156,6 +156,7 @@ class ZBADB
         if (isset($args[ 'order_by' ])) {
             $where .= $this->wpdb->prepare(" ORDER BY %i " . $args[ 'order_by' ][ 1 ], $args[ 'order_by' ][ 0 ]);
         }
+        
         if (isset($args[ 'per_page' ])) {
             $where .= $this->wpdb->prepare(" LIMIT %d ", absint($args[ 'per_page' ]));
         }

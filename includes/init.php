@@ -69,3 +69,37 @@ add_action('init', function (): void {
     }
 
 });
+
+add_action('no_created_user', 'fun_no_created_user');
+
+function fun_no_created_user($mobile)
+{
+    $massage = '';
+
+    $zbadb = new ZBADB('winners');
+
+    $arg = [
+        'data' => [
+            'mobile' => $mobile,
+
+         ],
+
+     ];
+
+    $all_win = $zbadb->select($arg);
+
+    if ($all_win) {
+        foreach ($all_win as $key => $win) {
+
+            $massage .= '<div class="alert alert-success" role="alert">شما برنده ' . $win->gift . ' شدید</div>';
+
+        }
+
+    } else {
+        $massage .= '<div class="alert alert-danger" role="alert">متاسفانه شما برنده نشدید</div>';
+
+    }
+
+    set_transient('zba_transient', $massage, 10 * MINUTE_IN_SECONDS);
+
+}

@@ -1,9 +1,11 @@
 <?php
 
+use zbaclass\ZBADB;
+
 (defined('ABSPATH')) || exit;
 date_default_timezone_set('Asia/Tehran');
 
-define('ZBA_VERSION', '1.2.3');
+define('ZBA_VERSION', '1.2.5');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -41,6 +43,7 @@ require_once ZBA_INCLUDES . '/meta_boxs.php';
 require_once ZBA_INCLUDES . '/postype.php';
 require_once ZBA_INCLUDES . '/taxonomies.php';
 require_once ZBA_INCLUDES . '/dashboard_widget.php';
+require_once ZBA_INCLUDES . '/shortcode.php';
 
 if (is_admin()) {
     require_once ZBA_CLASS . '/List_Table.php';
@@ -52,8 +55,6 @@ if (is_admin()) {
 }
 
 if (isset($_GET[ 'test' ])) {
-
-    echo get_option('android_link');
 
     exit;
 

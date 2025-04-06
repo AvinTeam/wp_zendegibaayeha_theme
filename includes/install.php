@@ -36,6 +36,16 @@ function zba_row_install()
 
     dbDelta($sql_vote);
 
+    $tabel_winners_row = $wpdb->prefix . 'zba_winners';
+    $sql_winners       = "CREATE TABLE IF NOT EXISTS `$tabel_winners_row` (
+                            `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+                            `mobile` varchar(12) NOT NULL,
+                            `gift` varchar(50) NOT NULL,
+                            PRIMARY KEY (`id`)
+                            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=$wpdb_collate";
+
+    dbDelta($sql_winners);
+
 }
 
 add_action('after_switch_theme', 'zba_row_install');
