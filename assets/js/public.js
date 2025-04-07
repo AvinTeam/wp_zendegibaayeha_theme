@@ -384,7 +384,7 @@ jQuery(document).ready(function ($) {
             });
 
             allItems.hide();
-            uniqueCategoryItems.slice(0, 8).show();
+            uniqueCategoryItems.slice(0, 12).show();
         }
     });
 
