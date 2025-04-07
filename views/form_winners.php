@@ -1,10 +1,8 @@
 <div class="h-100 mt-5 p-5">
     <div class="mx-auto d-flex flex-column justify-content-center align-content-center login-box">
 
-        <form id="loginForm" class="mb-4">
+        <form id="loginForm" class="mb-4" >
             <input type="hidden" id="created_user" name="created_user" value="false">
-
-
             <div id="mobileForm">
                 <h3 class="text-center mt-2">استعلام با شماره موبایل</h3>
                 <div class="form-group text-start">
@@ -52,8 +50,4 @@
 
         <?php echo zba_transient(); ?>
     </div>
-
-
-
-
 </div>
