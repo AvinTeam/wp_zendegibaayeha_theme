@@ -113,8 +113,13 @@ function zba_save_bax($post_id, $post, $updata)
         update_post_meta($post_id, '_ayeh_ayeh', $_POST[ 'ayeh' ][ 'ayeh' ]);
         update_post_meta($post_id, '_ayeh_tarjomeh', $_POST[ 'ayeh' ][ 'tarjomeh' ]);
         update_post_meta($post_id, '_ayeh_address', $_POST[ 'ayeh' ][ 'address' ]);
-        update_post_meta($post_id, '_ayeh_sound_list', $_POST[ 'ayeh' ][ 'sound' ]);
-        update_post_meta($post_id, '_ayeh_video_list', $_POST[ 'ayeh' ][ 'video' ]);
+
+        $ayeh_ayeh  = (is_array($_POST[ 'ayeh' ][ 'ayeh' ])) ? $_POST[ 'ayeh' ][ 'ayeh' ] : [  ];
+        $ayeh_video = (is_array($_POST[ 'ayeh' ][ 'video' ])) ? $_POST[ 'ayeh' ][ 'video' ] : [  ];
+
+        update_post_meta($post_id, '_ayeh_sound_list', $ayeh_ayeh);
+        update_post_meta($post_id, '_ayeh_video_list', $ayeh_video);
+
         update_post_meta($post_id, '_vote_ayeh', 0);
 
     }

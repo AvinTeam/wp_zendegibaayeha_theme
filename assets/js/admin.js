@@ -35,16 +35,47 @@ jQuery(document).ready(function ($) {
 
         const videoUrl = $('#zba-add-video-url').val();
         const videoTitle = $('#zba-add-video-title').val();
+        const videoImageId = $('#zba-add-image-id').val();
+        const videoImage = $('#zba-video-image').attr('src');
+
+        let error = false;
+
+        if (!videoUrl) {
+            $('#zba-add-video-url').addClass('border-error');
+            error = true;
+        }
+
+
+        if (!videoTitle) {
+            $('#zba-add-video-title').addClass('border-error');
+            error = true;
+        }
+
+
+        if (error) {
+            return;
+        } else {
+            $('#zba-add-video-url').removeClass('border-error');
+            $('#zba-add-video-title').removeClass('border-error');
+        }
+
+
+
+
+
+
+
+
 
         e.preventDefault();
         const newRow = `
             <div class="zba-row-meta-box w-100">
-                <textarea style="opacity: 0; width: 0px; height: 0px; " name="ayeh[video][]">${videoTitle.trim()}|==|${videoUrl.trim()}</textarea>
+                <textarea style="opacity: 0; width: 0px; height: 0px; " name="ayeh[video][]">${videoTitle.trim()}|==|${videoUrl.trim()}|==|${Number(videoImageId.trim())}</textarea>
                 <div class="w-100">
                     <p class="w-100">${videoTitle.trim()}</p>                        
                     <a class="button w-100" href="${videoUrl.trim()}">${videoUrl.trim()}</a>
                 </div>        
-                <video controls  preload="auto">
+                <video controls  preload="auto"  poster="${videoImage.trim()}">
                     <source src="${videoUrl.trim()}" type="video/mp4">
                     مرورگر شما از تگ video پشتیبانی نمی‌کند.
                 </video>
@@ -56,6 +87,10 @@ jQuery(document).ready(function ($) {
 
         $('#zba-add-video-url').val('');
         $('#zba-add-video-title').val('');
+
+        $('#zba-add-image-id').val('');
+        $('#zba-video-image').attr('src', '');
+
     });
 
 
@@ -91,6 +126,51 @@ jQuery(document).ready(function ($) {
     $(document).on("click", ".zba_btn_remove", function () {
         $(this).closest(".zba-row-meta-box").remove(); // حذف عنصر
     });
+
+
+
+
+    // انتخاب تصویر از گالری
+    $(document).on('click', '.upload-menu-image', function (e) {
+        e.preventDefault();
+
+        var mediaUploader = wp.media({
+            title: 'انتخاب تصویر برای کاور ویدئو',
+            button: { text: 'استفاده از این تصویر' },
+            multiple: false,
+            library: {
+                type: ['image']
+            },
+        });
+
+        mediaUploader.on('select', function () {
+            var attachment = mediaUploader.state().get('selection').first().toJSON();
+
+            $('#zba-add-image-id').val(attachment.id);
+            $('#zba-video-image').attr('src', attachment.url).show();
+        });
+
+        mediaUploader.open();
+    });
+
+    // حذف تصویر
+    $(document).on('click', '.remove-menu-image', function (e) {
+        e.preventDefault();
+        $('#zba-add-image-id').val('');
+        $('#zba-video-image').hide().attr('src', '');
+    });
+
+
+
+
+
+
+
+
+
+
+
+
 
 })
 

@@ -2,7 +2,7 @@
 
 <div class="zba-header-post text-center py-5">
     <div class="zba-row mx-auto d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
-        <h1 style="font-size: 34px; " class="text-white fw-900">محتوای آیه های سال <?php the_archive_title(); ?></h1>
+        <h1 style="font-size: 34px; " class="text-white fw-900">محتوای آیه های <?php the_archive_title(); ?></h1>
         <?php
 
             $current_category = get_queried_object();
@@ -20,7 +20,7 @@
                 $ancestors = array_reverse($ancestors);
                 foreach ($ancestors as $ancestor_id) {
                     $ancestor = get_category($ancestor_id);
-                    echo '<li class="breadcrumb-item  p-0"><a class=" text-white" href="' . esc_url(get_category_link($ancestor_id)) . '">محتوای آیه های سال ' . esc_html($ancestor->name) . '</a></li>';
+                    echo '<li class="breadcrumb-item  p-0"><a class=" text-white" href="' . esc_url(get_category_link($ancestor_id)) . '">محتوای آیه های ' . esc_html($ancestor->name) . '</a></li>';
                 }
             }
 

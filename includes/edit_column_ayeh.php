@@ -55,7 +55,7 @@ function add_category_filter_dropdown($post_type)
     $taxonomy = 'cat_ayeh';
     $selected = isset($_GET[ $taxonomy ]) ? $_GET[ $taxonomy ] : '';
     wp_dropdown_categories([
-        'show_option_all' => 'همه سال ها',
+        'show_option_all' => 'همه دسته ها',
         'taxonomy'        => $taxonomy,
         'name'            => $taxonomy,
         'value_field'     => 'slug',

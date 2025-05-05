@@ -1,26 +1,3 @@
-@font-face {
-  font-family: "vazir";
-  src: url("../fonts/vazir/Vazir-Bold-FD.eot");
-  src: url("../fonts/vazir/Vazir-Bold-FD.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/vazir/Vazir-Bold-FD.woff2") format("woff2"),
-    url("../fonts/vazir/Vazir-Bold-FD.woff") format("woff"),
-    url("../fonts/vazir/Vazir-Bold-FD.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "vazir";
-  src: url("../fonts/vazir/Vazir-FD.eot");
-  src: url("../fonts/vazir/Vazir-FD.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/vazir/Vazir-FD.woff2") format("woff2"),
-    url("../fonts/vazir/Vazir-FD.woff") format("woff"),
-    url("../fonts/vazir/Vazir-FD.ttf") format("truetype");
-}
-
-* {
-  font-family: vazir;
-}
-
 .d-ltr {
   direction: ltr !important;
 }
@@ -50,6 +27,11 @@
 }
 
 
+.border-error {
+  border-color: #b12222 !important;
+}
+
+
 .w-100 {
   width: 100%;
 }
@@ -71,6 +53,14 @@
   text-align: end;
 }
 
-.zba-row-meta-box video{
+.zba-row-meta-box video {
   height: 100px;
+}
+
+.zba-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
 }

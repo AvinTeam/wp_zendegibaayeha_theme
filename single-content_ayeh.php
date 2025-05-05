@@ -7,7 +7,11 @@
 
     $ayeh_video_list = get_post_meta($post->ID, '_ayeh_video_list', true);
 
+    if (empty($ayeh_video_list)) {$ayeh_video_list = [  ];}
+
     $ayeh_sound_list = get_post_meta($post->ID, '_ayeh_sound_list', true);
+
+    if (empty($ayeh_sound_list)) {$ayeh_sound_list = [  ];}
 
 ?>
 
@@ -68,17 +72,17 @@
                                 <?php foreach ($ayeh_sound_list as $sound):
                                     $sound = explode('|==|', $sound); ?>
 
-                                <div class="col p-2">
-                                    <div class="rounded shadow p-2">
-                                        <p class="text-center w-100 fw-bold">قاری: <?php echo $sound[ 0 ] ?></p>
-                                        <audio class="w-100 rounded" controls preload="auto" loading="lazy">
-                                            <source id="zba-source-sound" src="<?php echo $sound[ 1 ] ?>"
-                                                type="audio/mpeg">
-                                            مرورگر شما از تگ audio پشتیبانی نمی‌کند.
-                                        </audio>
-                                    </div>
-                                </div>
-                                <?php endforeach; ?>
+	                                <div class="col p-2">
+	                                    <div class="rounded shadow p-2">
+	                                        <p class="text-center w-100 fw-bold">قاری:	                                                                                       <?php echo $sound[ 0 ] ?></p>
+	                                        <audio class="w-100 rounded" controls preload="auto" loading="lazy">
+	                                            <source id="zba-source-sound" src="<?php echo $sound[ 1 ] ?>"
+	                                                type="audio/mpeg">
+	                                            مرورگر شما از تگ audio پشتیبانی نمی‌کند.
+	                                        </audio>
+	                                    </div>
+	                                </div>
+	                                <?php endforeach; ?>
 
                             </div>
                         </div>
@@ -89,20 +93,23 @@
 
 
                                 <?php foreach ($ayeh_video_list as $video):
-                                    $video = explode('|==|', $video); ?>
+                                        $video     = explode('|==|', $video);
+                                        $image_url = (isset($video[ 2 ]) && absint($video[ 2 ])) ? wp_get_attachment_url(absint($video[ 2 ])) : '';
 
-                                <div class="col p-2">
-                                    <div class="rounded shadow p-2">
+                                    ?>
 
-                                        <p class="text-center fw-bold"><?php echo $video[ 0 ] ?></p>
+	                                <div class="col p-2">
+	                                    <div class="rounded shadow p-2">
 
-                                        <video class="w-100 rounded" controls preload="auto" loading="lazy">
-                                            <source src="<?php echo $video[ 1 ] ?>" type="video/mp4">
-                                            مرورگر شما از تگ video پشتیبانی نمی‌کند.
-                                        </video>
-                                    </div>
-                                </div>
-                                <?php endforeach; ?>
+	                                        <p class="text-center fw-bold"><?php echo $video[ 0 ] ?></p>
+
+	                                        <video class="w-100 rounded" poster="<?php echo $image_url ?>" controls preload="auto" loading="lazy">
+	                                            <source src="<?php echo $video[ 1 ] ?>" type="video/mp4">
+	                                            مرورگر شما از تگ video پشتیبانی نمی‌کند.
+	                                        </video>
+	                                    </div>
+	                                </div>
+	                                <?php endforeach; ?>
 
                             </div>
                         </div>

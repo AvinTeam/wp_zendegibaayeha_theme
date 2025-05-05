@@ -5,19 +5,19 @@
 function zba_taxonomies()
 {
     $labels = [
-        'name'                  => 'سال ها',
-        'singular_name'         => 'سال ها',
-        'search_items'          => 'جست و جو سال ها',
-        'popular_items'         => 'سال ها محبوب',
-        'all_items'             => 'سال ها',
-        'edit_item'             => 'ویرایش سال ',
-        'update_item'           => 'بروزرسانی سال ',
-        'add_new_item'          => 'افزودن سال ',
-        'new_item_name'         => 'نام سال جدید',
-        'add_or_remove_items'   => 'اضافه کردن یا حذف سال ',
-        'choose_from_most_used' => 'از میان سال ها پرکاربرد انتخاب کنید',
-        'not_found'             => 'سال ی را یافت نشد',
-        'menu_name'             => 'سال ها',
+        'name'                  => 'دسته ها',
+        'singular_name'         => 'دسته ها',
+        'search_items'          => 'جست و جو دسته ها',
+        'popular_items'         => 'دسته ها محبوب',
+        'all_items'             => 'دسته ها',
+        'edit_item'             => 'ویرایش دسته ',
+        'update_item'           => 'بروزرسانی دسته ',
+        'add_new_item'          => 'افزودن دسته ',
+        'new_item_name'         => 'نام دسته جدید',
+        'add_or_remove_items'   => 'اضافه کردن یا حذف دسته ',
+        'choose_from_most_used' => 'از میان دسته ها پرکاربرد انتخاب کنید',
+        'not_found'             => 'دسته ی را یافت نشد',
+        'menu_name'             => 'دسته ها',
      ];
 
     $args = [
