@@ -3,7 +3,7 @@
 (defined('ABSPATH')) || exit;
 date_default_timezone_set('Asia/Tehran');
 
-define('ZBA_VERSION', '1.3.0');
+define('ZBA_VERSION', '1.4.2');
 
 define('ZBA_PATH', get_template_directory() . "/");
 define('ZBA_INCLUDES', ZBA_PATH . 'includes/');
@@ -48,6 +48,7 @@ if (is_admin()) {
     require_once ZBA_INCLUDES . '/menu.php';
     require_once ZBA_INCLUDES . '/install.php';
     require_once ZBA_INCLUDES . '/edit_column_ayeh.php';
+    require_once ZBA_INCLUDES . '/edit_taxonomy.php';
     //     require_once ZBA_INCLUDES . '/handle_download.php';
 
 }

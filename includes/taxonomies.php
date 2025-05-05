@@ -5,19 +5,19 @@
 function zba_taxonomies()
 {
     $labels = [
-        'name'                  => 'دسته ها',
-        'singular_name'         => 'دسته ها',
-        'search_items'          => 'جست و جو دسته ها',
-        'popular_items'         => 'دسته ها محبوب',
-        'all_items'             => 'دسته ها',
-        'edit_item'             => 'ویرایش دسته ',
-        'update_item'           => 'بروزرسانی دسته ',
-        'add_new_item'          => 'افزودن دسته ',
-        'new_item_name'         => 'نام دسته جدید',
-        'add_or_remove_items'   => 'اضافه کردن یا حذف دسته ',
-        'choose_from_most_used' => 'از میان دسته ها پرکاربرد انتخاب کنید',
-        'not_found'             => 'دسته ی را یافت نشد',
-        'menu_name'             => 'دسته ها',
+        'name'                  => 'دسته آیه ها',
+        'singular_name'         => 'دسته آیه ها',
+        'search_items'          => 'جست و جو دسته آیه ها',
+        'popular_items'         => 'دسته آیه ها محبوب',
+        'all_items'             => 'دسته آیه ها',
+        'edit_item'             => 'ویرایش دسته آیه ',
+        'update_item'           => 'بروزرسانی دسته آیه ',
+        'add_new_item'          => 'افزودن دسته آیه ',
+        'new_item_name'         => 'نام دسته آیه جدید',
+        'add_or_remove_items'   => 'اضافه کردن یا حذف دسته آیه ',
+        'choose_from_most_used' => 'از میان دسته آیه ها پرکاربرد انتخاب کنید',
+        'not_found'             => 'دسته آیه ی را یافت نشد',
+        'menu_name'             => 'دسته آیه ها',
      ];
 
     $args = [

@@ -162,6 +162,10 @@ jQuery(document).ready(function ($) {
 
 
 
+    $("form#edittag").attr("enctype", "multipart/form-data");
+
+
+
 
 
 

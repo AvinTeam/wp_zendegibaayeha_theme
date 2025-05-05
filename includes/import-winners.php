@@ -54,6 +54,4 @@ if (isset($_FILES[ 'zba_exel_winners' ]) && $_FILES[ 'zba_exel_winners' ][ 'erro
     } catch (Exception $e) {
         die("خطا در خواندن فایل اکسل: " . $e->getMessage());
     }
-} else {
-    die("لطفاً یک فایل اکسل آپلود کنید.");
 }

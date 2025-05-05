@@ -3,12 +3,10 @@ jalaliDatepicker.startWatch({
     maxDate: "attr"
 });
 
-// آرایه‌های مربوط به اعداد
 const western = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 const arabic = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
 
-// تابع تبدیل اعداد در متن
 function convertNumbers(text) {
     western.forEach((digit, index) => {
         text = text.replace(new RegExp(digit, 'g'), persian[index]);
@@ -19,19 +17,43 @@ function convertNumbers(text) {
     return text;
 }
 
-// تابعی برای پیمایش در نودهای DOM و تغییر فقط نودهای متنی
 function traverseAndConvert(node) {
     if (node.nodeType === Node.TEXT_NODE) {
-        // تغییر متن نود
         node.nodeValue = convertNumbers(node.nodeValue);
     } else {
-        // پیمایش در نودهای فرزند
         node.childNodes.forEach(child => traverseAndConvert(child));
     }
 }
 
-// اجرای تابع روی کل body صفحه
 traverseAndConvert(document.body);
+
+
+
+function convertToArabic(text) {
+    let result = text;
+
+    for (let i = 0; i < 10; i++) {
+        result = result.replace(new RegExp(persian[i], 'g'), arabic[i]);
+    }
+
+    for (let i = 0; i < 10; i++) {
+        result = result.replace(new RegExp(western[i], 'g'), arabic[i]);
+    }
+
+    return result;
+}
+
+const elements = document.querySelectorAll('.zba_ayeh');
+if (elements) {
+    elements.forEach(element => {
+        element.textContent = convertToArabic(element.textContent);
+    });
+
+}
+
+
+
+
 
 
 
@@ -39,17 +61,16 @@ function startLoading() {
     var overlay = document.getElementById("overlay");
 
     if (overlay) {
-        overlay.style.display = "flex"; // نمایش به صورت flex
-        overlay.style.opacity = "0"; // آماده‌سازی برای افکت fadeIn
-        overlay.style.transition = "opacity 0.5s ease-in-out"; // اضافه کردن انیمیشن
+        overlay.style.display = "flex"; 
+        overlay.style.opacity = "0"; 
+        overlay.style.transition = "opacity 0.5s ease-in-out"; 
 
-        // تأخیر برای اعمال transition
         setTimeout(() => {
             overlay.style.opacity = "1";
         }, 10);
     }
 
-    document.body.classList.add("no-scroll"); // اضافه کردن کلاس به body
+    document.body.classList.add("no-scroll"); 
 }
 
 function endLoading() {
@@ -57,15 +78,15 @@ function endLoading() {
     var overlay = document.getElementById("overlay");
 
     if (overlay) {
-        overlay.style.transition = "opacity 0.5s ease-in-out"; // اضافه کردن انیمیشن
-        overlay.style.opacity = "0"; // شروع افکت fadeOut
+        overlay.style.transition = "opacity 0.5s ease-in-out"; 
+        overlay.style.opacity = "0"; 
 
         setTimeout(() => {
-            overlay.style.display = "none"; // بعد از محو شدن، مخفی کردن کامل
-        }, 500); // مقدار 500 باید با زمان transition هماهنگ باشه
+            overlay.style.display = "none"; 
+        }, 500); 
     }
 
-    document.body.classList.remove("no-scroll"); // حذف کلاس از body
+    document.body.classList.remove("no-scroll"); 
 
 }
 
@@ -240,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     new Swiper('.ayeh-swiper', {
-        slidesPerView: 4.5, // نمایش ۲.۵ اسلاید در دسکتاپ
+        slidesPerView: 4.5,
         centeredSlides: true,
         loop: true,
         spaceBetween: 20,
@@ -265,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
             1000: { slidesPerView: 4.5 },
-            0: { slidesPerView: 1 } // در موبایل فقط ۱ اسلاید
+            0: { slidesPerView: 1 } 
         },
         pagination: {
             el: ".swiper-pagination",
@@ -300,23 +321,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // تمام دکمه‌های رادیویی با کلاس zba-radio را انتخاب می‌کنیم
     const radioButtons = document.querySelectorAll('.zba-radio');
 
-    // برای هر دکمه یک رویداد کلیک اضافه می‌کنیم
     radioButtons.forEach(button => {
         button.addEventListener('click', function () {
-            // ابتدا همه دکمه‌ها را به حالت اولیه برمی‌گردانیم
             radioButtons.forEach(btn => {
                 btn.classList.remove('btn-success');
                 btn.classList.add('btn-outline-primary');
             });
 
-            // سپس فقط دکمه کلیک شده را تغییر می‌دهیم
             this.classList.remove('btn-outline-primary');
             this.classList.add('btn-success');
 
-            // این قسمت اختیاری است - برای انتخاب input مربوطه
             const radioInput = this.querySelector('input[type="radio"]');
             if (radioInput) {
                 radioInput.checked = true;
@@ -331,7 +347,6 @@ jQuery(document).ready(function ($) {
 
 
     $('.onlyNumbersInput').on('input paste', function () {
-        // پاک کردن تمام کاراکترهای غیرعددی
         this.value = this.value.replace(/[^0-9]/g, '');
     });
 
@@ -341,9 +356,8 @@ jQuery(document).ready(function ($) {
 
     let allItems = $(".mpgallery-item");
 
-    // حذف آیتم‌های تکراری بر اساس data-id و نمایش ۶ تای اول
     function filterUniqueItems() {
-        let seenIds = {}; // اینجا id های دیده‌شده رو ذخیره می‌کنیم
+        let seenIds = {}; 
         let uniqueItems = allItems.filter(function () {
             let itemId = $(this).data("id");
             if (!seenIds[itemId]) {
@@ -353,12 +367,10 @@ jQuery(document).ready(function ($) {
             return false;
         });
 
-        // نمایش فقط ۶ تا از آیتم‌های یکتا
         allItems.hide();
         uniqueItems.slice(0, 12).show();
     }
 
-    // اجرای فیلتر در ابتدای بارگذاری صفحه
     filterUniqueItems();
 
 
@@ -484,7 +496,7 @@ jQuery(document).ready(function ($) {
 
         if (massegeError != "") {
             $('#form-alert-vote-ayeh').html(massegeError);
-        }else{
+        } else {
             this.submit();
         }
 

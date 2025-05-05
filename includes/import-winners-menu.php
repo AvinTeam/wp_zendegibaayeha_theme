@@ -47,6 +47,4 @@ if (isset($_FILES[ 'excel_file' ]) && $_FILES[ 'excel_file' ][ 'error' ] === UPL
     } catch (Exception $e) {
         die("خطا در خواندن فایل اکسل: " . $e->getMessage());
     }
-} else {
-    die("لطفاً یک فایل اکسل آپلود کنید.");
 }
