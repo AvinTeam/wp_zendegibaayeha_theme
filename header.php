@@ -40,13 +40,11 @@
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search text-primary"></i></button>
                         <span>|</span>
                         <a href="tel:02192003978 " class="btn btn-tel" style="width: 170px !important;">
-                            <span>02192003978-82</span>
+                            <span>02192003978</span>
                             <i class="bi bi-telephone"></i>
                         </a>
                     </div>
                 </div>
             </div>
-
-
         </nav>
     </header>
