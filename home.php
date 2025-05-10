@@ -9,8 +9,8 @@
         <div class="zba-row mx-auto mt-3 mb-5 row row-cols-2 row-cols-md-1 ">
 
             <a class="col"
-                href="https://zendegibaayeha.ir/cat_ayeh/1403/">
-                <img loading="lazy" class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner.png') ?>">
+                href="https://zendegibaayeha.ir/cat_ayeh/110-%d8%a2%db%8c%d9%87-1404/">
+                <img loading="lazy" class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner110.png') ?>">
 
                 <div
                     class="rounded-3 banner0 d-flex flex-column justify-content-center align-items-center d-md-none gap-2 ">
