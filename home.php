@@ -14,7 +14,7 @@
 
                 <div
                     class="rounded-3 banner0 d-flex flex-column justify-content-center align-items-center d-md-none gap-2 ">
-                    <img loading="lazy" class="w-100 rounded-3" src="<?php echo zba_image('30.png') ?>">
+                    <img loading="lazy" class="w-100 rounded-3" src="<?php echo zba_image('110.png') ?>">
                     <div class="px-2 text-center">
                         <h2 class="f-22px text-primary fw-900">منابع نهضت ملی زندگی با آیه ها</h2>
                         <p class="f-17px text-white fw-bold">قبل از شرکت در آزمون، منابع را مطالعه کنید</p>
