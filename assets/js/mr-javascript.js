@@ -70,8 +70,13 @@ jQuery(document).ready(function ($) {
             });
         }
 
-    }
 
+        $('#ayeh_tv').removeClass('d-none');
+    } else {
+
+        $('#ayeh_tv').addClass('d-none');
+
+    }
 
     if (mr_param_script.setting == 1 && document.getElementById("mr_element1")) {
 
@@ -132,6 +137,12 @@ jQuery(document).ready(function ($) {
                 document.getElementById("mr_element1").innerHTML = 'زمان باقی مانده ' + convertNumbers(texclock);
             }
         });
+
+        $('#ayeh_net').removeClass('d-none');
+    } else {
+
+        $('#ayeh_net').addClass('d-none');
+
     }
 
 });

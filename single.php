@@ -41,7 +41,7 @@
 <div>
     <div class="zba-row mx-auto d-flex flex-column justify-content-center align-items-center gap-5">
 
-        <div class="zba-content-post">
+        <div class="zba-content-post w-100">
             <div
                 class="zba-content-post-image mx-auto d-flex flex-column justify-content-center align-items-center my-3">
 

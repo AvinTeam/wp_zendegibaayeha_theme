@@ -62,7 +62,7 @@
                 <div class="row row-cols-1 row-cols-md-2 justify-content-around row-gap-2  all-match ">
 
 
-                    <a href="https://ayeh.tv/" class="col p-2">
+                    <a id="ayeh_tv" href="https://ayeh.tv/" class="col p-2">
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                             <div class="w-25 text-center"><img loading="lazy" class="all-match-img"
                                     src="<?php echo zba_image('tv.svg') ?>">
@@ -75,7 +75,7 @@
                         </div>
                     </a>
 
-                    <a href="https://ayeh.net/" class="col p-2">
+                    <a id="ayeh_net" href="https://ayeh.net/" class="col p-2">
                         <div class="d-flex flex-row align-items-center h-108px bg-white rounded-4 shadow ">
                             <div class="w-25 text-center"><img loading="lazy" class="all-match-img"
                                     src="<?php echo zba_image('group.svg') ?>"></div>
@@ -119,7 +119,7 @@
             <div class="col-12 col-lg-4 mt-3 mt-gl-0 ">
                 <div class="w-75 mx-auto text-center">
                     <img loading="lazy" class="w-50" src="<?php echo zba_image('zba-logo.png') ?>">
-                    <p class="f-40px fw-900 text-white">مجمـوعه مسابقــات
+                    <p class="f-40px fw-900 text-white text-nowrap">مجمـوعه مسابقــات
                         زندگی با آیه ها</p>
                 </div>
             </div>
@@ -137,7 +137,7 @@
     <div style="height: 500px;  border-radius: 54px;"
         class="zba-row mx-auto bg-white text-primary text-center py-5 d-flex flex-column justify-content-around  gap-2 ">
         <div>
-            <h2 class="fw-900 f-28px">جوایز و برندگان </h2>
+            <h2 class="fw-900 f-28px">جوایز</h2>
         </div>
         <div class="swiper giftSwiper w-100 container">
             <div class="swiper-wrapper f-21px" style="color: #9BA1B2;">
@@ -238,7 +238,7 @@
             }
 
         ?>
-        <div class="text-center w-100 my-5"><a href="<?php echo esc_url(home_url('/')); ?>/category/media/"
+        <div class="text-center w-100 my-5    "><a href="<?php echo esc_url(home_url('/')); ?>/category/media/"
                 class="btn btn-secondary">دیدین بیشتر</a></div>
 
     </div>
@@ -297,9 +297,12 @@
             <div class="swiper-slide">
                 <div class="news-item p-2">
                     <a href="<?php echo get_permalink() ?>">
-                        <img loading="lazy" style="height: 260px; object-fit: contain;"
+                        <div class="d-flex align-items-center" style="height: 260px;">
+
+                        <img loading="lazy" style="object-fit: contain;"
                             src="<?php echo(has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '' ?>"
-                            class="card-img-top rounded" alt="<?php echo get_the_title() ?>">
+                            class="card-img-top rounded-3" alt="<?php echo get_the_title() ?>">
+                        </div>
                     </a>
                     <div class="d-flex flex-column mt-2 text-start ">
                         <a style="font-size: 23px;" class="nav-link card-hover-text fw-bolder"
@@ -308,10 +311,12 @@
                         </a>
                         <p style="font-size: 14px;" class="text-justify d-none"><?php echo get_the_excerpt() ?></p>
                         <a href="<?php echo get_permalink() ?>" style="background-color: #FFA200; width: 126px;"
-                            class="btn btn-warning rounded-bottom-2 text-white ">توضیحات بیشتر</a>
+                            class="btn btn-warning rounded-bottom-2 text-white ">ادامه خبر</a>
                     </div>
                 </div>
             </div>
+
+
 
             <?php
                 }
@@ -340,7 +345,7 @@
                 <div class="py-4">
                     <h3 class="fw-900">سفیران آیه ها</h3>
                     <p class="f-17px">دستیار هوشمند تولید محتوا برای محفل زندگی با آیه ها</p>
-                    <a href="https://safiranayeha.ir" style="background-color: #FFA200;"
+                    <a target="_blank" href="https://safiranayeha.ir" style="background-color: #FFA200;"
                         class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
 
                 </div>
@@ -357,7 +362,7 @@
                 <div class="py-4">
                     <h3 class="fw-900">مدرسه شمع</h3>
                     <p class="f-17px">دوره‌های ويژهٔ مدرسهٔ شمع بر اساس طرح «زندگی با آیه‌ها»</p>
-                    <a href="https://lms.shabaketabligh.ir/pages/zendegi-ba-ayeha" style="background-color: #FFA200;"
+                    <a target="_blank" href="https://lms.shabaketabligh.ir/pages/zendegi-ba-ayeha" style="background-color: #FFA200;"
                         class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
                 </div>
             </div>
@@ -373,7 +378,7 @@
                 <div class="py-4">
                     <h3 class="fw-900">اطلس</h3>
                     <p class="f-17px">سامانه جامع ثبت و معرفی محافل و تشکل های قرآنی کشور</p>
-                    <a href="https://mahfel.info/" style="background-color: #FFA200;"
+                    <a target="_blank" href="https://mahfel.info/" style="background-color: #FFA200;"
                         class="btn btn-warning rounded-bottom-2 text-white">توضیحات بیشتر</a>
                 </div>
             </div>

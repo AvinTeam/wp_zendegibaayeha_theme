@@ -43,10 +43,10 @@
 <div>
     <div class="zba-row mx-auto d-flex flex-column justify-content-start align-items-center gap-5">
 
-        <div class="zba-content-post">
+        <div class="zba-content-post w-100">
 
             <div class="zba-content-post-text mt-3">
-                <div class="py-2 zba-page-ayeha ">
+                <div class="py-2 zba-page-ayeha">
                     <div class="zba-row mx-auto d-flex flex-column">
                         <p class="mb-5"><span
                                 class="bg-success p-3 text-white f-17px rounded  "><?php echo get_the_title() ?></span>
@@ -54,7 +54,7 @@
                         <p class="zba_ayeh text-primary fw-900 f-40px  text-justify lh-lg"><?php echo $ayeh_ayeh ?></p>
 
 
-                        <div class="ayeh-address d-flex align-items-center flex-row-reverse"><span
+                        <div class="ayeh-address d-flex align-items-center flex-row-reverse w-100"><span
                                 class="pe-3 text-primary"><?php echo $ayeh_address ?></span>
                         </div>
 
@@ -62,9 +62,9 @@
 
                         <div class="w-100 divider-separator "></div>
                     </div>
-                    <div class="zba-row mx-auto row mt-2">
+                    <div class="zba-row mx-auto row mt-2   <?php if(empty($ayeh_sound_list) && empty($ayeh_video_list)){echo 'd-none';} ?>">
 
-                        <div class="col-12 col-md-3">
+                        <div class="col-12 col-md-3 <?php if(empty($ayeh_sound_list)){echo 'd-none';} ?>">
                             <h3 class="text-center">قرائت</h3>
                             <div class="row row-cols-1">
 
@@ -87,7 +87,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-md-9">
+                        <div class="col-12 col-md-9 <?php if(empty($ayeh_video_list)){echo 'd-none';} ?>">
                             <h3 class="text-center">تولیدات کوتاه</h3>
                             <div class="row row-cols-1 row-cols-lg-2">
 
