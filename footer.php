@@ -6,7 +6,7 @@
             <img loading="lazy" style="height: 150px;" src="<?php echo zba_image('logo-footer.png') ?>">
             <div class="w-50"></div>
             <div class="text-center  text-md-start" >
-                <p class="f-17px">پویش ملی تبیین و حفظ 110 فراز زندگی ساز قرآن کریم</p>
+                <p class="f-17px">پویش ملی تبیین و حفظ 100 فراز زندگی ساز قرآن کریم</p>
                 <p style="font-size:15px">مسابقات روزانه برای نوجوانان و بزرگسالان همراه با جوایز
                     متنوع از جمله سفر حج عمره، کربلای معلی، مشهد مقدس و ...</p>
             </div>

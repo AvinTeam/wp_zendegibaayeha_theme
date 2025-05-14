@@ -9,7 +9,7 @@
         <div class="zba-row mx-auto mt-3 mb-5 row row-cols-2 row-cols-md-1 ">
 
             <a class="col"
-                href="https://zendegibaayeha.ir/cat_ayeh/110-%d8%a2%db%8c%d9%87-1404/">
+                href="https://zendegibaayeha.ir/cat_ayeh/100-%d8%a2%db%8c%d9%87-1404/">
                 <img loading="lazy" class="w-100 mb-2 d-none  d-md-block " src="<?php echo zba_image('banner110.png') ?>">
 
                 <div
@@ -247,7 +247,7 @@
 <div
     class="zba-ayeha text-primary text-center d-flex flex-column justify-content-center align-items-center h-100 py-5 ">
     <h2 class="fw-900 f-28px"> برای مسابقه کدام آیه ها را باید بخوانم؟ </h2>
-    <p class="f-21px">نهضت ملی "زندگی با آیه ها" 110 آیه قرآن کریم توسط جمع کثیری از اندیشمندان قرآنی کشور انتخاب شده اند
+    <p class="f-21px">نهضت ملی "زندگی با آیه ها" 100 آیه قرآن کریم توسط جمع کثیری از اندیشمندان قرآنی کشور انتخاب شده اند
         که تسلط به آنها می تواند مبانی اعتقادی مخاطبین را مستحکم تر کند. </p>
     <div class="ayeh-swiper overflow-hidden position-relative ">
         <div class="swiper-wrapper">
