@@ -62,6 +62,10 @@
 
                         <div class="w-100 divider-separator "></div>
                     </div>
+                    <div class="zba-row mx-auto row mt-2  ">
+                <?php the_content(); ?>
+
+                    </div>
                     <div class="zba-row mx-auto row mt-2   <?php if(empty($ayeh_sound_list) && empty($ayeh_video_list)){echo 'd-none';} ?>">
 
                         <div class="col-12 col-md-3 <?php if(empty($ayeh_sound_list)){echo 'd-none';} ?>">

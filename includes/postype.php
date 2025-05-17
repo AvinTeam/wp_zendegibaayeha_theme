@@ -47,7 +47,7 @@ function zba_content_ayeh_init()
         'query_var' => true,
         'menu_icon' => 'dashicons-text-page',
         'capability_type' => 'post',
-        'supports' => array('title', 'author','custom-fields'),
+        'supports' => array('title','editor', 'author','custom-fields'),
         'rewrite' => array('slug' => 'content_ayeh'),
         'has_archive' => true,
     );
